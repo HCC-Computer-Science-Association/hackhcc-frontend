@@ -17,8 +17,8 @@ export default function Home() {
           <a href="#home" className="group flex items-center gap-3">
             <Logo className="h-8 w-8" />
             <span className="text-lg font-bold tracking-wider">
-              <span className="text-cyan-300">hack</span>
-              <span className="text-fuchsia-400">HCC</span>
+              <span className="text-[#00BFFF]">hack</span>
+              <span className="text-[#FF003C]">HCC</span>
             </span>
           </a>
           <nav className="hidden items-center gap-6 md:flex">
@@ -58,13 +58,13 @@ export default function Home() {
         <div className="mx-auto grid min-h-[70vh] w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 py-20 md:grid-cols-2">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400"></span>
+              <span className="h-2 w-2 animate-pulse rounded-full bg-[#FF003C]"></span>
               Houston Community College • In‑person • April 4-5, 2026
             </div>
             <h1 className="mt-6 text-5xl font-black leading-[1.05] tracking-tight md:text-7xl">
               <span className="block text-white/90">Welcome to</span>
               <Glitch>HackHCC</Glitch>
-              <span className="block bg-gradient-to-r from-fuchsia-400 via-cyan-300 to-emerald-300 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-[#FF003C] via-[#00BFFF] to-[#FF003C] bg-clip-text text-transparent">
                 Cyberpunk Edition
               </span>
             </h1>
@@ -131,7 +131,7 @@ export default function Home() {
               key={label}
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-500/10 via-cyan-400/10 to-sky-400/10 opacity-0 transition-opacity group-hover:opacity-100"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FF003C]/10 via-[#00BFFF]/10 to-[#FF003C]/10 opacity-0 transition-opacity group-hover:opacity-100"></div>
               <div className="text-4xl font-extrabold">{num}</div>
               <div className="text-sm uppercase tracking-widest text-white/60">
                 {label}
@@ -166,7 +166,7 @@ export default function Home() {
                 "Beginner‑friendly tracks",
               ].map((t) => (
                 <li key={t} className="flex items-center gap-3">
-                  <span className="h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_20px] shadow-cyan-400"></span>
+                  <span className="h-2 w-2 rounded-full bg-[#FF003C] shadow-[0_0_20px] shadow-[#FF003C]"></span>
                   <span className="text-white/80">{t}</span>
                 </li>
               ))}
@@ -457,7 +457,7 @@ function Button(
         "relative inline-flex items-center justify-center px-5 py-3 text-sm font-semibold transition cyber-button",
         "focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60",
         variant === "primary" &&
-          "bg-gradient-to-r from-fuchsia-500 via-cyan-400 to-emerald-400 text-white font-bold shadow-[0_0_15px_0_rgba(0,255,255,0.8)] hover:shadow-[0_0_25px_0_rgba(0,255,255,1)]",
+          "bg-[#FF003C] text-white font-bold shadow-[0_0_15px_0_rgba(255,0,60,0.8)] hover:shadow-[0_0_25px_0_rgba(255,0,60,1)]",
         variant === "ghost" &&
           "ring-1 ring-white/15 text-white/90 hover:bg-white/5",
         className
@@ -494,7 +494,7 @@ function TimeBox({ label, value }: { label: string; value: number }) {
   const padded = String(value).padStart(2, "0");
   return (
     <div className="flex flex-col items-center">
-      <div className="rounded-xl border border-white/15 bg-black/40 px-3 py-2 font-semibold shadow-[0_0_40px_-10px] shadow-cyan-400/50">
+      <div className="rounded-xl border border-white/15 bg-black/40 px-3 py-2 font-semibold shadow-[0_0_40px_-10px] shadow-[#FF003C]/50">
         {padded}
       </div>
       <div className="mt-1 text-[10px] uppercase tracking-widest text-white/50">
@@ -532,7 +532,7 @@ function Timeline({ day, items }: { day: string; items: [string, string][] }) {
             key={time}
             className="grid grid-cols-[90px_1fr] items-start gap-4"
           >
-            <div className="font-mono text-sm text-cyan-300">{time}</div>
+            <div className="font-mono text-sm text-[#FF003C]">{time}</div>
             <div className="text-white/80">{label}</div>
           </li>
         ))}
@@ -574,9 +574,9 @@ function BackgroundFX() {
       className="pointer-events-none absolute inset-0 -z-10 select-none"
     >
       {/* Big gradient blurs */}
-      <div className="absolute -left-24 top-[-10%] h-96 w-96 rounded-full bg-fuchsia-500/30 blur-[120px]" />
-      <div className="absolute right-[-10%] top-[20%] h-96 w-96 rounded-full bg-cyan-400/30 blur-[120px]" />
-      <div className="absolute bottom-[-10%] left-[20%] h-96 w-96 rounded-full bg-emerald-400/20 blur-[140px]" />
+      <div className="absolute -left-24 top-[-10%] h-96 w-96 rounded-full bg-[#FF003C]/30 blur-[120px]" />
+      <div className="absolute right-[-10%] top-[20%] h-96 w-96 rounded-full bg-[#00BFFF]/30 blur-[120px]" />
+      <div className="absolute bottom-[-10%] left-[20%] h-96 w-96 rounded-full bg-[#FF003C]/20 blur-[140px]" />
 
       {/* Neon grid */}
       <div className="absolute inset-x-0 bottom-0 h-[55vh]">
@@ -591,14 +591,14 @@ function BackgroundFX() {
 function Glitch({ children }: { children: React.ReactNode }) {
   return (
     <span className="relative inline-block text-6xl md:text-8xl font-black tracking-tight">
-      <span className="relative z-10 bg-gradient-to-r from-fuchsia-400 via-cyan-300 to-emerald-300 bg-clip-text text-transparent">
+      <span className="relative z-10 bg-gradient-to-r from-[#FF003C] via-[#00BFFF] to-[#FF003C] bg-clip-text text-transparent">
         {children}
       </span>
       {/* RGB ghost layers */}
-      <span className="absolute inset-0 -z-0 translate-x-[2px] translate-y-[2px] select-none text-fuchsia-500/40 blur-sm">
+      <span className="absolute inset-0 -z-0 translate-x-[2px] translate-y-[2px] select-none text-[#FF003C]/40 blur-sm">
         {children}
       </span>
-      <span className="absolute inset-0 -z-0 -translate-x-[2px] -translate-y-[1px] select-none text-cyan-400/40 blur-sm">
+      <span className="absolute inset-0 -z-0 -translate-x-[2px] -translate-y-[1px] select-none text-[#00BFFF]/40 blur-sm">
         {children}
       </span>
     </span>
@@ -613,9 +613,9 @@ function NeonCity() {
     >
       <defs>
         <linearGradient id="g1" x1="0" x2="1">
-          <stop offset="0%" stopColor="#a21caf" />
-          <stop offset="50%" stopColor="#22d3ee" />
-          <stop offset="100%" stopColor="#34d399" />
+          <stop offset="0%" stopColor="#FF003C" />
+          <stop offset="50%" stopColor="#00BFFF" />
+          <stop offset="100%" stopColor="#FF003C" />
         </linearGradient>
       </defs>
       <rect x="0" y="0" width="600" height="420" fill="#0a0a12" rx="24" />
@@ -651,7 +651,7 @@ function NeonCity() {
                 y={320 - h + 6 + j * 20}
                 width={w - 8}
                 height={10}
-                fill={j % 2 ? "#22d3ee" : "#a21caf"}
+                fill={j % 2 ? "#00BFFF" : "#FF003C"}
                 opacity=".25"
               />
             ))}
@@ -688,7 +688,7 @@ function NeonCity() {
         width="64"
         height="22"
         rx="4"
-        fill="#22d3ee"
+        fill="#00BFFF"
         opacity=".8"
       />
       <rect
@@ -697,7 +697,7 @@ function NeonCity() {
         width="40"
         height="10"
         rx="2"
-        fill="#a21caf"
+        fill="#FF003C"
         opacity=".8"
       />
     </svg>
@@ -709,9 +709,9 @@ function Logo({ className = "" }: { className?: string }) {
     <svg viewBox="0 0 64 64" className={className}>
       <defs>
         <linearGradient id="lg" x1="0" x2="1">
-          <stop offset="0%" stopColor="#a21caf" />
-          <stop offset="50%" stopColor="#22d3ee" />
-          <stop offset="100%" stopColor="#34d399" />
+          <stop offset="0%" stopColor="#FF003C" />
+          <stop offset="50%" stopColor="#00BFFF" />
+          <stop offset="100%" stopColor="#FF003C" />
         </linearGradient>
       </defs>
       <rect
