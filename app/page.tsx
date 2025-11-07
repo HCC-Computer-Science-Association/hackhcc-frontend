@@ -59,11 +59,11 @@ export default function Home() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80">
               <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400"></span>
-              Houston Community College • In‑person • Feb 21–23, 2026
+              Houston Community College • In‑person • April 4-5, 2026
             </div>
             <h1 className="mt-6 text-5xl font-black leading-[1.05] tracking-tight md:text-7xl">
               <span className="block text-white/90">Welcome to</span>
-              <Glitch>hackHCC</Glitch>
+              <Glitch>HackHCC</Glitch>
               <span className="block bg-gradient-to-r from-fuchsia-400 via-cyan-300 to-emerald-300 bg-clip-text text-transparent">
                 Cyberpunk Edition
               </span>
@@ -153,7 +153,7 @@ export default function Home() {
           >
             <h2 className="section-title">Build under neon lights</h2>
             <p className="mt-4 text-white/70">
-              hackHCC is Houston Community College’s flagship hackathon. Whether
+              HackHCC is Houston Community College’s flagship hackathon. Whether
               it’s your first hack or you’re a seasoned builder, you’ll team up,
               learn from mentors, attend lightning talks, and ship something
               wild in just a weekend.
@@ -235,7 +235,7 @@ export default function Home() {
       {/* SCHEDULE */}
       <section className="relative py-24">
         <div className="mx-auto w-full max-w-7xl px-6">
-          <h2 className="section-title">Schedule (Feb 21–23)</h2>
+          <h2 className="section-title">Schedule (April 4-5)</h2>
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
             <Timeline
               day="Friday"
@@ -368,7 +368,7 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <Logo className="h-6 w-6" />
             <span className="text-sm text-white/60">
-              © {new Date().getFullYear()} hackHCC
+              © {new Date().getFullYear()} HackHCC
             </span>
           </div>
           <div className="flex items-center gap-6 text-sm text-white/60">
@@ -469,7 +469,7 @@ function Button(
 }
 
 // Countdown hook
-function useCountdown(targetISO = "2026-02-21T10:00:00-06:00") {
+function useCountdown(targetISO = "2026-04-04T10:00:00-06:00") {
   const target = useMemo(() => new Date(targetISO).getTime(), [targetISO]);
   const [now, setNow] = useState<number>(() => Date.now());
 

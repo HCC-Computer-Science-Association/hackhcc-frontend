@@ -75,9 +75,9 @@ function Hero() {
     <section id="home" className="relative">
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-24 pt-16 md:grid-cols-2 md:pb-32 md:pt-24">
         <div>
-          <Badge>hackHCC • Cyberpunk • 36 Hours</Badge>
+          <Badge>HackHCC • Cyberpunk • 36 Hours</Badge>
           <h1 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl md:text-6xl">
-            <GlitchText>hackHCC</GlitchText>
+            <GlitchText>HackHCC</GlitchText>
             <span className="block mt-2 text-2xl font-semibold text-white\/80">
               A Cyberpunk Hackathon
             </span>
@@ -187,10 +187,10 @@ function About() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_50%_at_50%_0%,rgba(168,85,247,0.15)_0%,rgba(0,0,0,0)_60%)]" />
       <div className="relative mx-auto max-w-5xl px-4 py-20">
         <h2 className="text-center text-3xl font-black sm:text-4xl">
-          What is hackHCC?
+          What is HackHCC?
         </h2>
         <p className="mx-auto mt-4 max-w-3xl text-center text-white/70">
-          hackHCC is a student‑run, cyberpunk‑themed hackathon. Build
+          HackHCC is a student‑run, cyberpunk‑themed hackathon. Build
           dystopian‑adjacent prototypes, experiment with bleeding‑edge tools,
           and learn from mentors in security, AI, and creative tech.
         </p>
@@ -439,7 +439,7 @@ function Footer() {
     <footer className="border-t border-white/10">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-10 sm:flex-row">
         <div className="text-sm text-white/60">
-          © {new Date().getFullYear()} hackHCC. All rights reserved.
+          © {new Date().getFullYear()} HackHCC. All rights reserved.
         </div>
         <div className="flex items-center gap-4 text-sm text-white/70">
           <a href="#" className="hover:text-white">
