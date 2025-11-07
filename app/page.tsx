@@ -396,6 +396,9 @@ export default function Home() {
         .section-title {
           @apply text-3xl md:text-4xl font-black tracking-tight;
         }
+        .cyber-button {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+        }
         @keyframes floaty {
           0% {
             transform: translateY(0px);
@@ -451,10 +454,10 @@ function Button(
     <button
       {...rest}
       className={cx(
-        "relative inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold transition",
+        "relative inline-flex items-center justify-center px-5 py-3 text-sm font-semibold transition cyber-button",
         "focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60",
         variant === "primary" &&
-          "bg-gradient-to-r from-fuchsia-500 via-cyan-400 to-emerald-400 text-gray-900 shadow-[0_0_30px_-10px] shadow-fuchsia-500/60 hover:opacity-95",
+          "bg-gradient-to-r from-fuchsia-500 via-cyan-400 to-emerald-400 text-white font-bold shadow-[0_0_15px_0_rgba(0,255,255,0.8)] hover:shadow-[0_0_25px_0_rgba(0,255,255,1)]",
         variant === "ghost" &&
           "ring-1 ring-white/15 text-white/90 hover:bg-white/5",
         className
@@ -462,7 +465,7 @@ function Button(
     >
       <span className="relative z-10">{children}</span>
       {variant === "primary" && (
-        <span className="pointer-events-none absolute inset-0 -z-0 rounded-2xl bg-white/0 [mask-image:radial-gradient(60%_100%_at_50%_0%,#000_60%,transparent_100%)]"></span>
+        <span className="pointer-events-none absolute inset-0 -z-0 bg-white/0 [mask-image:radial-gradient(60%_100%_at_50%_0%,#000_60%,transparent_100%)]"></span>
       )}
     </button>
   );
