@@ -1,7 +1,14 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    output: 'export',
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+    // Required for GitHub Pages subdirectory deployment
+    basePath: process.env.NODE_ENV === 'production' ? '/hackhcc-frontend' : '',
 
-export default nextConfig;
+    // Disable image optimization for static export
+    images: {
+        unoptimized: true,
+    },
+}
+
+module.exports = nextConfig
