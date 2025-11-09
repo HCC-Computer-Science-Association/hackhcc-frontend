@@ -3,47 +3,49 @@ name: Deploy Next.js with pnpm
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-22.04
-    
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
       
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v4
         with:
           version: 10
       
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'pnpm'
       
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       
-      - name: Lint code
-        run: pnpm run lint
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
       
-      - name: Build application
-        run: pnpm run build
-        env:
-          NODE_ENV: production
-      
-      - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
+          path: ./out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-22.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
