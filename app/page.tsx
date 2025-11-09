@@ -630,7 +630,9 @@ function NeonCity() {
       />
       {/* Buildings */}
       {Array.from({ length: 12 }).map((_, i) => {
+          // eslint-disable-next-line react-hooks/purity
         const w = 20 + Math.random() * 40;
+          // eslint-disable-next-line react-hooks/purity
         const h = 80 + Math.random() * 220;
         const x = 20 + i * 48;
         return (

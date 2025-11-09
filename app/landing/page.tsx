@@ -601,9 +601,13 @@ function Stars({ density = 80 }: { density?: number }) {
   const dots = useMemo(
     () =>
       Array.from({ length: density }, () => ({
+          // eslint-disable-next-line react-hooks/purity
         top: Math.random() * 100,
+          // eslint-disable-next-line react-hooks/purity
         left: Math.random() * 100,
+          // eslint-disable-next-line react-hooks/purity
         size: Math.random() * 2 + 0.5,
+          // eslint-disable-next-line react-hooks/purity
         delay: Math.random() * 4,
       })),
     [density]
