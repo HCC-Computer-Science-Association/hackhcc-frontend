@@ -7,34 +7,34 @@ export default function Home() {
   const { d, h, m, s, done } = useCountdown();
 
   return (
-    <main className="relative min-h-screen overflow-x-clip bg-[#06060b] text-white">
+    <main className="relative min-h-screen overflow-x-clip" style={{ background: '#FFEF15' }}>
       {/* Cyberpunk grid + glow background */}
       <BackgroundFX />
 
       {/* NAVBAR */}
-      <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-black/30">
+      <header className="sticky top-0 z-40 bg-[#000000] border-b border-yellow-500/20">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
           <a href="#home" className="group flex items-center gap-3">
             <Logo className="h-8 w-8" />
             <span className="text-lg font-bold tracking-wider">
-              <span className="text-[#00BFFF]">hack</span>
-              <span className="text-[#FF003C]">HCC</span>
+              <span className="text-[#2FF1FF]">hack</span>
+              <span className="text-[#2FF1FF]">HCC</span>
             </span>
           </a>
-          <nav className="hidden items-center gap-6 md:flex">
-            <a href="#about" className="navlink">
+          <nav className="items-center gap-6 flex">
+            <a href="#about" className="text-[#FFEF15] font-normal hover:text-[#FFF200] transition-colors">
               About
             </a>
-            <a href="#tracks" className="navlink">
+            <a href="#tracks" className="text-[#FFEF15] font-normal hover:text-[#FFF200] transition-colors">
               Tracks
             </a>
-            <a href="#prizes" className="navlink">
+            <a href="#prizes" className="text-[#FFEF15] font-normal hover:text-[#FFF200] transition-colors">
               Prizes
             </a>
-            <a href="#sponsors" className="navlink">
+            <a href="#sponsors" className="text-[#FFEF15] font-normal hover:text-[#FFF200] transition-colors">
               Sponsors
             </a>
-            <a href="#faq" className="navlink">
+            <a href="#faq" className="text-[#FFEF15] font-normal hover:text-[#FFF200] transition-colors">
               FAQ
             </a>
             <Button
@@ -57,18 +57,18 @@ export default function Home() {
       <section id="home" className="relative isolate">
         <div className="mx-auto grid min-h-[70vh] w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 py-20 md:grid-cols-2">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-[#FF003C]"></span>
-              Houston Community College • In‑person • April 4-5, 2026
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#000000]/30 bg-[#000000]/20 px-3 py-1 text-xs text-[#000000] font-medium">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-[#FFD700] shadow-[0_0_8px] shadow-[#FFD700]"></span>
+              Houston Community College • In‑person • April 11-12, 2026
             </div>
             <h1 className="mt-6 text-5xl font-black leading-[1.05] tracking-tight md:text-7xl">
-              <span className="block text-white/90">Welcome to</span>
-              <Glitch>HackHCC</Glitch>
-              <span className="block bg-gradient-to-r from-[#FF003C] via-[#00BFFF] to-[#FF003C] bg-clip-text text-transparent">
-                Cyberpunk Edition
+              <span className="block text-[#000000] font-semibold">Welcome to</span>
+              <span className="block text-[#000000] font-black">HackHCC</span>
+              <span className="block text-[#000000] font-black">
+                CodeRunners
               </span>
             </h1>
-            <p className="mt-6 max-w-xl text-balance text-lg text-white/70">
+            <p className="mt-6 max-w-xl text-balance text-lg text-[#000000] font-normal">
               A 48‑hour student hackathon fusing code with neon‑soaked
               creativity. Build, learn, and ship projects that push the edge of
               tech.
@@ -90,16 +90,16 @@ export default function Home() {
 
             {/* Countdown */}
             <div className="mt-10 flex items-center gap-6">
-              <div className="text-xs uppercase tracking-widest text-white/60">
+              <div className="text-xs uppercase tracking-widest text-[#000000] font-medium">
                 Countdown
               </div>
               <div className="flex items-center gap-3 text-2xl font-mono">
                 <TimeBox label="days" value={d} />
-                <span className="text-white/40">:</span>
+                <span className="text-[#000000]/70">:</span>
                 <TimeBox label="hours" value={h} />
-                <span className="text-white/40">:</span>
+                <span className="text-[#000000]/70">:</span>
                 <TimeBox label="mins" value={m} />
-                <span className="text-white/40">:</span>
+                <span className="text-[#000000]/70">:</span>
                 <TimeBox label="secs" value={s} />
               </div>
             </div>
@@ -129,11 +129,11 @@ export default function Home() {
           ].map(([num, label]) => (
             <div
               key={label}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+              className="group relative overflow-hidden rounded-2xl border border-yellow-500/20 bg-[#000000] p-6"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FF003C]/10 via-[#00BFFF]/10 to-[#FF003C]/10 opacity-0 transition-opacity group-hover:opacity-100"></div>
-              <div className="text-4xl font-extrabold">{num}</div>
-              <div className="text-sm uppercase tracking-widest text-white/60">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FFD700]/10 via-[#FFA500]/10 to-[#FFD700]/10 opacity-0 transition-opacity group-hover:opacity-100"></div>
+              <div className="text-4xl font-extrabold text-white">{num}</div>
+              <div className="text-sm uppercase tracking-widest text-white/80 font-medium">
                 {label}
               </div>
             </div>
@@ -151,8 +151,8 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="order-2 md:order-1"
           >
-            <h2 className="section-title">Build under neon lights</h2>
-            <p className="mt-4 text-white/70">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#000000]">Build under neon lights</h2>
+            <p className="mt-4 text-[#000000] font-normal">
               HackHCC is Houston Community College’s flagship hackathon. Whether
               it’s your first hack or you’re a seasoned builder, you’ll team up,
               learn from mentors, attend lightning talks, and ship something
@@ -166,8 +166,8 @@ export default function Home() {
                 "Beginner‑friendly tracks",
               ].map((t) => (
                 <li key={t} className="flex items-center gap-3">
-                  <span className="h-2 w-2 rounded-full bg-[#FF003C] shadow-[0_0_20px] shadow-[#FF003C]"></span>
-                  <span className="text-white/80">{t}</span>
+                  <span className="h-2 w-2 rounded-full bg-[#FFD700] shadow-[0_0_20px] shadow-[#FFD700]"></span>
+                  <span className="text-[#000000] font-normal">{t}</span>
                 </li>
               ))}
             </ul>
@@ -187,8 +187,8 @@ export default function Home() {
       {/* TRACKS */}
       <section id="tracks" className="relative py-24">
         <div className="mx-auto w-full max-w-7xl px-6">
-          <h2 className="section-title">Tracks</h2>
-          <p className="mt-2 max-w-2xl text-white/70">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#000000]">Tracks</h2>
+          <p className="mt-2 max-w-2xl text-[#000000] font-normal">
             Choose a path or blend a few—surprise us.
           </p>
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -219,7 +219,7 @@ export default function Home() {
       {/* PRIZES */}
       <section id="prizes" className="relative py-24">
         <div className="mx-auto w-full max-w-7xl px-6">
-          <h2 className="section-title">Prizes</h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#000000]">Prizes</h2>
           <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
             {[
               { t: "Grand Prize", d: "$3,500 + trophies + swag" },
@@ -235,7 +235,7 @@ export default function Home() {
       {/* SCHEDULE */}
       <section className="relative py-24">
         <div className="mx-auto w-full max-w-7xl px-6">
-          <h2 className="section-title">Schedule (April 4-5)</h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#000000]">Schedule (April 11-12)</h2>
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
             <Timeline
               day="Friday"
@@ -271,8 +271,8 @@ export default function Home() {
       {/* SPONSORS */}
       <section id="sponsors" className="relative py-24">
         <div className="mx-auto w-full max-w-7xl px-6">
-          <h2 className="section-title">Sponsors</h2>
-          <p className="mt-2 max-w-2xl text-white/70">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#000000]">Sponsors</h2>
+          <p className="mt-2 max-w-2xl text-[#000000] font-normal">
             Want to support Houston’s next wave of builders? We’d love to
             partner.
           </p>
@@ -292,7 +292,7 @@ export default function Home() {
       {/* FAQ */}
       <section id="faq" className="relative py-24">
         <div className="mx-auto w-full max-w-5xl px-6">
-          <h2 className="section-title">FAQ</h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#000000]">FAQ</h2>
           <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
             {[
               [
@@ -322,12 +322,12 @@ export default function Home() {
             ].map(([q, a]) => (
               <details
                 key={q}
-                className="group rounded-2xl border border-white/10 bg-white/[0.03] p-5"
+                className="group rounded-2xl border border-yellow-500/20 bg-[#000000] p-5"
               >
-                <summary className="cursor-pointer select-none list-none font-semibold leading-6 text-white/90">
+                <summary className="cursor-pointer select-none list-none font-semibold leading-6 text-white">
                   {q}
                 </summary>
-                <p className="mt-2 text-white/70">{a}</p>
+                <p className="mt-2 text-white/80 font-normal">{a}</p>
               </details>
             ))}
           </div>
@@ -337,8 +337,8 @@ export default function Home() {
       {/* APPLY / CTA */}
       <section id="apply" className="relative py-24">
         <div className="mx-auto w-full max-w-3xl px-6 text-center">
-          <h2 className="section-title">Ready to jack in?</h2>
-          <p className="mx-auto mt-2 max-w-2xl text-white/70">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#000000]">Ready to jack in?</h2>
+          <p className="mx-auto mt-2 max-w-2xl text-[#000000] font-normal">
             Applications open soon. Join the waitlist and get notified the
             moment we go live.
           </p>
@@ -353,7 +353,7 @@ export default function Home() {
               required
               type="email"
               placeholder="you@college.edu"
-              className="h-12 w-full flex-1 rounded-xl border border-white/10 bg-white/[0.04] px-4 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
+              className="h-12 w-full flex-1 rounded-xl border border-yellow-500/30 bg-[#000000] px-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-yellow-500/40 font-normal"
             />
             <Button type="submit" className="h-12 w-full sm:w-auto">
               Join waitlist
@@ -363,25 +363,25 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="relative border-t border-white/10 py-10">
+      <footer className="relative bg-[#000000] border-t border-yellow-500/20 py-10">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
           <div className="flex items-center gap-3">
             <Logo className="h-6 w-6" />
-            <span className="text-sm text-white/60">
+            <span className="text-sm text-[#2FF1FF] font-normal">
               © {new Date().getFullYear()} HackHCC
             </span>
           </div>
-          <div className="flex items-center gap-6 text-sm text-white/60">
-            <a href="#faq" className="hover:text-white">
+          <div className="flex items-center gap-6 text-sm text-[#2FF1FF] font-normal">
+            <a href="#faq" className="hover:text-[#FFEF15] transition-colors">
               FAQ
             </a>
-            <a href="#" className="hover:text-white">
+            <a href="#" className="hover:text-[#FFEF15] transition-colors">
               Email
             </a>
-            <a href="#" className="hover:text-white">
+            <a href="#" className="hover:text-[#FFEF15] transition-colors">
               Twitter
             </a>
-            <a href="#" className="hover:text-white">
+            <a href="#" className="hover:text-[#FFEF15] transition-colors">
               Instagram
             </a>
           </div>
@@ -390,14 +390,10 @@ export default function Home() {
 
       {/* Global styles for effects */}
       <style jsx global>{`
-        .navlink {
-          @apply text-white/80 hover:text-white;
-        }
-        .section-title {
-          @apply text-3xl md:text-4xl font-black tracking-tight;
-        }
+
         .cyber-button {
-            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+            clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
         }
         @keyframes floaty {
           0% {
@@ -455,11 +451,11 @@ function Button(
       {...rest}
       className={cx(
         "relative inline-flex items-center justify-center px-5 py-3 text-sm font-semibold transition cyber-button",
-        "focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60",
+        "focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500/60",
         variant === "primary" &&
-          "bg-[#FF003C] text-white font-bold shadow-[0_0_15px_0_rgba(255,0,60,0.8)] hover:shadow-[0_0_25px_0_rgba(255,0,60,1)]",
+          "bg-[#000000] text-[#FFEF15] font-bold shadow-[0_0_20px_0_rgba(0,0,0,0.6)] hover:shadow-[0_0_30px_0_rgba(0,0,0,0.9)] hover:bg-[#1a1a1a]",
         variant === "ghost" &&
-          "ring-1 ring-white/15 text-white/90 hover:bg-white/5",
+          "ring-1 ring-yellow-500/30 text-yellow-200/90 hover:bg-yellow-500/10 hover:ring-yellow-500/50",
         className
       )}
     >
@@ -472,7 +468,7 @@ function Button(
 }
 
 // Countdown hook
-function useCountdown(targetISO = "2026-04-04T10:00:00-06:00") {
+function useCountdown(targetISO = "2026-04-11T10:00:00-06:00") {
   const target = useMemo(() => new Date(targetISO).getTime(), [targetISO]);
   const [now, setNow] = useState<number>(() => Date.now());
 
@@ -494,10 +490,10 @@ function TimeBox({ label, value }: { label: string; value: number }) {
   const padded = String(value).padStart(2, "0");
   return (
     <div className="flex flex-col items-center">
-      <div className="rounded-xl border border-white/15 bg-black/40 px-3 py-2 font-semibold shadow-[0_0_40px_-10px] shadow-[#FF003C]/50">
+      <div className="rounded-xl border border-[#000000]/30 bg-[#000000] px-3 py-2 font-semibold text-[#FFEF15] shadow-[0_0_40px_-10px] shadow-[#000000]/30">
         {padded}
       </div>
-      <div className="mt-1 text-[10px] uppercase tracking-widest text-white/50">
+      <div className="mt-1 text-[10px] uppercase tracking-widest text-[#000000] font-medium">
         {label}
       </div>
     </div>
@@ -506,24 +502,24 @@ function TimeBox({ label, value }: { label: string; value: number }) {
 
 function Card({ title, desc }: { title: string; desc: string }) {
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-      <div
+    <div className="group relative overflow-hidden rounded-2xl border border-yellow-500/20 bg-[#000000] p-6">
+            <div
         className="pointer-events-none absolute -inset-[1px] -z-10 rounded-2xl opacity-0 blur transition-all group-hover:opacity-100 group-hover:blur-md"
         style={{
           background:
-            "conic-gradient(from 180deg at 50% 50%, rgba(255,0,200,.25), rgba(0,200,255,.25), rgba(0,255,180,.25), rgba(255,0,200,.25))",
+            "conic-gradient(from 180deg at 50% 50%, rgba(255,215,0,.3), rgba(255,165,0,.3), rgba(255,215,0,.3), rgba(255,165,0,.3))",
         }}
       />
-      <h3 className="text-lg font-semibold text-white/90">{title}</h3>
-      <p className="mt-2 text-sm text-white/70">{desc}</p>
+      <h3 className="text-lg font-semibold text-white">{title}</h3>
+      <p className="mt-2 text-sm text-white/80 font-normal">{desc}</p>
     </div>
   );
 }
 
 function Timeline({ day, items }: { day: string; items: [string, string][] }) {
   return (
-    <div className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-      <div className="mb-4 text-sm font-semibold uppercase tracking-widest text-white/60">
+    <div className="relative rounded-2xl border border-yellow-500/20 bg-[#000000] p-6">
+      <div className="mb-4 text-sm font-semibold uppercase tracking-widest text-white/80">
         {day}
       </div>
       <ul className="space-y-4">
@@ -532,8 +528,8 @@ function Timeline({ day, items }: { day: string; items: [string, string][] }) {
             key={time}
             className="grid grid-cols-[90px_1fr] items-start gap-4"
           >
-            <div className="font-mono text-sm text-[#FF003C]">{time}</div>
-            <div className="text-white/80">{label}</div>
+            <div className="font-mono text-sm text-[#FFEF15]">{time}</div>
+            <div className="text-white font-normal">{label}</div>
           </li>
         ))}
       </ul>
@@ -543,19 +539,19 @@ function Timeline({ day, items }: { day: string; items: [string, string][] }) {
 
 function SponsorPlaceholder() {
   return (
-    <div className="relative grid aspect-[3/1] place-items-center rounded-xl border border-white/10 bg-white/[0.02] p-4">
-      <div className="h-full w-full rounded-md border border-dashed border-white/15"></div>
+    <div className="relative grid aspect-[3/1] place-items-center rounded-xl border border-yellow-500/20 bg-[#000000] p-4">
+      <div className="h-full w-full rounded-md border border-dashed border-yellow-500/30"></div>
     </div>
   );
 }
 
 function HoloCard() {
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-8">
-      <div className="pointer-events-none absolute -inset-1 bg-[radial-gradient(60%_40%_at_50%_0%,rgba(0,255,200,.25),transparent)]" />
+    <div className="relative overflow-hidden rounded-3xl border border-yellow-500/20 bg-[#000000] p-8">
+      <div className="pointer-events-none absolute -inset-1 bg-[radial-gradient(60%_40%_at_50%_0%,rgba(255,215,0,.25),transparent)]" />
       <div className="relative">
-        <h3 className="text-xl font-bold text-white/90">Venue perks</h3>
-        <ul className="mt-4 space-y-2 text-white/70">
+        <h3 className="text-xl font-bold text-white">Venue perks</h3>
+        <ul className="mt-4 space-y-2 text-white/80 font-normal">
           <li>• Fast Wi‑Fi & power strips</li>
           <li>• Quiet nap zone</li>
           <li>• Maker lab access</li>
@@ -573,16 +569,12 @@ function BackgroundFX() {
       aria-hidden
       className="pointer-events-none absolute inset-0 -z-10 select-none"
     >
-      {/* Big gradient blurs */}
-      <div className="absolute -left-24 top-[-10%] h-96 w-96 rounded-full bg-[#FF003C]/30 blur-[120px]" />
-      <div className="absolute right-[-10%] top-[20%] h-96 w-96 rounded-full bg-[#00BFFF]/30 blur-[120px]" />
-      <div className="absolute bottom-[-10%] left-[20%] h-96 w-96 rounded-full bg-[#FF003C]/20 blur-[140px]" />
+      {/* Subtle depth variations on bright yellow background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#FFF200] via-[#FFEF15] to-[#FFD700]" />
 
-      {/* Neon grid */}
+      {/* Dark grid overlay for depth */}
       <div className="absolute inset-x-0 bottom-0 h-[55vh]">
-        <div className="absolute inset-0 bg-[radial-gradient(1200px_300px_at_50%_120%,rgba(0,255,200,.15),transparent)]" />
-        <div className="absolute inset-0 [background-image:linear-gradient(rgba(255,255,255,.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.05)_1px,transparent_1px)] [background-size:40px_40px] [background-position:center_bottom]" />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#06060b] to-transparent" />
+        <div className="absolute inset-0 [background-image:linear-gradient(rgba(0,0,0,.15)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,.15)_1px,transparent_1px)] [background-size:40px_40px] [background-position:center_bottom]" />
       </div>
     </div>
   );
@@ -591,14 +583,14 @@ function BackgroundFX() {
 function Glitch({ children }: { children: React.ReactNode }) {
   return (
     <span className="relative inline-block text-6xl md:text-8xl font-black tracking-tight">
-      <span className="relative z-10 bg-gradient-to-r from-[#FF003C] via-[#00BFFF] to-[#FF003C] bg-clip-text text-transparent">
+      <span className="relative z-10 bg-gradient-to-r from-[#FFD700] via-[#FFA500] to-[#FFD700] bg-clip-text text-transparent">
         {children}
       </span>
-      {/* RGB ghost layers */}
-      <span className="absolute inset-0 -z-0 translate-x-[2px] translate-y-[2px] select-none text-[#FF003C]/40 blur-sm">
+      {/* RGB ghost layers - Yellow theme */}
+      <span className="absolute inset-0 -z-0 translate-x-[2px] translate-y-[2px] select-none text-[#FFD700]/40 blur-sm">
         {children}
       </span>
-      <span className="absolute inset-0 -z-0 -translate-x-[2px] -translate-y-[1px] select-none text-[#00BFFF]/40 blur-sm">
+      <span className="absolute inset-0 -z-0 -translate-x-[2px] -translate-y-[1px] select-none text-[#FFA500]/40 blur-sm">
         {children}
       </span>
     </span>
@@ -606,19 +598,35 @@ function Glitch({ children }: { children: React.ReactNode }) {
 }
 
 function NeonCity() {
+  // Pre-calculate building dimensions with seeded random for consistent server/client rendering
+  const buildings = useMemo(() => {
+    let seed = 12345; // Fixed seed for consistency
+    const rand = () => {
+      seed = (seed * 9301 + 49297) % 233280;
+      return seed / 233280;
+    };
+    
+    return Array.from({ length: 12 }).map((_, i) => {
+      const w = 20 + rand() * 40;
+      const h = 80 + rand() * 220;
+      const x = 20 + i * 48;
+      return { x, w, h };
+    });
+  }, []);
+
   return (
     <svg
       viewBox="0 0 600 420"
-      className="h-[380px] w-full animate-floaty drop-shadow-[0_0_25px_rgba(34,211,238,.35)]"
+      className="h-[380px] w-full animate-floaty drop-shadow-[0_0_25px_rgba(255,215,0,.35)]"
     >
       <defs>
         <linearGradient id="g1" x1="0" x2="1">
-          <stop offset="0%" stopColor="#FF003C" />
-          <stop offset="50%" stopColor="#00BFFF" />
-          <stop offset="100%" stopColor="#FF003C" />
+          <stop offset="0%" stopColor="#FFD700" />
+          <stop offset="50%" stopColor="#FFA500" />
+          <stop offset="100%" stopColor="#FFD700" />
         </linearGradient>
       </defs>
-      <rect x="0" y="0" width="600" height="420" fill="#0a0a12" rx="24" />
+      <rect x="0" y="0" width="600" height="420" fill="#FFEF15" rx="24" />
       {/* Horizon glow */}
       <ellipse
         cx="300"
@@ -629,12 +637,8 @@ function NeonCity() {
         opacity=".18"
       />
       {/* Buildings */}
-      {Array.from({ length: 12 }).map((_, i) => {
-          // eslint-disable-next-line react-hooks/purity
-        const w = 20 + Math.random() * 40;
-          // eslint-disable-next-line react-hooks/purity
-        const h = 80 + Math.random() * 220;
-        const x = 20 + i * 48;
+      {buildings.map((building, i) => {
+        const { x, w, h } = building;
         return (
           <g key={i}>
             <rect
@@ -653,7 +657,7 @@ function NeonCity() {
                 y={320 - h + 6 + j * 20}
                 width={w - 8}
                 height={10}
-                fill={j % 2 ? "#00BFFF" : "#FF003C"}
+                fill={j % 2 ? "#FFD700" : "#FFA500"}
                 opacity=".25"
               />
             ))}
@@ -690,7 +694,7 @@ function NeonCity() {
         width="64"
         height="22"
         rx="4"
-        fill="#00BFFF"
+        fill="#FFD700"
         opacity=".8"
       />
       <rect
@@ -699,7 +703,7 @@ function NeonCity() {
         width="40"
         height="10"
         rx="2"
-        fill="#FF003C"
+        fill="#FFA500"
         opacity=".8"
       />
     </svg>
@@ -711,9 +715,9 @@ function Logo({ className = "" }: { className?: string }) {
     <svg viewBox="0 0 64 64" className={className}>
       <defs>
         <linearGradient id="lg" x1="0" x2="1">
-          <stop offset="0%" stopColor="#FF003C" />
-          <stop offset="50%" stopColor="#00BFFF" />
-          <stop offset="100%" stopColor="#FF003C" />
+          <stop offset="0%" stopColor="#FFD700" />
+          <stop offset="50%" stopColor="#FFA500" />
+          <stop offset="100%" stopColor="#FFD700" />
         </linearGradient>
       </defs>
       <rect

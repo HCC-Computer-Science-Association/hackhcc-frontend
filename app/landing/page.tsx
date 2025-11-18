@@ -38,20 +38,20 @@ function Header() {
             hack<span className="text-cyan-300">HCC</span>
           </span>
         </a>
-        <nav className="hidden items-center gap-6 text-sm text-white/80 md:flex">
-          <a href="#about" className="hover:text-white">
+        <nav className="items-center gap-6 text-sm md:flex">
+          <a href="#about" className="text-[#2ff1ff] hover:text-white">
             About
           </a>
-          <a href="#tracks" className="hover:text-white">
+          <a href="#tracks" className="text-[#2ff1ff] hover:text-white">
             Tracks
           </a>
-          <a href="#schedule" className="hover:text-white">
+          <a href="#schedule" className="text-[#2ff1ff] hover:text-white">
             Schedule
           </a>
-          <a href="#sponsors" className="hover:text-white">
+          <a href="#sponsors" className="text-[#2ff1ff] hover:text-white">
             Sponsors
           </a>
-          <a href="#faq" className="hover:text-white">
+          <a href="#faq" className="text-[#2ff1ff] hover:text-white">
             FAQ
           </a>
           <a

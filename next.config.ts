@@ -3,7 +3,7 @@ const nextConfig = {
     output: 'export',
 
     // Required for GitHub Pages subdirectory deployment
-    basePath: process.env.NODE_ENV === 'production' ? '/hackhcc-frontend' : '',
+    basePath: process.env.NODE_ENV === 'production' ? '/' : '',
 
     // Disable image optimization for static export
     images: {
