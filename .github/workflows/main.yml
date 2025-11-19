@@ -33,6 +33,7 @@ jobs:
       
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build
+      - run: echo "hackhcc.org" > ./out/CNAME
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
