@@ -2,8 +2,7 @@
 const nextConfig = {
     output: 'export',
 
-    // Required for GitHub Pages subdirectory deployment
-    basePath: process.env.NODE_ENV === 'production' ? '/' : '',
+    // basePath is removed so it defaults to '/'
 
     // Disable image optimization for static export
     images: {
