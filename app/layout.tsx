@@ -1,11 +1,36 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
+const interceptor = localFont({
+  src: [
+    {
+      path: "./fonts/Interceptor.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Interceptor Italic.otf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "./fonts/Interceptor Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Interceptor Bold Italic.otf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+  variable: "--font-interceptor",
+});
+
+const rovelink = localFont({
+  src: "./fonts/Rovelink.otf",
+  variable: "--font-rovelink",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${interceptor.variable} ${rovelink.variable} antialiased`}
       >
         {children}
       </body>
