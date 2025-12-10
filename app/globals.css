@@ -5,8 +5,14 @@ html {
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --biscay: #1e3a76;
+  --jelly-bean: #2a6ca2;
+  --picton-blue: #3db2e1;
+  --pastel-green: #7fd959;
+  --portica: #f9e75d;
+  
+  --background: var(--biscay);
+  --foreground: var(--portica);
   --font-interceptor: sans-serif;
   --font-rovelink: sans-serif;
 }
@@ -16,12 +22,19 @@ html {
   --color-foreground: var(--foreground);
   --font-sans: var(--font-interceptor);
   --font-display: var(--font-rovelink);
+  
+  --color-biscay: var(--biscay);
+  --color-jelly-bean: var(--jelly-bean);
+  --color-picton-blue: var(--picton-blue);
+  --color-pastel-green: var(--pastel-green);
+  --color-portica: var(--portica);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Keeping consistent cyberpunk theme across modes for now */
+    --background: var(--biscay);
+    --foreground: var(--portica);
   }
 }
 
@@ -33,8 +46,8 @@ body {
 
 /* Cyberpunk Edgerunners bright neon yellow background */
 body {
-  background: #FFEF15 !important;
-  color: #000000;
+  background: var(--background) !important;
+  color: var(--foreground);
   font-family: var(--font-interceptor);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
