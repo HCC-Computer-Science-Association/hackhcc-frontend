@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# hackhcc-frontend Project
+
+This project serves as the frontend for the HackHCC application. It is built using Next.js and provides the user interface for interacting with the HackHCC platform.
+
 ## Getting Started
 
 First, run the development server:
