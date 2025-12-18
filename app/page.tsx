@@ -122,7 +122,7 @@ export default function Home() {
           {[
             ["24", "Hours"],
             ["$$$", "Prizes"],
-            ["300+", "Hackers"],
+            ["600+", "Hackers"],
             ["24/7", "Food & Mentors"],
           ].map(([num, label]) => (
             <div
