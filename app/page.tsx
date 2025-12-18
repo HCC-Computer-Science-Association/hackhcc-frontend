@@ -38,16 +38,15 @@ export default function Home() {
               FAQ
             </a>
             <Button
-              onClick={() =>
-                document
-                  .getElementById("apply")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
+              as="a"
+              href="https://registration.socio.events/e/hackhcc"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Apply Now
             </Button>
           </nav>
-          <a href="#apply" className="md:hidden">
+          <a href="https://registration.socio.events/e/hackhcc" target="_blank" rel="noopener noreferrer" className="md:hidden">
             <Button>Apply</Button>
           </a>
         </div>
@@ -75,16 +74,15 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Button
-                onClick={() =>
-                  document
-                    .getElementById("apply")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+                as="a"
+                href="https://registration.socio.events/e/hackhcc"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Apply Now
               </Button>
               <a href="#sponsors">
-                <Button variant="ghost">Sponsor us</Button>
+                <Button variant="ghost">Sponsors</Button>
               </a>
             </div>
 
@@ -122,9 +120,9 @@ export default function Home() {
       <section className="relative">
         <div className="mx-auto grid w-full max-w-7xl grid-cols-2 gap-3 px-6 md:grid-cols-4">
           {[
-            ["48", "Hours"],
-            ["$10k+", "Prizes"],
-            ["500+", "Hackers"],
+            ["24", "Hours"],
+            ["$$$", "Prizes"],
+            ["300+", "Hackers"],
             ["24/7", "Food & Mentors"],
           ].map(([num, label]) => (
             <div
@@ -188,26 +186,23 @@ export default function Home() {
       <section id="tracks" className="relative py-24">
         <div className="mx-auto w-full max-w-7xl px-6">
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">Tracks</h2>
-          <p className="mt-2 max-w-2xl text-white font-normal">
-            Choose a path or blend a few—surprise us.
-          </p>
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                t: "AI & Agents",
-                d: "Build assistants, copilots, and autonomous systems.",
+                t: "TBA",
+                d: "TBA",
               },
               {
-                t: "Cybersecurity",
-                d: "Offense, defense, detection—ship something secure.",
+                t: "TBA",
+                d: "TBA",
               },
               {
-                t: "XR & Games",
-                d: "WebXR, Three.js, and playful experiments.",
+                t: "TBA",
+                d: "TBA",
               },
               {
-                t: "Civic & Health",
-                d: "Tech for good, accessibility, health tools.",
+                t: "TBA",
+                d: "TBA",
               },
             ].map((x) => (
               <Card key={x.t} title={x.t} desc={x.d} />
@@ -222,9 +217,8 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">Prizes</h2>
           <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
             {[
-              { t: "Grand Prize", d: "$3,500 + trophies + swag" },
-              { t: "Runner Up", d: "$2,000 + swag" },
-              { t: "Best Beginner Hack", d: "$1,000 + mentorship" },
+              { t: "Grand Prize", d: "TBA" },
+              { t: "Runner Up", d: "TBA" },
             ].map((p) => (
               <Card key={p.t} title={p.t} desc={p.d} />
             ))}
@@ -235,33 +229,24 @@ export default function Home() {
       {/* SCHEDULE */}
       <section className="relative py-24">
         <div className="mx-auto w-full max-w-7xl px-6">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">Schedule (April 11-12)</h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">Schedule</h2>
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
             <Timeline
-              day="Friday"
+              day="Hackathon"
               items={[
-                ["5:00 PM", "Check‑in & badge pickup"],
-                ["6:00 PM", "Opening ceremony"],
-                ["7:00 PM", "Team formation"],
-                ["8:00 PM", "Hacking begins"],
+                ["TBA", "Check‑in & badge pickup"],
               ]}
             />
             <Timeline
-              day="Saturday"
+              day="Food"
               items={[
-                ["10:00 AM", "Workshops & mentor hours"],
-                ["12:30 PM", "Lunch"],
-                ["6:30 PM", "Dinner"],
-                ["11:59 PM", "Midnight check‑in"],
+                ["TBA", "Lunch"],
               ]}
             />
             <Timeline
-              day="Sunday"
+              day="Workshops & mentors"
               items={[
-                ["9:00 AM", "Breakfast"],
-                ["10:00 AM", "Hacking ends"],
-                ["11:00 AM", "Expo & judging"],
-                ["3:00 PM", "Closing ceremony"],
+                ["TBA", "Workshops start"],
               ]}
             />
           </div>
@@ -282,7 +267,7 @@ export default function Home() {
             ))}
           </div>
           <div className="mt-8">
-            <a href="#apply">
+            <a href="mailto:sponsorship@hackhcc.org">
               <Button>Become a sponsor</Button>
             </a>
           </div>
@@ -334,33 +319,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* APPLY / CTA */}
-      <section id="apply" className="relative py-24">
-        <div className="mx-auto w-full max-w-3xl px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">Ready to jack in?</h2>
-          <p className="mx-auto mt-2 max-w-2xl text-white font-normal">
-            Applications open soon. Join the waitlist and get notified the
-            moment we go live.
-          </p>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Thanks! You're on the list.");
-            }}
-            className="mx-auto mt-7 flex max-w-xl flex-col items-center gap-3 sm:flex-row"
-          >
-            <input
-              required
-              type="email"
-              placeholder="you@college.edu"
-              className="h-12 w-full flex-1 rounded-xl border border-picton-blue/30 bg-jelly-bean/10 px-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-picton-blue/40 font-normal"
-            />
-            <Button type="submit" className="h-12 w-full sm:w-auto">
-              Join waitlist
-            </Button>
-          </form>
-        </div>
-      </section>
+
 
       {/* FOOTER */}
       <footer className="relative bg-biscay/95 border-t border-picton-blue/20 py-10">
@@ -375,14 +334,11 @@ export default function Home() {
             <a href="#faq" className="hover:text-portica transition-colors">
               FAQ
             </a>
-            <a href="#" className="hover:text-portica transition-colors">
+            <a href="mailto:support@hackhcc.org" className="hover:text-portica transition-colors">
               Email
             </a>
-            <a href="#" className="hover:text-portica transition-colors">
-              Twitter
-            </a>
-            <a href="#" className="hover:text-portica transition-colors">
-              Instagram
+            <a href="https://www.linkedin.com/company/compscia/" target="_blank" rel="noopener noreferrer" className="hover:text-portica transition-colors">
+              LinkedIn
             </a>
           </div>
         </div>
@@ -440,14 +396,15 @@ function cx(...classes: (string | false | null | undefined)[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-function Button(
-  props: React.ButtonHTMLAttributes<HTMLButtonElement> & {
+function Button<T extends React.ElementType = "button">(
+  props: {
+    as?: T;
     variant?: "primary" | "ghost";
-  }
+  } & React.ComponentPropsWithoutRef<T>
 ) {
-  const { className, children, variant = "primary", ...rest } = props;
+  const { as: Comp = "button", className, children, variant = "primary", ...rest } = props;
   return (
-    <button
+    <Comp
       {...rest}
       className={cx(
         "relative inline-flex items-center justify-center px-5 py-3 text-sm font-semibold transition cyber-button",
@@ -463,7 +420,7 @@ function Button(
       {variant === "primary" && (
         <span className="pointer-events-none absolute inset-0 -z-0 bg-white/0 [mask-image:radial-gradient(60%_100%_at_50%_0%,#000_60%,transparent_100%)]"></span>
       )}
-    </button>
+    </Comp>
   );
 }
 
@@ -553,8 +510,6 @@ function HoloCard() {
         <h3 className="text-xl font-bold text-white">Venue perks</h3>
         <ul className="mt-4 space-y-2 text-white/80 font-normal">
           <li>• Fast Wi‑Fi & power strips</li>
-          <li>• Quiet nap zone</li>
-          <li>• Maker lab access</li>
           <li>• 24/7 snacks & coffee</li>
         </ul>
       </div>

@@ -91,7 +91,7 @@ function Hero() {
           <div id="register" className="mt-8 flex flex-wrap gap-3">
             <a
               className="rounded-xl bg-gradient-to-br from-fuchsia-500 to-cyan-400 px-6 py-3 font-semibold text-black shadow-[0_10px_30px_-10px_rgba(34,211,238,0.6)] hover:opacity-90"
-              href="https://example.com/apply"
+              href="https://registration.socio.events/e/hackhcc"
               target="_blank"
             >
               Apply Now
