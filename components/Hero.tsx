@@ -62,8 +62,7 @@ export function Hero() {
           </a>
 
           <a
-            href="#"
-            target="_blank"
+            href="#event_schedule_container"
             rel="noopener noreferrer"
             className="inline-flex cursor-pointer px-8 py-4 neon-border-magenta bg-dark-bg/50 hover:bg-cyber-magenta/10 transition-colors duration-300 backdrop-blur-sm"
           >

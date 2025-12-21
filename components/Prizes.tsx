@@ -24,7 +24,7 @@ export function Prizes() {
       amount: '$8,000',
       perks: ['Cash Prize', 'Premium Swag Pack', 'LinkedIn Feature'],
       color: 'magenta',
-      size: 'medium'
+      size: 'small'
     }
   ];
 
@@ -84,6 +84,9 @@ export function Prizes() {
                 key={index}
                 className={`${borderClass} bg-dark-bg/80 backdrop-blur-sm p-8 text-center hover:transform hover:scale-105 transition-all duration-300 ${
                   prize.size === 'large' ? 'md:col-span-3 md:row-start-1' : ''
+                }
+                ${
+                  prize.size === 'medium' ? 'md:col-span-2' : ''
                 }`}
               >
                 <Icon className={`w-16 h-16 mx-auto mb-4 ${iconColor}`} />

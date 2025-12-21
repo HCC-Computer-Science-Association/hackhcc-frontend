@@ -21,7 +21,7 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-2 text-sm text-white/70">
               <MapPin className="w-4 h-4 text-cyber-cyan" />
-              <span>Innovation District, Houston, TX</span>
+              <span>HCC, Houston, TX</span>
             </div>
           </div>
 

@@ -1,73 +1,128 @@
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Twitter } from "lucide-react";
 
 export function Team() {
   const teamMembers = [
     {
-      name: 'Alex Chen',
-      role: 'Lead Organizer',
-      bio: 'Full-stack developer & hackathon enthusiast',
-      color: 'cyan',
+      name: "Arian Din-Kirkebo",
+      role: "President",
+      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      color: "cyan",
       social: {
-        github: '#',
-        linkedin: '#',
-        twitter: '#'
-      }
+        github: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
     },
     {
-      name: 'Maria Rodriguez',
-      role: 'Tech Director',
-      bio: 'AI/ML engineer with 8+ years experience',
-      color: 'magenta',
+      name: "John Pierre",
+      role: "Vice President",
+      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      color: "magenta",
       social: {
-        github: '#',
-        linkedin: '#',
-        twitter: '#'
-      }
+        github: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
     },
     {
-      name: 'Jordan Park',
-      role: 'Sponsorship Lead',
-      bio: 'Building bridges between tech and business',
-      color: 'yellow',
+      name: "Gabriel Morales",
+      role: "Chief Information Officer",
+      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      color: "yellow",
       social: {
-        github: '#',
-        linkedin: '#',
-        twitter: '#'
-      }
+        github: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
     },
     {
-      name: 'Samantha Lee',
-      role: 'Operations Manager',
-      bio: 'Event planning pro & community builder',
-      color: 'cyan',
+      name: "Manuel Orozco",
+      role: "Chief Representative",
+      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      color: "cyan",
       social: {
-        github: '#',
-        linkedin: '#',
-        twitter: '#'
-      }
+        github: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
     },
     {
-      name: 'Marcus Williams',
-      role: 'Mentor Coordinator',
-      bio: 'Connecting hackers with industry experts',
-      color: 'magenta',
+      name: "Nelson Aviles",
+      role: "Chief Strategy Officer",
+      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      color: "magenta",
       social: {
-        github: '#',
-        linkedin: '#',
-        twitter: '#'
-      }
+        github: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
     },
     {
-      name: 'Priya Patel',
-      role: 'Marketing Lead',
-      bio: 'Digital storyteller & brand strategist',
-      color: 'yellow',
+      name: "Adil Mujeeb",
+      role: "First Minister",
+      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      color: "yellow",
       social: {
-        github: '#',
-        linkedin: '#',
-        twitter: '#'
-      }
-    }
+        github: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Madison Emshousen",
+      role: "Chief Marketing Officer",
+      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      color: "cyan",
+      social: {
+        github: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Lara Iskandar",
+      role: "Chief Communication Officer",
+      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      color: "magenta",
+      social: {
+        github: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Khizar Ahmed",
+      role: "Chief Technology Officer",
+      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      color: "yellow",
+      social: {
+        github: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Taki",
+      role: "Coding Club Officer",
+      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      color: "cyan",
+      social: {
+        github: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Rafay Ahmed Syed",
+      role: "Chief Financial Officer/Tresurer",
+      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      color: "magenta",
+      social: {
+        github: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
   ];
 
   return (
@@ -87,22 +142,28 @@ export function Team() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => {
-            const borderClass = 
-              member.color === 'cyan' ? 'neon-border-cyan' :
-              member.color === 'magenta' ? 'neon-border-magenta' :
-              'neon-border-yellow';
-            
-            const accentColor = 
-              member.color === 'cyan' ? 'text-cyber-cyan' :
-              member.color === 'magenta' ? 'text-cyber-magenta' :
-              'text-neon-yellow';
+            const borderClass =
+              member.color === "cyan"
+                ? "neon-border-cyan"
+                : member.color === "magenta"
+                ? "neon-border-magenta"
+                : "neon-border-yellow";
 
-            const gradientFrom = 
-              member.color === 'cyan' ? 'from-cyber-cyan/20' :
-              member.color === 'magenta' ? 'from-cyber-magenta/20' :
-              'from-neon-yellow/20';
+            const accentColor =
+              member.color === "cyan"
+                ? "text-cyber-cyan"
+                : member.color === "magenta"
+                ? "text-cyber-magenta"
+                : "text-neon-yellow";
+
+            const gradientFrom =
+              member.color === "cyan"
+                ? "from-cyber-cyan/20"
+                : member.color === "magenta"
+                ? "from-cyber-magenta/20"
+                : "from-neon-yellow/20";
 
             return (
               <div
@@ -111,7 +172,9 @@ export function Team() {
               >
                 {/* Avatar */}
                 <div className="relative mb-4 overflow-hidden">
-                  <div className={`w-full aspect-square ${borderClass} bg-gradient-to-br ${gradientFrom} to-transparent flex items-center justify-center`}>
+                  <div
+                    className={`w-full aspect-square ${borderClass} bg-gradient-to-br ${gradientFrom} to-transparent flex items-center justify-center`}
+                  >
                     <div className={`text-6xl ${accentColor}`}>
                       {member.name.charAt(0)}
                     </div>
@@ -119,15 +182,9 @@ export function Team() {
                 </div>
 
                 {/* Info */}
-                <h4 className="text-white mb-1">
-                  {member.name}
-                </h4>
-                <p className={`mb-3 ${accentColor}`}>
-                  {member.role}
-                </p>
-                <p className="text-sm text-white/70 mb-4">
-                  {member.bio}
-                </p>
+                <h4 className="text-white mb-1">{member.name}</h4>
+                <p className={`mb-3 ${accentColor}`}>{member.role}</p>
+                <p className="text-sm text-white/70 mb-4">{member.bio}</p>
 
                 {/* Social Links */}
                 <div className="flex gap-3">
@@ -160,12 +217,16 @@ export function Team() {
           <div className="neon-border-yellow bg-dark-bg/80 backdrop-blur-sm p-8 inline-block max-w-2xl">
             <h3 className="mb-4 neon-text-yellow">WANT TO JOIN THE TEAM?</h3>
             <p className="text-white/70 mb-6">
-              We're always looking for passionate individuals to help make HACKHCC even better. 
-              Whether you're into logistics, tech, or community building, we'd love to hear from you!
+              We're always looking for passionate individuals to help make
+              HACKHCC even better. Whether you're into logistics, tech, or
+              community building, we'd love to hear from you!
             </p>
-            <button className="px-8 py-4 neon-border-magenta hover:bg-cyber-magenta/10 transition-all duration-300">
+            <a
+              href="mailto:community@hackhcc.com?subject=Get%20Involved%20with%20HackHCC"
+              className="inline-flex cursor-pointer px-8 py-4 neon-border-magenta hover:bg-cyber-magenta/10 transition-all duration-300"
+            >
               <span className="neon-text-magenta">GET INVOLVED</span>
-            </button>
+            </a>
           </div>
         </div>
       </div>

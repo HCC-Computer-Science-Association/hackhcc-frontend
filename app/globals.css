@@ -1,64 +1,71 @@
 /* Import Fonts */
-@import url('https://fonts.cdnfonts.com/css/rovelink');
-@import url('https://fonts.cdnfonts.com/css/interceptor');
+@import url("https://fonts.cdnfonts.com/css/rovelink");
+@import url("https://fonts.cdnfonts.com/css/interceptor");
 
 html {
   scroll-behavior: smooth;
 }
 
-
 @import "tailwindcss";
-
 
 @theme {
   /* Color Palette */
   --color-dark-navy: #0a0a1f;
   --color-deep-purple: #1a0d2e;
-  --color-cyber-magenta: #E91E8C;
-  --color-cyber-cyan: #00E5FF;
-  --color-neon-yellow: #FFD700;
+  --color-cyber-magenta: #e91e8c;
+  --color-cyber-cyan: #00e5ff;
+  --color-neon-yellow: #ffd700;
   --color-dark-bg: #121228;
-  
+  --color-platinum: #e5e4e2;
+  --color-silver: #c0c0c0;
+
   /* Font Families */
-  --font-family-rovelink: 'Rovelink', sans-serif;
-  --font-family-interceptor: 'Interceptor', sans-serif;
+  --font-family-rovelink: "Rovelink", sans-serif;
+  --font-family-interceptor: "Interceptor", sans-serif;
 }
 
 :root {
   --dark-navy: #0a0a1f;
   --deep-purple: #1a0d2e;
-  --cyber-magenta: #E91E8C;
-  --cyber-cyan: #00E5FF;
-  --neon-yellow: #FFD700;
+  --cyber-magenta: #e91e8c;
+  --cyber-cyan: #00e5ff;
+  --neon-yellow: #ffd700;
   --dark-bg: #121228;
+  --platinum: #e5e4e2;
+  --silver: #c0c0c0;
 }
 
 body {
   background: var(--dark-navy) !important;
   color: var(--neon-yellow);
-  font-family: 'Interceptor', sans-serif;
+  font-family: "Interceptor", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  letter-spacing: 0.1em;
+  letter-spacing: -0.01em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Rovelink', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rovelink", sans-serif;
 }
 
 h1 {
   font-size: 3.5rem;
   font-weight: 900;
   line-height: 1.1;
-  letter-spacing: 0.1em;
+  letter-spacing: -0.02em;
 }
 
 h2 {
   font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.2;
-  letter-spacing: 0.1em;
+  letter-spacing: -0.01em;
 }
 
 h3 {
@@ -82,40 +89,61 @@ p {
   .neon-border-yellow {
     border: 2px solid var(--neon-yellow);
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.5),
-                inset 0 0 10px rgba(255, 215, 0, 0.1);
+      inset 0 0 10px rgba(255, 215, 0, 0.1);
   }
 
   .neon-border-magenta {
     border: 2px solid var(--cyber-magenta);
     box-shadow: 0 0 10px rgba(233, 30, 140, 0.5),
-                inset 0 0 10px rgba(233, 30, 140, 0.1);
+      inset 0 0 10px rgba(233, 30, 140, 0.1);
   }
 
   .neon-border-cyan {
     border: 2px solid var(--cyber-cyan);
     box-shadow: 0 0 10px rgba(0, 229, 255, 0.5),
-                inset 0 0 10px rgba(0, 229, 255, 0.1);
+      inset 0 0 10px rgba(0, 229, 255, 0.1);
+  }
+
+  .neon-border-platinum {
+    border: 2px solid var(--platinum);
+    box-shadow: 0 0 10px rgba(229, 228, 226, 0.5),
+      inset 0 0 10px rgba(229, 228, 226, 0.1);
   }
 
   .neon-text-yellow {
     color: var(--neon-yellow);
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.6),
-                 0 0 20px rgba(255, 215, 0, 0.4),
-                 0 0 30px rgba(255, 215, 0, 0.2);
+      0 0 20px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
   }
 
   .neon-text-magenta {
     color: var(--cyber-magenta);
     text-shadow: 0 0 10px rgba(233, 30, 140, 0.6),
-                 0 0 20px rgba(233, 30, 140, 0.4),
-                 0 0 30px rgba(233, 30, 140, 0.2);
+      0 0 20px rgba(233, 30, 140, 0.4), 0 0 30px rgba(233, 30, 140, 0.2);
   }
 
   .neon-text-cyan {
     color: var(--cyber-cyan);
     text-shadow: 0 0 10px rgba(0, 229, 255, 0.6),
-                 0 0 20px rgba(0, 229, 255, 0.4),
-                 0 0 30px rgba(0, 229, 255, 0.2);
+      0 0 20px rgba(0, 229, 255, 0.4), 0 0 30px rgba(0, 229, 255, 0.2);
+  }
+
+  .neon-text-platinum {
+    color: var(--platinum);
+    text-shadow: 0 0 10px rgba(229, 228, 226, 0.8),
+      0 0 20px rgba(229, 228, 226, 0.6), 0 0 30px rgba(229, 228, 226, 0.4);
+  }
+
+  .neon-border-silver {
+    border: 2px solid var(--silver);
+    box-shadow: 0 0 10px rgba(192, 192, 192, 0.5),
+      inset 0 0 10px rgba(192, 192, 192, 0.1);
+  }
+
+  .neon-text-silver {
+    color: var(--silver);
+    text-shadow: 0 0 10px rgba(192, 192, 192, 0.8),
+      0 0 20px rgba(192, 192, 192, 0.6), 0 0 30px rgba(192, 192, 192, 0.4);
   }
 
   .glitch {
@@ -124,7 +152,9 @@ p {
   }
 
   @keyframes glitch {
-    0%, 96%, 100% {
+    0%,
+    96%,
+    100% {
       transform: translate(0);
     }
     97% {
@@ -144,7 +174,7 @@ p {
   }
 
   .scanline::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -171,6 +201,6 @@ p {
 
   .logo-glow {
     filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6))
-            drop-shadow(0 0 40px rgba(255, 215, 0, 0.4));
+      drop-shadow(0 0 40px rgba(255, 215, 0, 0.4));
   }
 }
