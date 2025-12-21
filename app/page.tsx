@@ -58,7 +58,8 @@ export default function Home() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-picton-blue/30 bg-jelly-bean/20 px-3 py-1 text-xs text-white font-medium">
               <span className="h-2 w-2 animate-pulse rounded-full bg-portica shadow-[0_0_8px] shadow-portica"></span>
-              Houston Community College • In‑person • April 11-12, 2026
+              {/* Houston Community College • In‑person • April 11-12, 2026 */}
+              Houston Community College • In‑person • TBD
             </div>
             <h1 className="mt-6 text-5xl font-black leading-[1.05] tracking-tight md:text-7xl">
               <span className="block text-white font-semibold">Welcome to</span>
@@ -435,10 +436,10 @@ function useCountdown(targetISO = "2026-04-11T10:00:00-06:00") {
   }, []);
 
   const diff = Math.max(0, target - now);
-  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const m = Math.floor((diff / (1000 * 60)) % 60);
-  const s = Math.floor((diff / 1000) % 60);
+  const d = true ?  "TBD" : Math.floor(diff / (1000 * 60 * 60 * 24));
+  const h = true ?  "TBD" : Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const m = true ?  "TBD" : Math.floor((diff / (1000 * 60)) % 60);
+  const s = true ?  "TBD" : Math.floor((diff / 1000) % 60);
 
   return { d, h, m, s, done: diff <= 0 };
 }

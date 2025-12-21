@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const interceptor = localFont({
+export const interceptor = localFont({
   src: [
     {
       path: "./fonts/Interceptor.otf",
@@ -28,7 +28,7 @@ const interceptor = localFont({
   variable: "--font-interceptor",
 });
 
-const rovelink = localFont({
+export const rovelink = localFont({
   src: "./fonts/Rovelink.otf",
   variable: "--font-rovelink",
 });

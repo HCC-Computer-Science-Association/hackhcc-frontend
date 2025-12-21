@@ -1,60 +1,176 @@
+/* Import Fonts */
+@import url('https://fonts.cdnfonts.com/css/rovelink');
+@import url('https://fonts.cdnfonts.com/css/interceptor');
+
 html {
   scroll-behavior: smooth;
 }
 
+
 @import "tailwindcss";
 
+
+@theme {
+  /* Color Palette */
+  --color-dark-navy: #0a0a1f;
+  --color-deep-purple: #1a0d2e;
+  --color-cyber-magenta: #E91E8C;
+  --color-cyber-cyan: #00E5FF;
+  --color-neon-yellow: #FFD700;
+  --color-dark-bg: #121228;
+  
+  /* Font Families */
+  --font-family-rovelink: 'Rovelink', sans-serif;
+  --font-family-interceptor: 'Interceptor', sans-serif;
+}
+
 :root {
-  --biscay: #1e3a76;
-  --jelly-bean: #2a6ca2;
-  --picton-blue: #3db2e1;
-  --pastel-green: #7fd959;
-  --portica: #f9e75d;
-  
-  --background: var(--biscay);
-  --foreground: var(--portica);
-  --font-interceptor: sans-serif;
-  --font-rovelink: sans-serif;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-interceptor);
-  --font-display: var(--font-rovelink);
-  
-  --color-biscay: var(--biscay);
-  --color-jelly-bean: var(--jelly-bean);
-  --color-picton-blue: var(--picton-blue);
-  --color-pastel-green: var(--pastel-green);
-  --color-portica: var(--portica);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Keeping consistent cyberpunk theme across modes for now */
-    --background: var(--biscay);
-    --foreground: var(--portica);
-  }
+  --dark-navy: #0a0a1f;
+  --deep-purple: #1a0d2e;
+  --cyber-magenta: #E91E8C;
+  --cyber-cyan: #00E5FF;
+  --neon-yellow: #FFD700;
+  --dark-bg: #121228;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Cyberpunk Edgerunners bright neon yellow background */
-body {
-  background: var(--background) !important;
-  color: var(--foreground);
-  font-family: var(--font-interceptor);
+  background: var(--dark-navy) !important;
+  color: var(--neon-yellow);
+  font-family: 'Interceptor', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-rovelink);
+  font-family: 'Rovelink', sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@layer utilities {
+  .neon-border-yellow {
+    border: 2px solid var(--neon-yellow);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5),
+                inset 0 0 10px rgba(255, 215, 0, 0.1);
+  }
+
+  .neon-border-magenta {
+    border: 2px solid var(--cyber-magenta);
+    box-shadow: 0 0 10px rgba(233, 30, 140, 0.5),
+                inset 0 0 10px rgba(233, 30, 140, 0.1);
+  }
+
+  .neon-border-cyan {
+    border: 2px solid var(--cyber-cyan);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.5),
+                inset 0 0 10px rgba(0, 229, 255, 0.1);
+  }
+
+  .neon-text-yellow {
+    color: var(--neon-yellow);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6),
+                 0 0 20px rgba(255, 215, 0, 0.4),
+                 0 0 30px rgba(255, 215, 0, 0.2);
+  }
+
+  .neon-text-magenta {
+    color: var(--cyber-magenta);
+    text-shadow: 0 0 10px rgba(233, 30, 140, 0.6),
+                 0 0 20px rgba(233, 30, 140, 0.4),
+                 0 0 30px rgba(233, 30, 140, 0.2);
+  }
+
+  .neon-text-cyan {
+    color: var(--cyber-cyan);
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.6),
+                 0 0 20px rgba(0, 229, 255, 0.4),
+                 0 0 30px rgba(0, 229, 255, 0.2);
+  }
+
+  .glitch {
+    position: relative;
+    animation: glitch 3s infinite;
+  }
+
+  @keyframes glitch {
+    0%, 96%, 100% {
+      transform: translate(0);
+    }
+    97% {
+      transform: translate(-2px, 2px);
+    }
+    98% {
+      transform: translate(2px, -2px);
+    }
+    99% {
+      transform: translate(-2px, 2px);
+    }
+  }
+
+  .scanline {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scanline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(0, 229, 255, 0.05) 50%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    animation: scan 8s linear infinite;
+  }
+
+  @keyframes scan {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  .logo-glow {
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6))
+            drop-shadow(0 0 40px rgba(255, 215, 0, 0.4));
+  }
 }
