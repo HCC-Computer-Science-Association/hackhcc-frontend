@@ -22,19 +22,34 @@ export default function Home() {
             </span>
           </a>
           <nav className="items-center gap-6 flex">
-            <a href="#about" className="text-white font-normal hover:text-portica transition-colors">
+            <a
+              href="#about"
+              className="text-white font-normal hover:text-portica transition-colors"
+            >
               About
             </a>
-            <a href="#tracks" className="text-white font-normal hover:text-portica transition-colors">
+            <a
+              href="#tracks"
+              className="text-white font-normal hover:text-portica transition-colors"
+            >
               Tracks
             </a>
-            <a href="#prizes" className="text-white font-normal hover:text-portica transition-colors">
+            <a
+              href="#prizes"
+              className="text-white font-normal hover:text-portica transition-colors"
+            >
               Prizes
             </a>
-            <a href="#sponsors" className="text-white font-normal hover:text-portica transition-colors">
+            <a
+              href="#sponsors"
+              className="text-white font-normal hover:text-portica transition-colors"
+            >
               Sponsors
             </a>
-            <a href="#faq" className="text-white font-normal hover:text-portica transition-colors">
+            <a
+              href="#faq"
+              className="text-white font-normal hover:text-portica transition-colors"
+            >
               FAQ
             </a>
             <Button
@@ -46,7 +61,12 @@ export default function Home() {
               Apply Now
             </Button>
           </nav>
-          <a href="https://registration.socio.events/e/hackhcc" target="_blank" rel="noopener noreferrer" className="md:hidden">
+          <a
+            href="https://registration.socio.events/e/hackhcc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="md:hidden"
+          >
             <Button>Apply</Button>
           </a>
         </div>
@@ -64,9 +84,7 @@ export default function Home() {
             <h1 className="mt-6 text-5xl font-black leading-[1.05] tracking-tight md:text-7xl">
               <span className="block text-white font-semibold">Welcome to</span>
               <span className="block text-white font-black">HackHCC</span>
-              <span className="block text-white font-black">
-                CodeRunners
-              </span>
+              <span className="block text-white font-black">CodeRunners</span>
             </h1>
             <p className="mt-6 max-w-xl text-balance text-lg text-white font-normal">
               A 48‑hour student hackathon fusing code with neon‑soaked
@@ -150,7 +168,9 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="order-2 md:order-1"
           >
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">Build under neon lights</h2>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">
+              Build under neon lights
+            </h2>
             <p className="mt-4 text-white font-normal">
               HackHCC is Houston Community College’s flagship hackathon. Whether
               it’s your first hack or you’re a seasoned builder, you’ll team up,
@@ -186,7 +206,9 @@ export default function Home() {
       {/* TRACKS */}
       <section id="tracks" className="relative py-24">
         <div className="mx-auto w-full max-w-7xl px-6">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">Tracks</h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">
+            Tracks
+          </h2>
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
@@ -215,7 +237,9 @@ export default function Home() {
       {/* PRIZES */}
       <section id="prizes" className="relative py-24">
         <div className="mx-auto w-full max-w-7xl px-6">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">Prizes</h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">
+            Prizes
+          </h2>
           <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
             {[
               { t: "Grand Prize", d: "TBA" },
@@ -230,25 +254,18 @@ export default function Home() {
       {/* SCHEDULE */}
       <section className="relative py-24">
         <div className="mx-auto w-full max-w-7xl px-6">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">Schedule</h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">
+            Schedule
+          </h2>
           <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
             <Timeline
               day="Hackathon"
-              items={[
-                ["TBA", "Check‑in & badge pickup"],
-              ]}
+              items={[["TBA", "Check‑in & badge pickup"]]}
             />
-            <Timeline
-              day="Food"
-              items={[
-                ["TBA", "Lunch"],
-              ]}
-            />
+            <Timeline day="Food" items={[["TBA", "Lunch"]]} />
             <Timeline
               day="Workshops & mentors"
-              items={[
-                ["TBA", "Workshops start"],
-              ]}
+              items={[["TBA", "Workshops start"]]}
             />
           </div>
         </div>
@@ -257,7 +274,9 @@ export default function Home() {
       {/* SPONSORS */}
       <section id="sponsors" className="relative py-24">
         <div className="mx-auto w-full max-w-7xl px-6">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">Sponsors</h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">
+            Sponsors
+          </h2>
           <p className="mt-2 max-w-2xl text-white font-normal">
             Want to support Houston’s next wave of builders? We’d love to
             partner.
@@ -278,7 +297,9 @@ export default function Home() {
       {/* FAQ */}
       <section id="faq" className="relative py-24">
         <div className="mx-auto w-full max-w-5xl px-6">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">FAQ</h2>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white">
+            FAQ
+          </h2>
           <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
             {[
               [
@@ -320,8 +341,6 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* FOOTER */}
       <footer className="relative bg-biscay/95 border-t border-picton-blue/20 py-10">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
@@ -335,10 +354,18 @@ export default function Home() {
             <a href="#faq" className="hover:text-portica transition-colors">
               FAQ
             </a>
-            <a href="mailto:support@hackhcc.org" className="hover:text-portica transition-colors">
+            <a
+              href="mailto:support@hackhcc.org"
+              className="hover:text-portica transition-colors"
+            >
               Email
             </a>
-            <a href="https://www.linkedin.com/company/compscia/" target="_blank" rel="noopener noreferrer" className="hover:text-portica transition-colors">
+            <a
+              href="https://www.linkedin.com/company/compscia/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-portica transition-colors"
+            >
               LinkedIn
             </a>
           </div>
@@ -347,10 +374,16 @@ export default function Home() {
 
       {/* Global styles for effects */}
       <style jsx global>{`
-
         .cyber-button {
-            clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
-            border: 1px solid rgba(61,178,225, 0.3);
+          clip-path: polygon(
+            8px 0,
+            100% 0,
+            100% calc(100% - 8px),
+            calc(100% - 8px) 100%,
+            0 100%,
+            0 8px
+          );
+          border: 1px solid rgba(61, 178, 225, 0.3);
         }
         @keyframes floaty {
           0% {
@@ -403,7 +436,13 @@ function Button<T extends React.ElementType = "button">(
     variant?: "primary" | "ghost";
   } & React.ComponentPropsWithoutRef<T>
 ) {
-  const { as: Comp = "button", className, children, variant = "primary", ...rest } = props;
+  const {
+    as: Comp = "button",
+    className,
+    children,
+    variant = "primary",
+    ...rest
+  } = props;
   return (
     <Comp
       {...rest}
@@ -436,10 +475,10 @@ function useCountdown(targetISO = "2026-04-11T10:00:00-06:00") {
   }, []);
 
   const diff = Math.max(0, target - now);
-  const d = true ?  "TBD" : Math.floor(diff / (1000 * 60 * 60 * 24));
-  const h = true ?  "TBD" : Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const m = true ?  "TBD" : Math.floor((diff / (1000 * 60)) % 60);
-  const s = true ?  "TBD" : Math.floor((diff / 1000) % 60);
+  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const m = Math.floor((diff / (1000 * 60)) % 60);
+  const s = Math.floor((diff / 1000) % 60);
 
   return { d, h, m, s, done: diff <= 0 };
 }
@@ -461,7 +500,7 @@ function TimeBox({ label, value }: { label: string; value: number }) {
 function Card({ title, desc }: { title: string; desc: string }) {
   return (
     <div className="group relative overflow-hidden rounded-2xl border border-picton-blue/20 bg-jelly-bean/10 p-6">
-            <div
+      <div
         className="pointer-events-none absolute -inset-[1px] -z-10 rounded-2xl opacity-0 blur transition-all group-hover:opacity-100 group-hover:blur-md"
         style={{
           background:
@@ -561,7 +600,7 @@ function NeonCity() {
       seed = (seed * 9301 + 49297) % 233280;
       return seed / 233280;
     };
-    
+
     return Array.from({ length: 12 }).map((_, i) => {
       const w = 20 + rand() * 40;
       const h = 80 + rand() * 220;
