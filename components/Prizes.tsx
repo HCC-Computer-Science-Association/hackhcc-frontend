@@ -29,10 +29,10 @@ export function Prizes() {
   ];
 
   const tracks = [
-    { name: 'AI Track', prize: '$5,000' },
-    { name: 'MLH Track', prize: '$5,000' },
-    { name: 'Social Impact', prize: '$3,000' },
-    { name: 'Best Design', prize: '$2,000' }
+    { name: 'Gemini', prize: 'TBA' },
+    { name: 'ElevenLabs', prize: 'TBA' },
+    { name: 'Solana', prize: 'TBA' },
+    { name: 'Auth0', prize: 'TBA' }
   ];
 
   return (
@@ -49,14 +49,14 @@ export function Prizes() {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="mb-4">
-            <span className="neon-text-magenta">PRIZES & AWARDS</span>
+            <span className="neon-text-yellow">PRIZES & AWARDS</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-neon-yellow to-cyber-magenta mx-auto mb-4"></div>
-          <p className="text-xl text-white/80">$50,000+ in total prizes</p>
+          <p className="text-xl text-white/80">TBA</p>
         </div>
 
         {/* Main Prizes */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        {/* <div className="grid md:grid-cols-3 gap-6 mb-16">
           {prizes.map((prize, index) => {
             const Icon = prize.icon;
             const borderClass = 
@@ -105,7 +105,7 @@ export function Prizes() {
               </div>
             );
           })}
-        </div>
+        </div> */}
 
         {/* Track Prizes */}
         <div className="neon-border-cyan bg-dark-bg/80 backdrop-blur-sm p-8">

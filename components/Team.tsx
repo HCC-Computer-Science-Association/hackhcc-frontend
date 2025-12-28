@@ -4,8 +4,8 @@ export function Team() {
   const teamMembers = [
     {
       name: "Arian Din-Kirkebo",
-      role: "President",
-      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      role: "Director",
+      
       color: "cyan",
       social: {
         github: "#",
@@ -15,8 +15,8 @@ export function Team() {
     },
     {
       name: "John Pierre",
-      role: "Vice President",
-      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      role: "Co-Director",
+      
       color: "magenta",
       social: {
         github: "#",
@@ -26,8 +26,8 @@ export function Team() {
     },
     {
       name: "Gabriel Morales",
-      role: "Chief Information Officer",
-      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      role: "Co-Director & Tech Lead",
+      
       color: "yellow",
       social: {
         github: "#",
@@ -37,8 +37,8 @@ export function Team() {
     },
     {
       name: "Manuel Orozco",
-      role: "Chief Representative",
-      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      role: "Experience & Corporate Relations",
+      
       color: "cyan",
       social: {
         github: "#",
@@ -48,8 +48,8 @@ export function Team() {
     },
     {
       name: "Nelson Aviles",
-      role: "Chief Strategy Officer",
-      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      role: "Experience & Corporate Relations",
+      
       color: "magenta",
       social: {
         github: "#",
@@ -59,8 +59,8 @@ export function Team() {
     },
     {
       name: "Adil Mujeeb",
-      role: "First Minister",
-      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      role: "Experience",
+      
       color: "yellow",
       social: {
         github: "#",
@@ -70,8 +70,8 @@ export function Team() {
     },
     {
       name: "Madison Emshousen",
-      role: "Chief Marketing Officer",
-      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      role: "Marketing & Design Lead",
+      
       color: "cyan",
       social: {
         github: "#",
@@ -81,8 +81,8 @@ export function Team() {
     },
     {
       name: "Lara Iskandar",
-      role: "Chief Communication Officer",
-      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      role: "Marketing & Design Lead",
+      
       color: "magenta",
       social: {
         github: "#",
@@ -92,8 +92,8 @@ export function Team() {
     },
     {
       name: "Khizar Ahmed",
-      role: "Chief Technology Officer",
-      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      role: "Tech Lead",
+      
       color: "yellow",
       social: {
         github: "#",
@@ -103,8 +103,8 @@ export function Team() {
     },
     {
       name: "Taki",
-      role: "Coding Club Officer",
-      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      role: "Experience",
+      
       color: "cyan",
       social: {
         github: "#",
@@ -114,8 +114,7 @@ export function Team() {
     },
     {
       name: "Rafay Ahmed Syed",
-      role: "Chief Financial Officer/Tresurer",
-      bio: "Vestibulum erat massa, ultricies congue dapibus ac",
+      role: "Experience & Finance",
       color: "magenta",
       social: {
         github: "#",
@@ -134,7 +133,7 @@ export function Team() {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="mb-4">
-            <span className="neon-text-cyan">MEET THE TEAM</span>
+            <span className="neon-text-yellow">MEET THE TEAM</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyber-cyan to-neon-yellow mx-auto mb-4"></div>
           <p className="text-xl text-white/80">
@@ -184,7 +183,6 @@ export function Team() {
                 {/* Info */}
                 <h4 className="text-white mb-1">{member.name}</h4>
                 <p className={`mb-3 ${accentColor}`}>{member.role}</p>
-                <p className="text-sm text-white/70 mb-4">{member.bio}</p>
 
                 {/* Social Links */}
                 <div className="flex gap-3">
@@ -213,7 +211,7 @@ export function Team() {
         </div>
 
         {/* Join the Team CTA */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="neon-border-yellow bg-dark-bg/80 backdrop-blur-sm p-8 inline-block max-w-2xl">
             <h3 className="mb-4 neon-text-yellow">WANT TO JOIN THE TEAM?</h3>
             <p className="text-white/70 mb-6">
@@ -222,13 +220,13 @@ export function Team() {
               community building, we'd love to hear from you!
             </p>
             <a
-              href="mailto:community@hackhcc.com?subject=Get%20Involved%20with%20HackHCC"
+              href="mailto:officialhackhcc@gmail.com?subject=Get%20Involved%20with%20HackHCC"
               className="inline-flex cursor-pointer px-8 py-4 neon-border-magenta hover:bg-cyber-magenta/10 transition-all duration-300"
             >
               <span className="neon-text-magenta">GET INVOLVED</span>
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

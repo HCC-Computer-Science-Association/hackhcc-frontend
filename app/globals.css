@@ -18,6 +18,7 @@ html {
   --color-dark-bg: #121228;
   --color-platinum: #e5e4e2;
   --color-silver: #c0c0c0;
+  --color-cp-yellow: #fcee0a;
 
   /* Font Families */
   --font-family-rovelink: "Rovelink", sans-serif;
@@ -33,6 +34,7 @@ html {
   --dark-bg: #121228;
   --platinum: #e5e4e2;
   --silver: #c0c0c0;
+  --cp-yellow: #fcee0a;
 }
 
 body {
@@ -202,5 +204,26 @@ p {
   .logo-glow {
     filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6))
       drop-shadow(0 0 40px rgba(255, 215, 0, 0.4));
+  }
+
+  .cp-btn {
+    align-items: center;
+    border-style: solid;
+    border-width: 0 20px;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    min-width: 232px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .cp-btn-black {
+    border-image: url('../img/cp-btn-black.svg') 0 20 fill;
+    color: #000;
   }
 }
