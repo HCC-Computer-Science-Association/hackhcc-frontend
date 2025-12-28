@@ -56,7 +56,7 @@ export function FAQ() {
           <div className="w-24 h-1 bg-gradient-to-r from-cyber-magenta to-cyber-cyan mx-auto"></div>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 bg-dark-navy p-4">
           {faqs.map((faq, index) => (
             <div
               key={index}

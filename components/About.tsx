@@ -62,75 +62,76 @@ export function About() {
             </div>
           </div>
         </div>
+        <div className="bg-dark-navy p-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16  ">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              const colorClass =
+                feature.color === "cyan"
+                  ? "neon-border-cyan"
+                  : feature.color === "magenta"
+                  ? "neon-border-magenta"
+                  : "neon-border-yellow";
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            const colorClass =
-              feature.color === "cyan"
-                ? "neon-border-cyan"
-                : feature.color === "magenta"
-                ? "neon-border-magenta"
-                : "neon-border-yellow";
-
-            return (
-              <div
-                key={index}
-                className={`${colorClass} bg-dark-bg/80 backdrop-blur-sm p-6 hover:transform hover:scale-105 transition-all duration-300 group`}
-              >
-                <Icon
-                  className={`w-12 h-12 mb-4 ${
-                    feature.color === "cyan"
-                      ? "text-cyber-cyan"
-                      : feature.color === "magenta"
-                      ? "text-cyber-magenta"
-                      : "text-neon-yellow"
-                  } group-hover:animate-pulse`}
-                />
-                <h4 className="mb-2 text-white">{feature.title}</h4>
-                <p className="text-white/70 text-sm">{feature.description}</p>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="relative">
-            <div className="neon-border-magenta overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1753998941587-5befe71f4572?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwY29kaW5nJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NjYyNzYxNTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Coding atmosphere"
-                className="w-full h-auto opacity-80"
-              />
-            </div>
+              return (
+                <div
+                  key={index}
+                  className={`${colorClass} bg-dark-bg/80 backdrop-blur-sm p-6 hover:transform hover:scale-105 transition-all duration-300 group`}
+                >
+                  <Icon
+                    className={`w-12 h-12 mb-4 ${
+                      feature.color === "cyan"
+                        ? "text-cyber-cyan"
+                        : feature.color === "magenta"
+                        ? "text-cyber-magenta"
+                        : "text-neon-yellow"
+                    } group-hover:animate-pulse`}
+                  />
+                  <h4 className="mb-2 text-white">{feature.title}</h4>
+                  <p className="text-white/70 text-sm">{feature.description}</p>
+                </div>
+              );
+            })}
           </div>
 
-          <div>
-            <h3 className="mb-4 text-dark-navy">
-              WHY HACKHCC: CODERUNNERS?
-            </h3>
-            <p className="text-dark-navy/70 mb-4">
-              In the heart of Houston's tech district, we're bringing together
-              the brightest minds to hack the future. Whether you're a seasoned
-              developer or just starting your coding journey, HACKHCC:
-              CODERUNNERS is your gateway to the next level.
-            </p>
-            <p className="text-dark-navy/70 mb-6">
-              Push the boundaries of what's possible. Our venue provides the
-              perfect environment for innovation and collaboration.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-cyber-cyan rounded-full animate-pulse"></div>
-                <span className="text-dark-navy/70">All skill levels welcome</span>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="relative">
+              <div className="neon-border-magenta overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1753998941587-5befe71f4572?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwY29kaW5nJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NjYyNzYxNTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Coding atmosphere"
+                  className="w-full h-auto opacity-80"
+                />
               </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-cyber-magenta rounded-full animate-pulse"></div>
-                <span className="text-dark-navy/70">Free food & swag</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-neon-yellow rounded-full animate-pulse"></div>
-                <span className="text-dark-navy/70">24/7 mentorship</span>
+            </div>
+
+            <div>
+              <h3 className="mb-4 text-white">WHY HACKHCC: CODERUNNERS?</h3>
+              <p className="text-white/70 mb-4">
+                In the heart of Houston's tech district, we're bringing together
+                the brightest minds to hack the future. Whether you're a
+                seasoned developer or just starting your coding journey,
+                HACKHCC: CODERUNNERS is your gateway to the next level.
+              </p>
+              <p className="text-white/70 mb-6">
+                Push the boundaries of what's possible. Our venue provides the
+                perfect environment for innovation and collaboration.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-cyber-cyan rounded-full animate-pulse"></div>
+                  <span className="text-white/70">
+                    All skill levels welcome
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-cyber-magenta rounded-full animate-pulse"></div>
+                  <span className="text-white/70">Free food & swag</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-neon-yellow rounded-full animate-pulse"></div>
+                  <span className="text-white/70">24/7 mentorship</span>
+                </div>
               </div>
             </div>
           </div>

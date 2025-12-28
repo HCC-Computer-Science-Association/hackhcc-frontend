@@ -10,7 +10,6 @@ export function Team() {
       social: {
         github: "#",
         linkedin: "#",
-        twitter: "#",
       },
     },
     {
@@ -21,7 +20,6 @@ export function Team() {
       social: {
         github: "#",
         linkedin: "#",
-        twitter: "#",
       },
     },
     {
@@ -32,7 +30,7 @@ export function Team() {
       social: {
         github: "#",
         linkedin: "#",
-        twitter: "#",
+        
       },
     },
     {
@@ -43,7 +41,7 @@ export function Team() {
       social: {
         github: "#",
         linkedin: "#",
-        twitter: "#",
+        
       },
     },
     {
@@ -54,7 +52,7 @@ export function Team() {
       social: {
         github: "#",
         linkedin: "#",
-        twitter: "#",
+        
       },
     },
     {
@@ -65,7 +63,7 @@ export function Team() {
       social: {
         github: "#",
         linkedin: "#",
-        twitter: "#",
+        
       },
     },
     {
@@ -76,7 +74,7 @@ export function Team() {
       social: {
         github: "#",
         linkedin: "#",
-        twitter: "#",
+        
       },
     },
     {
@@ -87,7 +85,7 @@ export function Team() {
       social: {
         github: "#",
         linkedin: "#",
-        twitter: "#",
+        
       },
     },
     {
@@ -98,7 +96,7 @@ export function Team() {
       social: {
         github: "#",
         linkedin: "#",
-        twitter: "#",
+        
       },
     },
     {
@@ -109,7 +107,7 @@ export function Team() {
       social: {
         github: "#",
         linkedin: "#",
-        twitter: "#",
+        
       },
     },
     {
@@ -119,7 +117,7 @@ export function Team() {
       social: {
         github: "#",
         linkedin: "#",
-        twitter: "#",
+        
       },
     },
   ];
@@ -133,7 +131,7 @@ export function Team() {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="mb-4">
-            <span className="neon-text-yellow">MEET THE TEAM</span>
+            <span className="text-white">MEET THE TEAM</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyber-cyan to-neon-yellow mx-auto mb-4"></div>
           <p className="text-xl text-white/80">

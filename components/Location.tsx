@@ -6,9 +6,9 @@ export function Location() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <MapPin className="w-10 h-10 text-cyber-yellow" />
+            <MapPin className="w-10 h-10 text-white" />
             <h2>
-              <span className="neon-text-yellow">LOCATION</span>
+              <span className="text-white">LOCATION</span>
             </h2>
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-cyber-cyan to-cyber-magenta mx-auto mb-4"></div>
