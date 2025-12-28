@@ -4,46 +4,57 @@ export function Sponsors() {
   // Mock sponsor data
   const sponsorTiers = [
     {
-      tier: "PLATINUM",
-      color: "platinum",
-      sponsors: [
-        { name: "TechCorp", logo: "⚡" },
-        { name: "CloudNet", logo: "☁️" },
-      ],
-    },
-    {
-      tier: "GOLD",
+      tier: "NEXUS",
       color: "yellow",
       sponsors: [
-        { name: "DataSystems", logo: "📊" },
-        { name: "AI Labs", logo: "🤖" },
-        { name: "CyberSec", logo: "🔒" },
+        { name: "TBA", logo: "" },
+        { name: "TBA", logo: "" },
       ],
     },
     {
-      tier: "SILVER",
-      color: "silver",
+      tier: "GRID",
+      color: "cyan",
       sponsors: [
-        { name: "StartupHub", logo: "🚀" },
-        { name: "DevTools", logo: "🛠️" },
-        { name: "CodeAcademy", logo: "📚" },
-        { name: "InnovateLab", logo: "💡" },
+        { name: "TBA", logo: "" },
+        { name: "TBA", logo: "" },
+        { name: "TBA", logo: "" },
+      ],
+    },
+    {
+      tier: "CIRCUIT",
+      color: "red",
+      sponsors: [
+        { name: "TBA", logo: "" },
+        { name: "TBA", logo: "" },
+        { name: "TBA", logo: "" },
+        { name: "TBA", logo: "" },
+      ],
+    },
+    {
+      tier: "SHARD",
+      color: "platinum",
+      sponsors: [
+        { name: "TBA", logo: "" },
+        { name: "TBA", logo: "" },
+        { name: "TBA", logo: "" },
+        { name: "TBA", logo: "" },
+        { name: "TBA", logo: "" },
       ],
     },
   ];
 
   return (
-    <section className="py-20 px-4 bg-dark-bg">
+    <section className="py-20 px-4 bg-cp-yellow">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Sparkles className="w-10 h-10 text-neon-yellow" />
+            <Sparkles className="w-10 h-10 text-dark-navy" />
             <h2>
-              <span className="neon-text-yellow">OUR SPONSORS</span>
+              <span className="text-dark-navy">OUR SPONSORS</span>
             </h2>
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-neon-yellow to-cyber-magenta mx-auto mb-4"></div>
-          <p className="text-white/70">Powered by the best in tech</p>
+          <p className="text-dark-navy/70">Powered by the best in tech</p>
         </div>
 
         <div className="space-y-12">
@@ -72,7 +83,7 @@ export function Sponsors() {
 
             return (
               <div key={tierIndex}>
-                <h3 className={`text-center mb-6 ${textClass}`}>{tier.tier}</h3>
+                <h3 className={`text-center mb-6 text-dark-navy`}>{tier.tier}</h3>
                 <div
                   className={`grid ${
                     tier.sponsors.length === 2
@@ -100,7 +111,7 @@ export function Sponsors() {
         {/* Become a Sponsor CTA */}
         <div className="mt-16 text-center">
           <div className="neon-border-magenta bg-dark-navy/80 backdrop-blur-sm p-12 inline-block">
-            <h3 className="mb-4 neon-text-magenta">
+            <h3 className="mb-4 text-white">
               INTERESTED IN SPONSORING?
             </h3>
             <p className="text-white/70 mb-6 max-w-2xl">
@@ -109,10 +120,10 @@ export function Sponsors() {
               Houston tech community.
             </p>
             <a
-              href="mailto:sponsors@hackhcc.com?subject=Sponsorship%20Packages%20Inquiry"
+              href="mailto:officialhackhcc@gmail.com?subject=Sponsorship%20Packages%20Inquiry"
               className="inline-flex cursor-pointer px-8 py-4 bg-neon-yellow text-dark-navy hover:bg-neon-yellow/90 transition-all duration-300 shadow-[0_0_20px_rgba(255,215,0,0.5)]"
             >
-              <span className="font-bold">VIEW SPONSORSHIP PACKAGES</span>
+              <span className="font-bold">CONTACT US</span>
             </a>
           </div>
         </div>

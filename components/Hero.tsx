@@ -27,15 +27,10 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 text-center scanline">
-        <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 neon-border-cyan bg-dark-bg/80 rounded-full backdrop-blur-sm">
-          <Terminal className="w-4 h-4 text-cyber-cyan" />
-          <span className="text-cyber-cyan">
-            Houston, Texas // April 11-12, 2026
-          </span>
-        </div>
+       
 
         {/* Logo Image */}
-        <div className="mb-8 flex justify-center glitch">
+        <div className="flex justify-center glitch">
           <Image
             src="/hackhcc-coderunners-logo.png"
             alt="HackHCC: Coderunners Logo"
@@ -46,28 +41,24 @@ export function Hero() {
           />
         </div>
 
-        <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto">
-          Take your code to the moon. 24 hours of innovation, collaboration, and
-          limitless possibilities.
-        </p>
+         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 neon-border-cyan bg-dark-bg/80 rounded-full backdrop-blur-sm">
+          <Terminal className="w-4 h-4 text-cyber-cyan" />
+          <span className="text-cyber-cyan">
+            Houston, Texas // April 11-12, 2026
+          </span>
+        </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-8">
           <a
             href="https://registration.socio.events/e/hackhcc"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex cursor-pointer px-8 py-4 bg-neon-yellow text-dark-navy hover:bg-neon-yellow/90 transition-all duration-300 overflow-hidden shadow-[0_0_20px_rgba(255,215,0,0.5)] hover:shadow-[0_0_30px_rgba(255,215,0,0.8)]"
+            className="group relative inline-flex cursor-pointer px-8 py-4 
+            bg-neon-yellow text-dark-navy hover:bg-neon-yellow/90 transition-all duration-300 overflow-hidden shadow-[0_0_20px_rgba(255,215,0,0.5)] hover:shadow-[0_0_30px_rgba(255,215,0,0.8)] "
           >
             <span className="relative z-10 font-bold">GET TICKET</span>
           </a>
 
-          <a
-            href="#event_schedule_container"
-            rel="noopener noreferrer"
-            className="inline-flex cursor-pointer px-8 py-4 neon-border-magenta bg-dark-bg/50 hover:bg-cyber-magenta/10 transition-colors duration-300 backdrop-blur-sm"
-          >
-            <span className="text-cyber-magenta">VIEW SCHEDULE</span>
-          </a>
         </div>
 
         {/* Floating Icons */}

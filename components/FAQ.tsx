@@ -7,14 +7,19 @@ export function FAQ() {
 
   const faqs = [
     {
+      question: "What is a hackathon?",
+      answer:
+        "A hackathon is a 24-hour competition where you and up to 3 teammates build a software project from scratch and compete against other groups for prizes. Sponsors will also provide workshops, events, and activities throughout the weekend to help you learn more about the field of technology!",
+    },
+    {
       question: "Who can participate?",
       answer:
-        "Anyone! Whether you're a student, professional, or hobbyist - if you're passionate about tech and innovation, you're welcome. Teams can have up to 4 members.",
+        "Everyone is welcome to come, and no experience is necessary to attend! We will even be hosting workshops to introduce new hackers to industry programs and technologies.",
     },
     {
       question: "What should I bring?",
       answer:
-        "Bring your laptop, chargers, toiletries, and enthusiasm! We'll provide food, drinks, workspace, and WiFi. Don't forget a issued ID for check-in.",
+        "You just need to bring a laptop, charger, and a hacking spirit to participate! We also recommend having a compiler, packages, or any packaging tools ready beforehand. We will be providing internet connectivity, and will also have free food throughout the event!",
     },
     {
       question: "Do I need a team?",
@@ -29,23 +34,23 @@ export function FAQ() {
     {
       question: "What can I build?",
       answer:
-        "Anything! Apps, websites, hardware projects, games, AI models - as long as you create it during the hackathon. We have special tracks for it.",
+        "Anything! Apps, websites, hardware projects, games, AI models, as long as you create it during the hackathon. We have special tracks for it.",
     },
     {
       question: "Are there travel reimbursements?",
       answer:
-        "No! We don't offer travel reimbursements for participants.",
+        "No, we don't offer travel reimbursements for participants.",
     },
   ];
 
   return (
-    <section className="py-20 px-4 bg-dark-bg">
+    <section className="py-20 px-4 bg-cp-yellow">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <HelpCircle className="w-10 h-10 text-cyber-magenta" />
+            <HelpCircle className="w-10 h-10 text-dark-navy" />
             <h2>
-              <span className="neon-text-magenta">FAQ</span>
+              <span className="text-dark-navy">FAQ</span>
             </h2>
           </div>
           <div className="w-24 h-1 bg-gradient-to-r from-cyber-magenta to-cyber-cyan mx-auto"></div>
@@ -81,12 +86,12 @@ export function FAQ() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-white/70 mb-4">Still have questions?</p>
+          <p className="text-dark-navy/70 mb-4">Still have questions?</p>
           <a
-            href="mailto:hello@hackhcc.com?subject=Contact%20HackHCC"
-            className="inline-flex cursor-pointer px-6 py-3 neon-border-yellow hover:bg-neon-yellow/10 transition-all duration-300"
+            href="mailto:officialhackhcc@gmail.com?subject=Contact%20HackHCC"
+            className="inline-flex cursor-pointer px-6 py-3 bg-dark-bg "
           >
-            <span className="neon-text-yellow">Contact Us</span>
+            <span className="text-cp-yellow">Contact Us</span>
           </a>
         </div>
       </div>

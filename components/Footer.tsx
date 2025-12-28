@@ -29,13 +29,15 @@ export function Footer() {
           <div>
             <h4 className="text-white mb-4">QUICK LINKS</h4>
             <ul className="space-y-2">
-              {['About', 'Schedule', 'Prizes', 'Sponsors', 'FAQ', 'Code of Conduct'].map((link) => (
-                <li key={link}>
+              {[{label: 'About', link: '#'},{label: 'Schedule', link: '#'},{label: 'Prizes', link: '#'},{label: 'Sponsors', link: '#'},{label: 'FAQ', link: '#'},{label: 'Code of Conduct', link: 'https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md'},].map((e) => (
+                <li key={e.label}>
                   <a
-                    href={`#${link.toLowerCase()}`}
+                    href={`${e.link.toLowerCase()}`}
+                    
+                    target={`${e.label === "Code of Conduct" ? "_blank" : "_self"}`}
                     className="text-white/70 hover:text-cyber-cyan transition-colors duration-300 text-sm"
                   >
-                    {link}
+                    {e.label}
                   </a>
                 </li>
               ))}
@@ -47,7 +49,6 @@ export function Footer() {
             <h4 className="text-white mb-4">CONNECT</h4>
             <div className="flex gap-4 mb-4">
               {[
-                { icon: Twitter, href: '#' },
                 { icon: Github, href: '#' },
                 { icon: Instagram, href: '#' },
                 { icon: Linkedin, href: '#' }
@@ -65,11 +66,11 @@ export function Footer() {
               })}
             </div>
             <a
-              href="mailto:hello@hackhcc.com"
+              href="mailto:officialhackhcc@gmail.com"
               className="flex items-center gap-2 text-sm text-white/70 hover:text-cyber-cyan transition-colors duration-300"
             >
               <Mail className="w-4 h-4" />
-              <span>hello@hackhcc.com</span>
+              <span>officialhackhcc@gmail.com</span>
             </a>
           </div>
         </div>

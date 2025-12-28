@@ -58,16 +58,17 @@ export function Schedule() {
   ];
 
   return (
-    <section id="event_schedule_container" className="py-20 px-4 bg-dark-bg">
+    <section id="event_schedule_container" className="py-20 px-4 bg-cp-yellow">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="mb-4">
-            <span  className="neon-text-cyan">EVENT SCHEDULE</span>
+            <span  className="text-dark-navy">EVENT SCHEDULE</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyber-cyan to-cyber-magenta mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-cyber-cyan to-cyber-magenta mx-auto mb-4"></div>
+          <p className="text-xl text-dark-navy/80">TBA</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        {/* <div className="grid lg:grid-cols-2 gap-8">
           {scheduleData.map((day, dayIndex) => (
             <div
               key={dayIndex}
@@ -100,7 +101,7 @@ export function Schedule() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
