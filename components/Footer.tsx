@@ -80,7 +80,7 @@ export function Footer() {
           <p className="text-sm text-white/70">
             © 2025 HACKHCC: CODERUNNERS. All rights reserved.
           </p>
-          <div className="flex gap-6">
+          {/* <div className="flex gap-6">
             <a
               href="#"
               className="text-sm text-white/70 hover:text-cyber-cyan transition-colors duration-300"
@@ -93,7 +93,7 @@ export function Footer() {
             >
               Terms of Service
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

@@ -196,12 +196,7 @@ export function Team() {
                   >
                     <Linkedin className="w-4 h-4 text-white/70" />
                   </a>
-                  <a
-                    href={member.social.twitter}
-                    className="w-8 h-8 border border-white/30 hover:border-cyber-cyan flex items-center justify-center transition-all duration-300 hover:bg-cyber-cyan/10"
-                  >
-                    <Twitter className="w-4 h-4 text-white/70" />
-                  </a>
+
                 </div>
               </div>
             );
