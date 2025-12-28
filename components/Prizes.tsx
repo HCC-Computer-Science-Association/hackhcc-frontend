@@ -49,7 +49,7 @@ export function Prizes() {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="mb-4">
-            <span className="neon-text-yellow">PRIZES & AWARDS</span>
+            <span className="text-white">PRIZES & AWARDS</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-neon-yellow to-cyber-magenta mx-auto mb-4"></div>
           <p className="text-xl text-white/80">TBA</p>
@@ -111,7 +111,7 @@ export function Prizes() {
         <div className="neon-border-cyan bg-dark-bg/80 backdrop-blur-sm p-8">
           <div className="flex items-center justify-center gap-3 mb-8">
             <Sparkles className="w-8 h-8 text-cyber-cyan" />
-            <h3 className="neon-text-cyan">SPECIAL TRACK PRIZES</h3>
+            <h3 className="text-white">SPECIAL TRACK PRIZES</h3>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">

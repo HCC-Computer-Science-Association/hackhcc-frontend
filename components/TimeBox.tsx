@@ -5,7 +5,7 @@ export function TimeBox({ label, value }: { label: string; value: number | strin
       <div className="rounded-xl border border-picton-blue/30 bg-jelly-bean/20 px-3 py-2 font-semibold text-portica ">
         {padded}
       </div>
-      <div className="mt-1 text-[10px] uppercase tracking-widest text-white/70 font-medium">
+      <div className="mt-1 text-[10px] uppercase tracking-widest text-dark-navy/70 font-medium">
         {label}
       </div>
     </div>
