@@ -154,6 +154,7 @@ p {
     position: relative;
     animation: glitch 3s infinite;
   }
+  
 
   @keyframes glitch {
     0%,
@@ -228,4 +229,15 @@ p {
     border-image: url('../img/cp-btn-black.svg') 0 20 fill;
     color: #000;
   }
+
+  .cosplay-guides {
+    background-color: #fcee0a;
+    background-image: url(/build/images/razor-099e4b40.svg);
+    background-position: 100% 0;
+    background-repeat: repeat-x;
+    background-size: auto 45px;
+    padding: 120px 50px;
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+}
 }

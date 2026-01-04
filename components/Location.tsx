@@ -2,11 +2,10 @@ import { MapPin } from 'lucide-react';
 
 export function Location() {
   return (
-    <section className="py-20 px-4 bg-dark-navy">
+    <section id="location" className="py-20 px-4 bg-dark-navy ">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <MapPin className="w-10 h-10 text-white" />
             <h2>
               <span className="text-white">LOCATION</span>
             </h2>

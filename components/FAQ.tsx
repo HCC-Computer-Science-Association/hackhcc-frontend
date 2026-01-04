@@ -38,63 +38,72 @@ export function FAQ() {
     },
     {
       question: "Are there travel reimbursements?",
-      answer:
-        "No, we don't offer travel reimbursements for participants.",
+      answer: "No, we don't offer travel reimbursements for participants.",
     },
   ];
 
   return (
-    <section id="faq" className="py-20 px-4 bg-cp-yellow">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <HelpCircle className="w-10 h-10 text-dark-navy" />
-            <h2>
-              <span className="text-dark-navy">FAQ</span>
-            </h2>
-          </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyber-magenta to-cyber-cyan mx-auto"></div>
-        </div>
-
-        <div className="space-y-4 bg-dark-navy p-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border-2 border-white/20 bg-dark-navy/80 backdrop-blur-sm hover:border-cyber-cyan transition-all duration-300"
-            >
-              <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-4 flex items-center justify-between text-left"
-              >
-                <h4 className="text-white">{faq.question}</h4>
-                <ChevronDown
-                  className={`w-5 h-5 text-cyber-cyan transition-transform duration-300 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? "max-h-48" : "max-h-0"
-                }`}
-              >
-                <p className="px-6 pb-4 text-white/70">{faq.answer}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <p className="text-dark-navy/70 mb-4">Still have questions?</p>
-          <a
-            href="mailto:officialhackhcc@gmail.com?subject=Contact%20HackHCC"
-            className="inline-flex cursor-pointer px-6 py-3 bg-dark-bg "
-          >
-            <span className="text-cp-yellow">Contact Us</span>
-          </a>
-        </div>
+    <>
+      <div className="bg-[initial] bg-[url('../img/separator-yellow-f58e9aba.svg')]   w-full z-1">
+        hackerpsycho
       </div>
-    </section>
+      <section id="faq" className="py-20 px-4 bg-cp-yellow">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <HelpCircle className="w-10 h-10 text-dark-navy" />
+              <h2>
+                <span className="text-dark-navy">FAQ</span>
+              </h2>
+            </div>
+            <div className="w-24 h-1 bg-gradient-to-r from-cyber-magenta to-cyber-cyan mx-auto"></div>
+          </div>
+
+          <div className="space-y-4 bg-dark-navy p-4">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="border-2 border-white/20 bg-dark-navy/80 backdrop-blur-sm hover:border-cyber-cyan transition-all duration-300"
+              >
+                <button
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
+                  className="w-full px-6 py-4 flex items-center justify-between text-left"
+                >
+                  <h4 className="text-white">{faq.question}</h4>
+                  <ChevronDown
+                    className={`w-5 h-5 text-cyber-cyan transition-transform duration-300 ${
+                      openIndex === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    openIndex === index ? "max-h-48" : "max-h-0"
+                  }`}
+                >
+                  <p className="px-6 pb-4 text-white/70">{faq.answer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-dark-navy/70 mb-4">Still have questions?</p>
+            <a
+              href="mailto:officialhackhcc@gmail.com?subject=Contact%20HackHCC"
+              className="inline-flex cursor-pointer px-6 py-3 bg-dark-bg "
+            >
+              <span className="text-cp-yellow">Contact Us</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <div className="bg-cp-yellow bg-[url('../img/razor-099e4b40.svg')]  bg-[length:auto_45px] bg-[right_bottom] bg-repeat-x rotate-180 py-2 px-[50px] -translate-y-[2px]">
+        Elmo
+      </div>
+    </>
   );
 }

@@ -35,7 +35,11 @@ export function About() {
   const { d, h, m, s } = useCountdown("2026-04-11T10:00:00-06:00");
 
   return (
-    <section id="about" className="py-20 px-4 relative overflow-hidden  bg-cp-yellow">
+    <>
+    <div className="bg-[initial] bg-[url('../img/separator-yellow-f58e9aba.svg')]   w-full z-1">
+      Code Runners
+    </div>
+    <section id="about" className="py-20 px-4 relative overflow-hidden  bg-cp-yellow ">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-cyber-cyan/5 blur-3xl rounded-full"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyber-magenta/5 blur-3xl rounded-full"></div>
@@ -78,7 +82,7 @@ export function About() {
                   key={index}
                   className={`${colorClass} bg-dark-bg/80 backdrop-blur-sm p-6 hover:transform hover:scale-105 transition-all duration-300 group`}
                 >
-                  <Icon
+                  {/* <Icon
                     className={`w-12 h-12 mb-4 ${
                       feature.color === "cyan"
                         ? "text-cyber-cyan"
@@ -86,7 +90,7 @@ export function About() {
                         ? "text-cyber-magenta"
                         : "text-neon-yellow"
                     } group-hover:animate-pulse`}
-                  />
+                  /> */}
                   <h4 className="mb-2 text-white">{feature.title}</h4>
                   <p className="text-white/70 text-sm">{feature.description}</p>
                 </div>
@@ -138,5 +142,10 @@ export function About() {
         </div>
       </div>
     </section>
+    <div className="bg-cp-yellow bg-[url('../img/razor-099e4b40.svg')]  bg-[length:auto_45px] bg-[right_bottom] bg-repeat-x rotate-180 px-[50px] -translate-y-[2px]">
+CSA
+    </div>
+    </>
+
   );
 }

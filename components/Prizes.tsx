@@ -110,7 +110,6 @@ export function Prizes() {
         {/* Track Prizes */}
         <div className="neon-border-cyan bg-dark-bg/80 backdrop-blur-sm p-8">
           <div className="flex items-center justify-center gap-3 mb-8">
-            <Sparkles className="w-8 h-8 text-cyber-cyan" />
             <h3 className="text-white">SPECIAL TRACK PRIZES</h3>
           </div>
           
