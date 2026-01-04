@@ -51,7 +51,6 @@ export function FAQ() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <HelpCircle className="w-10 h-10 text-dark-navy" />
               <h2>
                 <span className="text-dark-navy">FAQ</span>
               </h2>
@@ -63,13 +62,13 @@ export function FAQ() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="border-2 border-white/20 bg-dark-navy/80 backdrop-blur-sm hover:border-cyber-cyan transition-all duration-300"
+                className="border-2 border-white/20 bg-dark-navy/80 backdrop-blur-sm hover:border-cyber-cyan transition-all duration-300 "
               >
                 <button
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
-                  className="w-full px-6 py-4 flex items-center justify-between text-left"
+                  className="w-full px-6 py-4 flex items-center justify-between text-left cursor-pointer"
                 >
                   <h4 className="text-white">{faq.question}</h4>
                   <ChevronDown
@@ -101,8 +100,7 @@ export function FAQ() {
           </div>
         </div>
       </section>
-      <div className="bg-cp-yellow bg-[url('../img/razor-099e4b40.svg')]  bg-[length:auto_45px] bg-[right_bottom] bg-repeat-x rotate-180 py-2 px-[50px] -translate-y-[2px]">
-        Elmo
+      <div className="bg-cp-yellow bg-[url('../img/razor-099e4b40.svg')]  bg-[length:auto_45px] bg-[right_bottom] bg-repeat-x rotate-180 py-5 px-[50px] -translate-y-[2px]">
       </div>
     </>
   );

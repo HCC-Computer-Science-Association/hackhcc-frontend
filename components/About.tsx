@@ -142,8 +142,7 @@ export function About() {
         </div>
       </div>
     </section>
-    <div className="bg-cp-yellow bg-[url('../img/razor-099e4b40.svg')]  bg-[length:auto_45px] bg-[right_bottom] bg-repeat-x rotate-180 px-[50px] -translate-y-[2px]">
-CSA
+    <div className="bg-cp-yellow bg-[url('../img/razor-099e4b40.svg')]  bg-[length:auto_45px] bg-[right_bottom] bg-repeat-x rotate-180 py-5 px-[50px] -translate-y-[2px]">
     </div>
     </>
 
