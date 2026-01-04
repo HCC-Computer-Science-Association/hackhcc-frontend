@@ -36,7 +36,7 @@ export function Prizes() {
   ];
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden bg-dark-navy">
+    <section id="prizes" className="py-20 px-4 relative overflow-hidden bg-dark-navy">
       {/* Background Grid */}
       <div className="absolute inset-0 opacity-5"
            style={{

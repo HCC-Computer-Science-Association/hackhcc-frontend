@@ -1,11 +1,13 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
+import Image from 'next/image'
+ 
 
 export function Team() {
   const teamMembers = [
     {
       name: "Arian Din-Kirkebo",
       role: "Director",
-      
+      ref: "arian_dk.jpg",
       color: "cyan",
       social: {
         github: "#",
@@ -15,7 +17,7 @@ export function Team() {
     {
       name: "John Pierre",
       role: "Co-Director",
-      
+      ref: "john_pierre.JPG",
       color: "magenta",
       social: {
         github: "#",
@@ -25,105 +27,100 @@ export function Team() {
     {
       name: "Gabriel Morales",
       role: "Co-Director & Tech Lead",
-      
+      ref: "gabriel_m.png",
       color: "yellow",
       social: {
         github: "#",
         linkedin: "#",
-        
       },
     },
     {
       name: "Manuel Orozco",
       role: "Experience & Corporate Relations",
-      
+      ref: "manuel_orozco.jpg",
       color: "cyan",
       social: {
         github: "#",
         linkedin: "#",
-        
       },
     },
     {
       name: "Nelson Aviles",
       role: "Experience & Corporate Relations",
-      
+      ref: "nelson.jpg",
       color: "magenta",
       social: {
         github: "#",
         linkedin: "#",
-        
       },
     },
     {
       name: "Adil Mujeeb",
       role: "Experience",
-      
+      ref: "adil_mujeeb.jpeg",
       color: "yellow",
       social: {
         github: "#",
         linkedin: "#",
-        
       },
     },
     {
       name: "Madison Emshousen",
       role: "Marketing & Design Lead",
-      
+      ref: "maddie.jpg",
       color: "cyan",
       social: {
         github: "#",
         linkedin: "#",
-        
       },
     },
     {
       name: "Lara Iskandar",
       role: "Marketing & Design Lead",
-      
+      ref: "lara.jpg",
       color: "magenta",
       social: {
         github: "#",
         linkedin: "#",
-        
       },
     },
     {
       name: "Khizar Ahmed",
       role: "Tech Lead",
-      
+      ref: "khizar_ahmed.png",
       color: "yellow",
       social: {
         github: "#",
         linkedin: "#",
-        
       },
     },
     {
       name: "Taki",
       role: "Experience",
-      
+      ref: "Taki.png",
       color: "cyan",
       social: {
         github: "#",
         linkedin: "#",
-        
       },
     },
     {
       name: "Rafay Ahmed Syed",
       role: "Experience & Finance",
       color: "magenta",
+      ref: "Rafay.jpeg",
       social: {
         github: "#",
         linkedin: "#",
-        
       },
     },
   ];
 
   return (
-    <section className="py-20 px-4 bg-dark-navy relative overflow-hidden">
+    <section
+      id="team"
+      className="py-20 px-4 bg-dark-navy relative overflow-hidden"
+    >
       {/* Background Effects */}
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-cyber-magenta/5 blur-3xl rounded-full"></div>
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-cyber-cyan/5 blur-3xl rounded-full"></div>
@@ -172,9 +169,17 @@ export function Team() {
                   <div
                     className={`w-full aspect-square ${borderClass} bg-gradient-to-br ${gradientFrom} to-transparent flex items-center justify-center`}
                   >
-                    <div className={`text-6xl ${accentColor}`}>
+                    <Image
+                      src={`/img/${member.ref}`}
+                      width={500}
+                      height={500}
+                      alt={member.name}
+                      className="max-w-[200px] max-h-[200px] w-full h-auto object-cover"
+
+                    />
+                    {/* <div className={`text-6xl ${accentColor}`}>
                       {member.name.charAt(0)}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
@@ -196,7 +201,6 @@ export function Team() {
                   >
                     <Linkedin className="w-4 h-4 text-white/70" />
                   </a>
-
                 </div>
               </div>
             );

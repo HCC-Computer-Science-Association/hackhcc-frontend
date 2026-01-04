@@ -35,7 +35,7 @@ export function About() {
   const { d, h, m, s } = useCountdown("2026-04-11T10:00:00-06:00");
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden  bg-cp-yellow">
+    <section id="about" className="py-20 px-4 relative overflow-hidden  bg-cp-yellow">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-cyber-cyan/5 blur-3xl rounded-full"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyber-magenta/5 blur-3xl rounded-full"></div>
