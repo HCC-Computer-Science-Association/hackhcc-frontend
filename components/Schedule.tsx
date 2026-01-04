@@ -54,21 +54,25 @@ export function Schedule() {
           description: "Announcement",
         },
       ],
-    }
+    },
   ];
 
   return (
-    <section id="schedule" className="py-20 px-4 bg-cp-yellow">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="mb-4">
-            <span  className="text-dark-navy">EVENT SCHEDULE</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyber-cyan to-cyber-magenta mx-auto mb-4"></div>
-          <p className="text-xl text-dark-navy/80">TBA</p>
-        </div>
+    <>
+      <section
+        id="schedule"
+        className="py-20 px-4 bg-cp-yellow bg-[url('../img/razor-099e4b40.svg')] bg-[length:auto_45px] bg-[right_top] bg-repeat-x py-[120px] px-[50px] -translate-y-[2px]"
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="mb-4">
+              <span className="text-dark-navy">EVENT SCHEDULE</span>
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-cyber-cyan to-cyber-magenta mx-auto mb-4"></div>
+            <p className="text-xl text-dark-navy/80">TBA</p>
+          </div>
 
-        {/* <div className="grid lg:grid-cols-2 gap-8">
+          {/* <div className="grid lg:grid-cols-2 gap-8">
           {scheduleData.map((day, dayIndex) => (
             <div
               key={dayIndex}
@@ -102,7 +106,9 @@ export function Schedule() {
             </div>
           ))}
         </div> */}
-      </div>
-    </section>
+        </div>
+      </section>
+      <div className="bg-cp-yellow bg-[url('../img/razor-099e4b40.svg')] bg-[length:auto_45px] bg-[right_bottom] rotate-180 bg-repeat-x  px-[50px] h-8 -translate-y-[2px]">HCC</div>
+    </>
   );
 }

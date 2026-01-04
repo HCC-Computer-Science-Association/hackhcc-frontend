@@ -7,7 +7,7 @@ import {
   MapPin,
 } from "lucide-react";
 
-import Image from 'next/image'
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -20,11 +20,17 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="mb-4">
-              <span className="neon-text-yellow">HackHCC</span>
-              <span className="text-white">: </span>
-              <span className="neon-text-magenta">Coderunners</span>
-            </h3>
+              {/* Logo Image */}
+              <div className="flex  glitch">
+                <Image
+                  src="/hackhcc-coderunners-logo.png"
+                  alt="HackHCC: Coderunners Logo"
+                  width={1400}
+                  height={600}
+                  className="w-full max-w-xs h-auto logo-glow"
+                  priority
+                />
+              </div>
             <p className="text-white/70 text-sm mb-4">
               Houston's premier hackathon experience. Building the future, one
               line of code at a time.
@@ -126,5 +132,6 @@ export function Footer() {
         </div>
       </div>
     </footer>
+
   );
 }
