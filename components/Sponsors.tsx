@@ -38,7 +38,6 @@ export function Sponsors() {
         { name: "TBA", logo: "" },
         { name: "TBA", logo: "" },
         { name: "TBA", logo: "" },
-        { name: "TBA", logo: "" },
       ],
     },
   ];
@@ -60,7 +59,7 @@ export function Sponsors() {
             <p className="text-dark-navy/70">Powered by the best in tech</p>
           </div>
 
-          <div className="space-y-12 bg-dark-navy p-4">
+          <div className="space-y-12 bg-dark-navy p-18">
             {sponsorTiers.map((tier, tierIndex) => {
               const borderClass =
                 tier.color === "platinum"

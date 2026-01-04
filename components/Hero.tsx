@@ -1,29 +1,26 @@
 import { Terminal, Zap } from "lucide-react";
-import logoImage from "/HackHCC Coderunners Logo.png";
 import Image from "next/image";
 
 export function Hero() {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-navy">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
+      <div className="absolute inset-0 z-0 flex items-center justify-center">
+        {/* <img
           src="https://images.unsplash.com/photo-1688377051459-aebb99b42bff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlcnB1bmslMjBuZW9uJTIwY2l0eXxlbnwxfHx8fDE3NjYyMTQ2NDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
           alt="Cyberpunk background"
           className="w-full h-full object-cover opacity-20"
-        />
+        /> */}
+          <Image
+            src="/img/Banner-Cityscape.png"
+            alt="Cyberpunk background"
+            fill
+
+            className="object-cover opacity-100"
+            priority
+          />
         <div className="absolute inset-0 bg-gradient-to-b from-dark-navy via-deep-purple/50 to-dark-navy"></div>
       </div>
-
-      {/* Grid Pattern Overlay */}
-      <div
-        className="absolute inset-0 z-0 opacity-10"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 229, 255, 0.5) 1px, transparent 1px),
-                               linear-gradient(90deg, rgba(0, 229, 255, 0.5) 1px, transparent 1px)`,
-          backgroundSize: "50px 50px",
-        }}
-      ></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 text-center scanline">

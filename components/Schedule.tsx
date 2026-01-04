@@ -108,7 +108,7 @@ export function Schedule() {
         </div> */}
         </div>
       </section>
-      <div className="bg-cp-yellow bg-[url('../img/razor-099e4b40.svg')] bg-[length:auto_45px] bg-[right_bottom] rotate-180 bg-repeat-x  px-[50px] h-8 -translate-y-[2px]">HCC</div>
+      <div className="bg-cp-yellow bg-[url('../img/razor-099e4b40.svg')] bg-[length:auto_45px] bg-[right_bottom] rotate-180 bg-repeat-x  px-[50px] py-5 -translate-y-[2px]"></div>
     </>
   );
 }
