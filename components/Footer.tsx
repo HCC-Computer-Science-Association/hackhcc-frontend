@@ -1,4 +1,13 @@
-import { Github, Twitter, Instagram, Linkedin, Mail, MapPin } from 'lucide-react';
+import {
+  Github,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+} from "lucide-react";
+
+import Image from 'next/image'
 
 export function Footer() {
   return (
@@ -17,7 +26,8 @@ export function Footer() {
               <span className="neon-text-magenta">Coderunners</span>
             </h3>
             <p className="text-white/70 text-sm mb-4">
-              Houston's premier hackathon experience. Building the future, one line of code at a time.
+              Houston's premier hackathon experience. Building the future, one
+              line of code at a time.
             </p>
             <div className="flex items-center gap-2 text-sm text-white/70">
               <MapPin className="w-4 h-4 text-cyber-cyan" />
@@ -29,12 +39,23 @@ export function Footer() {
           <div>
             <h4 className="text-white mb-4">QUICK LINKS</h4>
             <ul className="space-y-2">
-              {[{label: 'About', link: '#'},{label: 'Schedule', link: '#'},{label: 'Prizes', link: '#'},{label: 'Sponsors', link: '#'},{label: 'FAQ', link: '#'},{label: 'Code of Conduct', link: 'https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md'},].map((e) => (
+              {[
+                { label: "About", link: "#About" },
+                { label: "Schedule", link: "#Schedule" },
+                { label: "Prizes", link: "#Prizes" },
+                { label: "Sponsors", link: "#Sponsors" },
+                { label: "FAQ", link: "#FAQ" },
+                {
+                  label: "Code of Conduct",
+                  link: "https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md",
+                },
+              ].map((e) => (
                 <li key={e.label}>
                   <a
                     href={`${e.link.toLowerCase()}`}
-                    
-                    target={`${e.label === "Code of Conduct" ? "_blank" : "_self"}`}
+                    target={`${
+                      e.label === "Code of Conduct" ? "_blank" : "_self"
+                    }`}
                     className="text-white/70 hover:text-cyber-cyan transition-colors duration-300 text-sm"
                   >
                     {e.label}
@@ -49,9 +70,9 @@ export function Footer() {
             <h4 className="text-white mb-4">CONNECT</h4>
             <div className="flex gap-4 mb-4">
               {[
-                { icon: Github, href: '#' },
-                { icon: Instagram, href: '#' },
-                { icon: Linkedin, href: '#' }
+                { icon: Github, href: "#" },
+                { icon: Instagram, href: "#" },
+                { icon: Linkedin, href: "#" },
               ].map((social, index) => {
                 const Icon = social.icon;
                 return (
@@ -67,11 +88,19 @@ export function Footer() {
             </div>
             <a
               href="mailto:officialhackhcc@gmail.com"
-              className="flex items-center gap-2 text-sm text-white/70 hover:text-cyber-cyan transition-colors duration-300"
+              className="flex items-center gap-2 text-sm text-white/70 hover:text-cyber-cyan transition-colors duration-300 mb-6"
             >
               <Mail className="w-4 h-4" />
               <span>officialhackhcc@gmail.com</span>
             </a>
+            <div>
+              <Image
+                src="/img/hcc_logo.png"
+                width={500}
+                height={500}
+                alt="Logos"
+              />
+            </div>
           </div>
         </div>
 

@@ -44,7 +44,7 @@ export function FAQ() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-cp-yellow">
+    <section id="faq" className="py-20 px-4 bg-cp-yellow">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">

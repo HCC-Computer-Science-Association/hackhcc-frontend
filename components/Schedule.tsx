@@ -58,7 +58,7 @@ export function Schedule() {
   ];
 
   return (
-    <section id="event_schedule_container" className="py-20 px-4 bg-cp-yellow">
+    <section id="schedule" className="py-20 px-4 bg-cp-yellow">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="mb-4">
