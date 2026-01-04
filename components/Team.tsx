@@ -95,7 +95,7 @@ export function Team() {
       },
     },
     {
-      name: "Taki",
+      name: "Taki Boubekri",
       role: "Experience",
       ref: "Taki.png",
       color: "cyan",
@@ -108,7 +108,7 @@ export function Team() {
       name: "Rafay Ahmed Syed",
       role: "Experience & Finance",
       color: "magenta",
-      ref: "Rafay.jpeg",
+      ref: "Rafay.png",
       social: {
         github: "#",
         linkedin: "#",
