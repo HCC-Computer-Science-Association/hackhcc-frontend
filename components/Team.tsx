@@ -10,8 +10,8 @@ export function Team() {
       ref: "arian_dk.jpg",
       color: "cyan",
       social: {
-        github: "#",
-        linkedin: "#",
+        github: "https://github.com/ArianDK",
+        linkedin: "https://www.linkedin.com/in/arian-dk/",
       },
     },
     {
@@ -20,8 +20,8 @@ export function Team() {
       ref: "john_pierre.JPG",
       color: "magenta",
       social: {
-        github: "#",
-        linkedin: "#",
+        github: "https://github.com/jpierre-7",
+        linkedin: "https://www.linkedin.com/in/johndotpierre/",
       },
     },
     {
@@ -30,8 +30,8 @@ export function Team() {
       ref: "gabriel_m.png",
       color: "yellow",
       social: {
-        github: "#",
-        linkedin: "#",
+        github: "https://github.com/gabbo-dam",
+        linkedin: "https://www.linkedin.com/in/gabbo-mv/",
       },
     },
     {
@@ -41,7 +41,7 @@ export function Team() {
       color: "cyan",
       social: {
         github: "#",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/oro-man/",
       },
     },
     {
@@ -50,8 +50,8 @@ export function Team() {
       ref: "nelson.jpg",
       color: "magenta",
       social: {
-        github: "#",
-        linkedin: "#",
+        github: "https://github.com/HefKer",
+        linkedin: "https://www.linkedin.com/in/nelson-aviles-9b3603272/",
       },
     },
     {
@@ -60,8 +60,8 @@ export function Team() {
       ref: "adil_mujeeb.jpeg",
       color: "yellow",
       social: {
-        github: "#",
-        linkedin: "#",
+        github: "https://github.com/AdilMujeeb99/",
+        linkedin: "https://www.linkedin.com/in/adil-mujeeb-2a5b84231/",
       },
     },
     {
@@ -70,8 +70,8 @@ export function Team() {
       ref: "maddie.jpg",
       color: "cyan",
       social: {
-        github: "#",
-        linkedin: "#",
+        github: "https://github.com/MEmshousen",
+        linkedin: "https://www.linkedin.com/in/madison-emshousen/",
       },
     },
     {
@@ -81,7 +81,7 @@ export function Team() {
       color: "magenta",
       social: {
         github: "#",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/lara-iskandar/",
       },
     },
     {
@@ -90,8 +90,8 @@ export function Team() {
       ref: "khizar_ahmed.png",
       color: "yellow",
       social: {
-        github: "#",
-        linkedin: "#",
+        github: "https://github.com/khizarahmed9",
+        linkedin: "https://www.linkedin.com/in/khizar-ahmed9/",
       },
     },
     {
@@ -101,7 +101,7 @@ export function Team() {
       color: "cyan",
       social: {
         github: "#",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/taki-boubekri-b35953310/",
       },
     },
     {
@@ -111,7 +111,7 @@ export function Team() {
       ref: "Rafay.png",
       social: {
         github: "#",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/rafayahmedsyed/",
       },
     },
   ];
