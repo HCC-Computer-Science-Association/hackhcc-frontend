@@ -32,7 +32,7 @@ export function About() {
     },
   ];
 
-  const { d, h, m, s } = useCountdown("2026-04-11T10:00:00-06:00");
+  const { d, h, m, s } = useCountdown("2026-04-10T00:00:00-06:00");
 
   return (
     <>
@@ -56,13 +56,13 @@ export function About() {
               Countdown
             </div>
             <div className="flex items-center gap-3 text-2xl font-mono text-dark-navy">
-              <TimeBox label="days" value={"TBA"} />
+              <TimeBox label="days" value={d} />
               <span className="text-dark-navy/70">:</span>
-              <TimeBox label="hours" value={"TBA"} />
+              <TimeBox label="hours" value={h} />
               <span className="text-dark-navy/70">:</span>
-              <TimeBox label="mins" value={"TBA"} />
+              <TimeBox label="mins" value={m} />
               <span className="text-dark-navy/70">:</span>
-              <TimeBox label="secs" value={"TBA"} />
+              <TimeBox label="secs" value={s} />
             </div>
           </div>
         </div>

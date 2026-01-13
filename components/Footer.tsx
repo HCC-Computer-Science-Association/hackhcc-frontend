@@ -20,17 +20,17 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-              {/* Logo Image */}
-              <div className="flex  glitch">
-                <Image
-                  src="/hackhcc-coderunners-logo.png"
-                  alt="HackHCC: Coderunners Logo"
-                  width={1400}
-                  height={600}
-                  className="w-full max-w-xs h-auto logo-glow"
-                  priority
-                />
-              </div>
+            {/* Logo Image */}
+            <div className="flex  glitch">
+              <Image
+                src="/hackhcc-coderunners-logo.png"
+                alt="HackHCC: Coderunners Logo"
+                width={1400}
+                height={600}
+                className="w-full max-w-xs h-auto logo-glow"
+                priority
+              />
+            </div>
             <p className="text-white/70 text-sm mb-4">
               Houston's premier hackathon experience. Building the future, one
               line of code at a time.
@@ -76,15 +76,19 @@ export function Footer() {
             <h4 className="text-white mb-4">CONNECT</h4>
             <div className="flex gap-4 mb-4">
               {[
-                { icon: Github, href: "#" },
-                { icon: Instagram, href: "#" },
-                { icon: Linkedin, href: "#" },
+                // { icon: Github, href: "#" },
+                { icon: Instagram, href: "https://www.instagram.com/hackhcc/" },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/company/compscia/posts/",
+                },
               ].map((social, index) => {
                 const Icon = social.icon;
                 return (
                   <a
                     key={index}
                     href={social.href}
+                    target="_blank"
                     className="w-10 h-10 border border-white/30 hover:border-cyber-cyan flex items-center justify-center hover:bg-cyber-cyan/10 transition-all duration-300"
                   >
                     <Icon className="w-5 h-5 text-white/70 hover:text-cyber-cyan" />
@@ -99,13 +103,34 @@ export function Footer() {
               <Mail className="w-4 h-4" />
               <span>officialhackhcc@gmail.com</span>
             </a>
-            <div>
-              <Image
-                src="/img/hcc_logo.png"
-                width={500}
-                height={500}
-                alt="Logos"
-              />
+            <div className="mb-4 max-w-[18rem]">
+              <a
+                href="https://www.hccs.edu/"
+                target="_blank"
+                className="cursor-pointer"
+              >
+                <Image
+                  src="/img/hcc_logo.png"
+                  width={500}
+                  height={500}
+                  alt="Logos"
+                />
+              </a>
+            </div>
+            <div className="max-w-[16rem] ">
+              <a
+                href="https://hcc-csa.org/"
+                target="_blank"
+                className="cursor-pointer"
+              >
+                <Image
+                  src="/img/csa-white-logo.png"
+                  className="max-h-36"
+                  width={1536}
+                  height={1024}
+                  alt="Logos"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -132,6 +157,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-
   );
 }
