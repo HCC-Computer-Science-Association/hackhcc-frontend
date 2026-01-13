@@ -1,120 +1,22 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
-import Image from 'next/image'
- 
+"use client";
+import React, { useCallback } from "react";
+import { Github, Linkedin, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import useEmblaCarousel from "embla-carousel-react";
+import { teams } from "@/data/teams";
 
 export function Team() {
-  const teamMembers = [
-    {
-      name: "Arian Din-Kirkebo",
-      role: "Director",
-      ref: "arian_dk.jpg",
-      color: "cyan",
-      social: {
-        github: "https://github.com/ArianDK",
-        linkedin: "https://www.linkedin.com/in/arian-dk/",
-      },
-    },
-    {
-      name: "John Pierre",
-      role: "Co-Director",
-      ref: "john_pierre.JPG",
-      color: "magenta",
-      social: {
-        github: "https://github.com/jpierre-7",
-        linkedin: "https://www.linkedin.com/in/johndotpierre/",
-      },
-    },
-    {
-      name: "Gabriel Morales",
-      role: "Co-Director & Tech Lead",
-      ref: "gabriel_m.png",
-      color: "yellow",
-      social: {
-        github: "https://github.com/gabbo-dam",
-        linkedin: "https://www.linkedin.com/in/gabbo-mv/",
-      },
-    },
-    {
-      name: "Manuel Orozco",
-      role: "Experience & Corporate Relations",
-      ref: "manuel_orozco.jpg",
-      color: "cyan",
-      social: {
-        github: "#",
-        linkedin: "https://www.linkedin.com/in/oro-man/",
-      },
-    },
-    {
-      name: "Nelson Aviles",
-      role: "Experience & Corporate Relations",
-      ref: "nelson.jpg",
-      color: "magenta",
-      social: {
-        github: "https://github.com/HefKer",
-        linkedin: "https://www.linkedin.com/in/nelson-aviles-9b3603272/",
-      },
-    },
-    {
-      name: "Adil Mujeeb",
-      role: "Experience",
-      ref: "adil_mujeeb.jpeg",
-      color: "yellow",
-      social: {
-        github: "https://github.com/AdilMujeeb99/",
-        linkedin: "https://www.linkedin.com/in/adil-mujeeb-2a5b84231/",
-      },
-    },
-    {
-      name: "Madison Emshousen",
-      role: "Marketing & Design Lead",
-      ref: "maddie.jpg",
-      color: "cyan",
-      social: {
-        github: "https://github.com/MEmshousen",
-        linkedin: "https://www.linkedin.com/in/madison-emshousen/",
-      },
-    },
-    {
-      name: "Lara Iskandar",
-      role: "Marketing & Design Lead",
-      ref: "lara.jpg",
-      color: "magenta",
-      social: {
-        github: "#",
-        linkedin: "https://www.linkedin.com/in/lara-iskandar/",
-      },
-    },
-    {
-      name: "Khizar Ahmed",
-      role: "Tech Lead",
-      ref: "khizar_ahmed.png",
-      color: "yellow",
-      social: {
-        github: "https://github.com/khizarahmed9",
-        linkedin: "https://www.linkedin.com/in/khizar-ahmed9/",
-      },
-    },
-    {
-      name: "Taki Boubekri",
-      role: "Experience",
-      ref: "Taki.png",
-      color: "cyan",
-      social: {
-        github: "#",
-        linkedin: "https://www.linkedin.com/in/taki-boubekri-b35953310/",
-      },
-    },
-    {
-      name: "Rafay Ahmed Syed",
-      role: "Experience & Finance",
-      color: "magenta",
-      ref: "Rafay.png",
-      social: {
-        github: "#",
-        linkedin: "https://www.linkedin.com/in/rafayahmedsyed/",
-      },
-    },
-  ];
+  // Initialize Embla with loop enabled
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+
+  // Navigation handlers
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   return (
     <section
@@ -125,10 +27,10 @@ export function Team() {
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-cyber-magenta/5 blur-3xl rounded-full"></div>
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-cyber-cyan/5 blur-3xl rounded-full"></div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-16">
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-12">
           <h2 className="mb-4">
-            <span className="text-white">MEET THE TEAM</span>
+            <span className="text-white text-3xl font-bold">MEET THE TEAM</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyber-cyan to-neon-yellow mx-auto mb-4"></div>
           <p className="text-xl text-white/80">
@@ -136,94 +38,148 @@ export function Team() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => {
-            const borderClass =
-              member.color === "cyan"
-                ? "neon-border-cyan"
-                : member.color === "magenta"
-                ? "neon-border-magenta"
-                : "neon-border-yellow";
+        {/* Carousel Container */}
+        <div className="relative px-8 md:px-12">
+          {/* Previous Button */}
+          <button
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all hidden md:flex"
+            onClick={scrollPrev}
+          >
+            <ChevronLeft size={32} />
+          </button>
 
-            const accentColor =
-              member.color === "cyan"
-                ? "text-cyber-cyan"
-                : member.color === "magenta"
-                ? "text-cyber-magenta"
-                : "text-neon-yellow";
+          {/* Next Button */}
+          <button
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all hidden md:flex"
+            onClick={scrollNext}
+          >
+            <ChevronRight size={32} />
+          </button>
 
-            const gradientFrom =
-              member.color === "cyan"
-                ? "from-cyber-cyan/20"
-                : member.color === "magenta"
-                ? "from-cyber-magenta/20"
-                : "from-neon-yellow/20";
-
-            return (
-              <div
-                key={index}
-                className={`${borderClass} bg-dark-bg/80 backdrop-blur-sm p-6 hover:transform hover:scale-105 transition-all duration-300 group`}
-              >
-                {/* Avatar */}
-                <div className="relative mb-4 overflow-hidden">
+          {/* Embla Viewport */}
+          <div className="overflow-hidden" ref={emblaRef}>
+            {/* CRITICAL FIX: 
+               1. added 'flex' to make slides horizontal
+               2. added 'touch-pan-y' for better mobile scrolling 
+            */}
+            <div className="flex touch-pan-y">
+              {teams.map((team) => {
+                const teamColorClass =
+                  team.color === "yellow"
+                    ? "neon-yellow"
+                    : team.color === "magenta"
+                    ? "cyber-magenta"
+                    : team.color === "cyan"
+                    ? "cyber-cyan"
+                    : "";
+                return (
+                  // CRITICAL FIX: added 'flex-[0_0_100%]' and 'min-w-0'
                   <div
-                    className={`w-full aspect-square ${borderClass} bg-gradient-to-br ${gradientFrom} to-transparent flex items-center justify-center`}
+                    key={team.name}
+                    className="flex-[0_0_100%] min-w-0 pl-4 relative"
                   >
-                    <Image
-                      src={`/img/${member.ref}`}
-                      width={500}
-                      height={500}
-                      alt={member.name}
-                      className="max-w-[200px] max-h-[200px] w-full h-auto object-cover"
+                    <div className="md:grid md:grid-cols-5 p-2 gap-10">
+                      
+                      {/* Left Side: Team Icon/Name */}
+                      <div className="md:col-start-1 m-auto flex flex-col items-center justify-center ">
+                        <Image
+                          src={team.icon}
+                          width={500}
+                          height={500}
+                          alt={team.name}
+                          className="max-h-48 w-auto object-contain mb-4"
+                        />
+                        <h3 className={`text-center text-2xl font-bold text-${teamColorClass}`}>
+                          {team.name}
+                        </h3>
+                      </div>
 
-                    />
-                    {/* <div className={`text-6xl ${accentColor}`}>
-                      {member.name.charAt(0)}
-                    </div> */}
+                      {/* Right Side: Members Grid */}
+                      <div className="md:col-start-2 md:col-span-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {team.members.map((member, index) => {
+                          const borderClass =
+                            member.color === "cyan"
+                              ? "neon-border-cyan"
+                              : member.color === "magenta"
+                              ? "neon-border-magenta"
+                              : "neon-border-yellow";
+
+                          const accentColor =
+                            member.color === "cyan"
+                              ? "text-cyber-cyan"
+                              : member.color === "magenta"
+                              ? "text-cyber-magenta"
+                              : "text-neon-yellow";
+
+                          const gradientFrom =
+                            member.color === "cyan"
+                              ? "from-cyber-cyan/20"
+                              : member.color === "magenta"
+                              ? "from-cyber-magenta/20"
+                              : "from-neon-yellow/20";
+
+                          return (
+                            <div
+                              key={index}
+                              className={`${borderClass} bg-dark-bg/80 backdrop-blur-sm p-6 hover:transform hover:scale-105 transition-all duration-300 group rounded-xl border border-white/10`}
+                            >
+                              {/* Avatar */}
+                              <div className="relative mb-4 overflow-hidden flex justify-center">
+                                <div
+                                  className={`w-32 h-32 rounded-full ${borderClass} bg-gradient-to-br ${gradientFrom} to-transparent flex items-center justify-center overflow-hidden`}
+                                >
+                                  <Image
+                                    src={`/img/${member.ref}`}
+                                    width={500}
+                                    height={500}
+                                    alt={member.name}
+                                    className="w-full h-full object-cover"
+                                  />
+                                </div>
+                              </div>
+
+                              {/* Info */}
+                              <div className="text-center">
+                                <h4 className="text-white text-lg font-semibold mb-1">
+                                  {member.name}
+                                </h4>
+                                <p className={`text-sm mb-4 ${accentColor}`}>
+                                  {member.role}
+                                </p>
+
+                                {/* Social Links */}
+                                <div className="flex gap-3 justify-center">
+                                  {member.social.github && (
+                                    <a
+                                      href={member.social.github}
+                                      target="_blank"
+                                      className="w-8 h-8 rounded-full border border-white/30 hover:border-cyber-cyan flex items-center justify-center transition-all duration-300 hover:bg-cyber-cyan/10"
+                                    >
+                                      <Github className="w-4 h-4 text-white/70" />
+                                    </a>
+                                  )}
+                                  {member.social.linkedin && (
+                                    <a
+                                      href={member.social.linkedin}
+                                      target="_blank"
+                                      className="w-8 h-8 rounded-full border border-white/30 hover:border-cyber-cyan flex items-center justify-center transition-all duration-300 hover:bg-cyber-cyan/10"
+                                    >
+                                      <Linkedin className="w-4 h-4 text-white/70" />
+                                    </a>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
-                </div>
-
-                {/* Info */}
-                <h4 className="text-white mb-1">{member.name}</h4>
-                <p className={`mb-3 ${accentColor}`}>{member.role}</p>
-
-                {/* Social Links */}
-                <div className="flex gap-3">
-                  <a
-                    href={member.social.github}
-                    className="w-8 h-8 border border-white/30 hover:border-cyber-cyan flex items-center justify-center transition-all duration-300 hover:bg-cyber-cyan/10"
-                  >
-                    <Github className="w-4 h-4 text-white/70" />
-                  </a>
-                  <a
-                    href={member.social.linkedin}
-                    className="w-8 h-8 border border-white/30 hover:border-cyber-cyan flex items-center justify-center transition-all duration-300 hover:bg-cyber-cyan/10"
-                  >
-                    <Linkedin className="w-4 h-4 text-white/70" />
-                  </a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Join the Team CTA */}
-        {/* <div className="mt-16 text-center">
-          <div className="neon-border-yellow bg-dark-bg/80 backdrop-blur-sm p-8 inline-block max-w-2xl">
-            <h3 className="mb-4 neon-text-yellow">WANT TO JOIN THE TEAM?</h3>
-            <p className="text-white/70 mb-6">
-              We're always looking for passionate individuals to help make
-              HACKHCC even better. Whether you're into logistics, tech, or
-              community building, we'd love to hear from you!
-            </p>
-            <a
-              href="mailto:officialhackhcc@gmail.com?subject=Get%20Involved%20with%20HackHCC"
-              className="inline-flex cursor-pointer px-8 py-4 neon-border-magenta hover:bg-cyber-magenta/10 transition-all duration-300"
-            >
-              <span className="neon-text-magenta">GET INVOLVED</span>
-            </a>
+                );
+              })}
+            </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );
