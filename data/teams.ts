@@ -6,7 +6,7 @@ export const teams = [
     members: [
       {
         name: "Arian Din-Kirkebo",
-        role: "Director",
+        role: "Co Directors",
         ref: "arian_dk.jpg",
         color: "yellow",
         social: {
@@ -22,16 +22,6 @@ export const teams = [
         social: {
           github: "https://github.com/jpierre-7",
           linkedin: "https://www.linkedin.com/in/johndotpierre/",
-        },
-      },
-      {
-        name: "Gabriel Morales",
-        role: "Co-Director & Tech Lead",
-        ref: "gabriel_m.png",
-        color: "yellow",
-        social: {
-          github: "https://github.com/gabbo-dam",
-          linkedin: "https://www.linkedin.com/in/gabbo-mv/",
         },
       },
     ],
