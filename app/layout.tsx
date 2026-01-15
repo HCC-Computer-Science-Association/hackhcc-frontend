@@ -3,7 +3,11 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 
-
+const rubikGlitch = localFont({
+  src: "./fonts/RubikGlitch-Regular.ttf",
+  variable: "--font-rubik-glitch",
+  weight: "400",
+});
 
 
 export const metadata: Metadata = {
@@ -23,7 +27,7 @@ export default function RootLayout({
       </head>
      
       <body
-        className={`antialiased`}
+        className={`antialiased ${rubikGlitch.variable}`}
       >
          <a id="mlh-trust-badge"   style={{
     display: 'block',
