@@ -12,7 +12,7 @@ const rubikGlitch = localFont({
 
 export const metadata: Metadata = {
   title: "HackHCC: CodeRunners",
-  description: "April 2026",
+  description: "May 2026",
 };
 
 export default function RootLayout({

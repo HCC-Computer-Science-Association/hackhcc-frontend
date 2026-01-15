@@ -32,7 +32,7 @@ export function About() {
     },
   ];
 
-  const { d, h, m, s } = useCountdown("2026-04-10T00:00:00-06:00");
+  const { d, h, m, s } = useCountdown("2026-05-22T12:00:00-06:00");
 
   return (
     <>
