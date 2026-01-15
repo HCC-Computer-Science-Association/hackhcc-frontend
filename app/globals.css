@@ -1,6 +1,7 @@
 /* Import Fonts */
 @import url("https://fonts.cdnfonts.com/css/rovelink");
 @import url("https://fonts.cdnfonts.com/css/interceptor");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -23,7 +24,7 @@ html {
   /* Font Families */
   --font-family-rovelink: "Rovelink", sans-serif;
   --font-family-rubik-glitch: var(--font-rubik-glitch), sans-serif;
-  --font-family-interceptor: "Interceptor", sans-serif;
+  --font-family-rubik-glitch: "Rubik Glitch", sans-serif;
 }
 
 :root {
@@ -54,7 +55,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-rubik-glitch), sans-serif;
+  font-family: "rubik-glitch", sans-serif;
 }
 
 h1 {

@@ -27,7 +27,7 @@ export default function RootLayout({
       </head>
      
       <body
-        className={`antialiased ${rubikGlitch.variable}`}
+        className={`antialiased`}
       >
          <a id="mlh-trust-badge"   style={{
     display: 'block',
