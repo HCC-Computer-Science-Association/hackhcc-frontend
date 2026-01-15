@@ -6,7 +6,7 @@ export const teams = [
     members: [
       {
         name: "Arian Din-Kirkebo",
-        role: "Co Directors",
+        role: "Co-Director",
         ref: "arian_dk.jpg",
         color: "yellow",
         social: {
