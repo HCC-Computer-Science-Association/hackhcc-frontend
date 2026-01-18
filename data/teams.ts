@@ -117,6 +117,7 @@ export const teams = [
         color: "magenta",
         social: {
           linkedin: "https://www.linkedin.com/in/oro-man/",
+          github: "https://github.com/yoitsmemblo",
         },
       },
       {
