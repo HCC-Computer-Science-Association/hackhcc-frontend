@@ -118,7 +118,7 @@ export function About() {
                     <div
                       key={feature.title}
                       className="group relative bg-[#12121a] border border-[#2a2a3a] p-6 hover:border-opacity-100 transition-all duration-500"
-                      style={{ borderColor: feature.color, borderOpacity: 0.3 }}
+                      style={{ borderColor: `${feature.color}4D`  }}
                     >
                       {/* Corner accent */}
                       <div
