@@ -23,8 +23,8 @@ html {
 
   /* Font Families */
   --font-family-rovelink: "Rovelink", sans-serif;
+  --font-family-rubik-glitch: var(--font-rubik-glitch), sans-serif;
   --font-family-rubik-glitch: "Rubik Glitch", sans-serif;
-  --font-family-interceptor: "Interceptor", sans-serif;
 }
 
 :root {

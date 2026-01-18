@@ -3,12 +3,16 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 
-
+const rubikGlitch = localFont({
+  src: "./fonts/RubikGlitch-Regular.ttf",
+  variable: "--font-rubik-glitch",
+  weight: "400",
+});
 
 
 export const metadata: Metadata = {
   title: "HackHCC: CodeRunners",
-  description: "April 2026",
+  description: "May 2026",
 };
 
 export default function RootLayout({

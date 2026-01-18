@@ -81,17 +81,21 @@ export function Team() {
                     <div className="md:grid md:grid-cols-5 p-2 gap-10">
                       
                       {/* Left Side: Team Icon/Name */}
-                      <div className="md:col-start-1 m-auto flex flex-col items-center justify-center ">
-                        <Image
-                          src={team.icon}
-                          width={500}
-                          height={500}
-                          alt={team.name}
-                          className="max-h-48 w-auto object-contain mb-4"
-                        />
-                        <h3 className={`text-center text-2xl font-bold text-${teamColorClass}`}>
-                          {team.name}
-                        </h3>
+                      <div className="md:col-start-1 m-auto flex flex-col items-center justify-center w-full mb-8 md:mb-auto">
+                        <div className="h-48 w-full flex items-center justify-center mb-4">
+                          <Image
+                            src={team.icon}
+                            width={500}
+                            height={500}
+                            alt={team.name}
+                            className="max-h-full w-auto object-contain"
+                          />
+                        </div>
+                        <div className="h-16 w-full flex items-center justify-center">
+                          <h3 className={`text-center text-2xl font-bold text-${teamColorClass}`}>
+                            {team.name}
+                          </h3>
+                        </div>
                       </div>
 
                       {/* Right Side: Members Grid */}

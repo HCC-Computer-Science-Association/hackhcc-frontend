@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ChevronDown, HelpCircle } from "lucide-react";
 
 export function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
     {

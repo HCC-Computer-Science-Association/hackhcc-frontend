@@ -17,7 +17,6 @@ export function Sponsors() {
       sponsors: [
         { name: "TBA", logo: "" },
         { name: "TBA", logo: "" },
-        { name: "TBA", logo: "" },
       ],
     },
     {
@@ -26,16 +25,12 @@ export function Sponsors() {
       sponsors: [
         { name: "TBA", logo: "" },
         { name: "TBA", logo: "" },
-        { name: "TBA", logo: "" },
-        { name: "TBA", logo: "" },
       ],
     },
     {
       tier: "SHARD",
       color: "platinum",
       sponsors: [
-        { name: "TBA", logo: "" },
-        { name: "TBA", logo: "" },
         { name: "TBA", logo: "" },
         { name: "TBA", logo: "" },
       ],

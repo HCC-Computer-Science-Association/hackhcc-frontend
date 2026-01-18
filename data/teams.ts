@@ -27,6 +27,33 @@ export const teams = [
     ],
   },
   {
+    name: "Website & Tech",
+    icon: "/img/afterlife.png",
+    color: "yellow",
+    members: [
+      {
+        name: "Gabriel Morales",
+        role: "Website & Tech",
+        ref: "gabriel_m.png",
+        color: "yellow",
+        social: {
+          github: "https://github.com/gabbo-dam",
+          linkedin: "https://www.linkedin.com/in/gabbo-mv/",
+        },
+      },
+      {
+        name: "Khizar Ahmed",
+        role: "Website & Tech",
+        ref: "khizar_ahmed.png",
+        color: "yellow",
+        social: {
+          github: "https://github.com/khizarahmed9",
+          linkedin: "https://www.linkedin.com/in/khizar-ahmed9/",
+        },
+      },
+    ],
+  },
+  {
     name: "Marketing & Design",
     icon: "/img/monkey.png",
     color: "magenta",
@@ -109,33 +136,6 @@ export const teams = [
         color: "magenta",
         social: {
           linkedin: "https://www.linkedin.com/in/taki-boubekri-b35953310/",
-        },
-      },
-    ],
-  },
-  {
-    name: "Website & Tech",
-    icon: "/img/afterlife.png",
-    color: "yellow",
-    members: [
-      {
-        name: "Gabriel Morales",
-        role: "Website & Tech",
-        ref: "gabriel_m.png",
-        color: "yellow",
-        social: {
-          github: "https://github.com/gabbo-dam",
-          linkedin: "https://www.linkedin.com/in/gabbo-mv/",
-        },
-      },
-      {
-        name: "Khizar Ahmed",
-        role: "Website & Tech",
-        ref: "khizar_ahmed.png",
-        color: "yellow",
-        social: {
-          github: "https://github.com/khizarahmed9",
-          linkedin: "https://www.linkedin.com/in/khizar-ahmed9/",
         },
       },
     ],

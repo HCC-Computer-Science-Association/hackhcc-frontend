@@ -41,7 +41,7 @@ export function Hero() {
          <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 neon-border-cyan bg-dark-bg/80 rounded-full backdrop-blur-sm">
           {/* <Terminal className="w-4 h-4 text-cyber-cyan" /> */}
           <span className="text-cyber-cyan">
-            Houston, Texas // April 11-12, 2026
+            Houston, Texas // May 22-23, 2026
           </span>
         </div>
 

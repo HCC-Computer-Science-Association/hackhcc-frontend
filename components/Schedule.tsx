@@ -4,7 +4,7 @@ export function Schedule() {
   const scheduleData = [
     {
       day: "DAY 01",
-      date: "April 11, 2026",
+      date: "May 22, 2026",
       events: [
         {
           time: "10:00",
@@ -30,7 +30,7 @@ export function Schedule() {
     },
     {
       day: "DAY 02",
-      date: "April 12, 2026",
+      date: "May 23, 2026",
       events: [
         { time: "09:00", title: "Breakfast", description: "Morning fuel" },
         {
