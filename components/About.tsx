@@ -52,9 +52,9 @@ export function About() {
           <div className="w-24 h-1 bg-gradient-to-r from-cyber-cyan to-cyber-magenta mx-auto"></div>
           {/* Countdown */}
           <div className="mt-10 flex items-center gap-6 justify-center">
-            <div className="text-xs uppercase tracking-widest text-dark-navy font-medium">
+            {/* <div className="text-xs uppercase tracking-widest text-dark-navy font-medium">
               Countdown
-            </div>
+            </div> */}
             <div className="flex items-center gap-3 text-2xl font-mono text-dark-navy">
               <TimeBox label="days" value={d} />
               <span className="text-dark-navy/70">:</span>

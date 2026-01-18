@@ -39,7 +39,7 @@ export function Hero() {
         </div>
 
          <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 neon-border-cyan bg-dark-bg/80 rounded-full backdrop-blur-sm">
-          <Terminal className="w-4 h-4 text-cyber-cyan" />
+          {/* <Terminal className="w-4 h-4 text-cyber-cyan" /> */}
           <span className="text-cyber-cyan">
             Houston, Texas // April 11-12, 2026
           </span>
@@ -59,12 +59,12 @@ export function Hero() {
         </div>
 
         {/* Floating Icons */}
-        <div className="absolute -z-10 top-20 left-10 opacity-30">
+        {/* <div className="absolute -z-10 top-20 left-10 opacity-30">
           <Zap className="w-12 h-12 text-cyber-cyan animate-pulse" />
         </div>
         <div className="absolute -z-10 bottom-20 right-10 opacity-30">
           <Terminal className="w-16 h-16 text-cyber-magenta animate-pulse" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

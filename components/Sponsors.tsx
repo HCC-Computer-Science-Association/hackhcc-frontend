@@ -59,7 +59,7 @@ export function Sponsors() {
             <p className="text-dark-navy/70">Powered by the best in tech</p>
           </div>
 
-          <div className="space-y-12 bg-dark-navy p-18">
+          <div className="space-y-12 bg-dark-navy p-8 md:p-18">
             {sponsorTiers.map((tier, tierIndex) => {
               const borderClass =
                 tier.color === "platinum"
@@ -89,10 +89,10 @@ export function Sponsors() {
                   <div
                     className={`grid ${
                       tier.sponsors.length === 2
-                        ? "grid-cols-2"
+                        ? "md:grid-cols-2"
                         : tier.sponsors.length === 3
-                        ? "grid-cols-3"
-                        : "grid-cols-2 md:grid-cols-4"
+                        ? "md:grid-cols-3"
+                        : "md:grid-cols-2 md:grid-cols-4"
                     } gap-6`}
                   >
                     {tier.sponsors.map((sponsor, sponsorIndex) => (

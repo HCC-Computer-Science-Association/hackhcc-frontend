@@ -6,7 +6,7 @@ export const teams = [
     members: [
       {
         name: "Arian Din-Kirkebo",
-        role: "Co Directors",
+        role: "Co-Director",
         ref: "arian_dk.jpg",
         color: "yellow",
         social: {
@@ -33,7 +33,7 @@ export const teams = [
     members: [
       {
         name: "Madison Emshousen",
-        role: "Marketing & Design Lead",
+        role: "Marketing & Design",
         ref: "maddie.jpg",
         color: "magenta",
         social: {
@@ -43,7 +43,7 @@ export const teams = [
       },
       {
         name: "Lara Iskandar",
-        role: "Marketing & Design Lead",
+        role: "Marketing & Design",
         ref: "lara.jpg",
         color: "magenta",
         social: {
@@ -59,7 +59,7 @@ export const teams = [
     members: [
       {
         name: "Nelson Aviles",
-        role: "Experience & Corporate Relations",
+        role: "Logistics",
         ref: "nelson.jpg",
         color: "cyan",
         social: {
@@ -69,7 +69,7 @@ export const teams = [
       },
       {
         name: "Rafay Ahmed Syed",
-        role: "Experience & Finance",
+        role: "Logistics",
         color: "cyan",
         ref: "Rafay.png",
         social: {
@@ -85,7 +85,7 @@ export const teams = [
     members: [
       {
         name: "Manuel Orozco",
-        role: "Experience & Corporate Relations",
+        role: "Sponsorship & Hospitality",
         ref: "manuel_orozco.jpg",
         color: "magenta",
         social: {
@@ -94,7 +94,7 @@ export const teams = [
       },
       {
         name: "Adil Mujeeb",
-        role: "Experience",
+        role: "Sponsorship & Hospitality",
         ref: "adil_mujeeb.jpeg",
         color: "magenta",
         social: {
@@ -104,7 +104,7 @@ export const teams = [
       },
       {
         name: "Taki Boubekri",
-        role: "Experience",
+        role: "Sponsorship & Hospitality",
         ref: "Taki.png",
         color: "magenta",
         social: {
@@ -120,7 +120,7 @@ export const teams = [
     members: [
       {
         name: "Gabriel Morales",
-        role: "Co-Director & Tech Lead",
+        role: "Website & Tech",
         ref: "gabriel_m.png",
         color: "yellow",
         social: {
@@ -130,7 +130,7 @@ export const teams = [
       },
       {
         name: "Khizar Ahmed",
-        role: "Tech Lead",
+        role: "Website & Tech",
         ref: "khizar_ahmed.png",
         color: "yellow",
         social: {
