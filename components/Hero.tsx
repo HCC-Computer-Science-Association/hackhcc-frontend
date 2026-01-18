@@ -6,11 +6,10 @@ export function Hero() {
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-navy ">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 flex items-center justify-center">
-        {/* <img
-          src="https://images.unsplash.com/photo-1688377051459-aebb99b42bff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjeWJlcnB1bmslMjBuZW9uJTIwY2l0eXxlbnwxfHx8fDE3NjYyMTQ2NDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="Cyberpunk background"
-          className="w-full h-full object-cover opacity-20"
-        /> */}
+        {/*
+          This background image is NOT AI Art.
+          It was made by a real human named Lara Iskandar.
+        */}
           <Image
             src="/img/Banner-Cityscape.png"
             alt="Cyberpunk background"
@@ -23,11 +22,11 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center scanline">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
        
 
         {/* Logo Image */}
-        <div className="flex justify-center ">
+        <div className="flex justify-center">
           <Image
             src="/hackhcc-coderunners-logo.png"
             alt="HackHCC: Coderunners Logo"
