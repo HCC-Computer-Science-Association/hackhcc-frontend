@@ -23,11 +23,11 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center scanline">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
        
 
         {/* Logo Image */}
-        <div className="flex justify-center glitch">
+        <div className="flex justify-center">
           <Image
             src="/hackhcc-coderunners-logo.png"
             alt="HackHCC: Coderunners Logo"
@@ -59,9 +59,7 @@ export function Hero() {
         </div>
 
         {/* Floating Icons */}
-        <div className="absolute -z-10 top-20 left-10 opacity-30">
-          <Zap className="w-12 h-12 text-cyber-cyan animate-pulse" />
-        </div>
+        
         <div className="absolute -z-10 bottom-20 right-10 opacity-30">
           <Terminal className="w-16 h-16 text-cyber-magenta animate-pulse" />
         </div>

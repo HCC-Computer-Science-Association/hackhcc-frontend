@@ -21,7 +21,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             {/* Logo Image */}
-            <div className="flex  glitch">
+            <div className="flex">
               <Image
                 src="/hackhcc-coderunners-logo.png"
                 alt="HackHCC: Coderunners Logo"
@@ -32,7 +32,7 @@ export function Footer() {
               />
             </div>
             <p className="text-white/70 text-sm mb-4">
-              Houston's premier hackathon experience. Building the future, one
+              Houston&#39;s premier hackathon experience. Building the future, one
               line of code at a time.
             </p>
             <div className="flex items-center gap-2 text-sm text-white/70">
