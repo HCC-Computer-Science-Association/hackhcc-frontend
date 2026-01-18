@@ -49,7 +49,7 @@ export function About() {
       icon: Trophy,
       title: "COMPETE",
       description: "Win prizes across multiple challenge tracks",
-      color: "#ff003c",
+      color: "#e91e8c",
     },
     {
       icon: GraduationCap,
@@ -127,7 +127,7 @@ export function About() {
                           background: `linear-gradient(135deg, ${feature.color}20 50%, transparent 50%)`,
                         }}
                       />
-
+{/* 
                       <div
                         className="w-12 h-12 border flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110"
                         style={{ borderColor: feature.color }}
@@ -136,7 +136,7 @@ export function About() {
                           className="w-6 h-6 transition-colors duration-300"
                           style={{ color: feature.color }}
                         />
-                      </div>
+                      </div> */}
 
                       <h5
                         className="font-bold text-xl mb-2 tracking-wider"
@@ -170,7 +170,7 @@ export function About() {
                   bringing together the brightest minds to hack the future.
                   Whether you&apos;re a seasoned developer or just starting your
                   coding journey,
-                  <span className="text-[#00f0ff]"> HACKHCC: CODERUNNERS </span>
+                  <span className="text-[#00f0ff] font-mono"> HACKHCC: CODERUNNERS </span>
                   is your gateway to the next level.
                 </p>
                 <p>

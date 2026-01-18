@@ -70,7 +70,12 @@ export function Sponsors() {
                       className="font-mono font-bold tracking-widest"
                       style={{ color: tier.color }}
                     >
-                      {tier.name}
+                      {tier.name == 'NEXUS' && <h2>{tier.name}</h2>} 
+                      {tier.name == 'GRID' && <h3>{tier.name}</h3>}
+                      {tier.name == 'CIRCUIT' && <h4>{tier.name}</h4>} 
+                      {tier.name == 'SHARD' && <h5>{tier.name}</h5>} 
+
+                      
                     </div>
                     <div
                       className="flex-1 h-px"
@@ -90,7 +95,7 @@ export function Sponsors() {
                     {Array.from({ length: tier.slots }).map((_, index) => (
                       <div
                         key={index}
-                        className="relative aspect-[3/1] bg-[#12121a]  border border-[#2a2a3a] flex items-center justify-center hover:border-opacity-50 transition-all group"
+                        className="relative aspect-[3/1]  border border-[#2a2a3a] flex items-center justify-center hover:border-opacity-50 transition-all group"
                         style={{ borderColor: `${tier.color}30` }}
                       >
                         <span className="font-mono text-[#8888aa]/50 text-sm">

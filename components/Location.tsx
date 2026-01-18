@@ -40,7 +40,7 @@ export function Location() {
           {/* Location details */}
           <div className="space-y-6">
             {/* Venue card */}
-            <div className="relative bg-[#12121a] border border-[#2a2a3a] p-6 hover:border-[#00f0ff]/50 transition-colors">
+            <div className="relative  border border-[#2a2a3a] p-6 hover:border-[#00f0ff]/50 transition-colors">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 border border-[#00f0ff] flex items-center justify-center flex-shrink-0">
                   <Building className="w-6 h-6 text-[#00f0ff]" />
@@ -67,7 +67,7 @@ export function Location() {
             </div>
 
             {/* Getting there card */}
-            <div className="relative bg-[#12121a] border border-[#2a2a3a] p-6 hover:border-[#fcee0a]/50 transition-colors">
+            <div className="relative  border border-[#2a2a3a] p-6 hover:border-[#fcee0a]/50 transition-colors">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 border border-[#fcee0a] flex items-center justify-center flex-shrink-0">
                   <Car className="w-6 h-6 text-[#fcee0a]" />

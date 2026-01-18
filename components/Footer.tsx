@@ -21,7 +21,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             {/* Logo Image */}
-            <div className="flex  glitch">
+            <div className="flex">
               <Image
                 src="/hackhcc-coderunners-logo.png"
                 alt="HackHCC: Coderunners Logo"
