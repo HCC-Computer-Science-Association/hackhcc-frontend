@@ -52,9 +52,6 @@ export function About() {
           <div className="w-24 h-1 bg-gradient-to-r from-cyber-cyan to-cyber-magenta mx-auto"></div>
           {/* Countdown */}
           <div className="mt-10 flex flex-col md:flex-row items-center gap-4 md:gap-8 justify-center">
-            <div className="text-xs sm:text-sm uppercase tracking-[0.2em] text-dark-navy font-bold opacity-80">
-              Countdown
-            </div>
             <div className="flex items-center gap-1 sm:gap-4 lg:gap-6 font-mono text-dark-navy">
               <TimeBox label="days" value={d} />
               <span className="text-dark-navy/40 text-2xl sm:text-5xl lg:text-7xl mb-6 sm:mb-12 lg:mb-16">:</span>
