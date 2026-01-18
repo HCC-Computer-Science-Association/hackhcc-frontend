@@ -71,7 +71,39 @@ export function Schedule() {
             <div className="w-24 h-1 bg-gradient-to-r from-cyber-cyan to-cyber-magenta mx-auto mb-4"></div>
             <p className="text-xl text-dark-navy/80">TBA</p>
           </div>
-
+{/* TBA placeholder */}
+        <div className="relative max-w-2xl mx-auto">
+          <div className="relative bg-[#12121a] border border-[#2a2a3a] p-12 text-center">
+            {/* Corner accents */}
+            <div className="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 border-[#00f0ff]" />
+            <div className="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 border-[#00f0ff]" />
+            <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 border-[#fcee0a]" />
+            <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 border-[#fcee0a]" />
+            
+            <div className="w-16 h-16 border border-[#00f0ff]/50 flex items-center justify-center mx-auto mb-6">
+              <Clock className="w-8 h-8 text-[#00f0ff]" />
+            </div>
+            
+            <div className="font-mono text-6xl font-bold text-[#00f0ff] mb-4 tracking-widest text-glow-cyan">
+              TBA
+            </div>
+            <p className="text-[#8888aa] font-mono">
+              Full schedule coming soon...
+            </p>
+            
+            {/* Loading bar animation */}
+            <div className="mt-8 h-1 bg-[#1a1a24] overflow-hidden">
+              <div 
+                className="h-full bg-gradient-to-r from-[#00f0ff] to-[#fcee0a]"
+                style={{
+                  width: '40%',
+                  animation: 'pulse 2s ease-in-out infinite',
+                }}
+              />
+            </div>
+            <p className="font-mono text-xs text-[#8888aa] mt-2">LOADING_SCHEDULE...</p>
+          </div>
+        </div>
           {/* <div className="grid lg:grid-cols-2 gap-8">
           {scheduleData.map((day, dayIndex) => (
             <div

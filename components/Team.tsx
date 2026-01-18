@@ -127,6 +127,7 @@ export function Team() {
                               key={index}
                               className={`${borderClass} bg-dark-bg/80 backdrop-blur-sm p-6 hover:transform hover:scale-105 transition-all duration-300 group rounded-xl border border-white/10`}
                             >
+                              
                               {/* Avatar */}
                               <div className="relative mb-4 overflow-hidden flex justify-center">
                                 <div

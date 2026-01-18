@@ -1,9 +1,9 @@
-import { Terminal, Zap } from "lucide-react";
+import { Terminal, Zap, ChevronDown } from "lucide-react";
 import Image from "next/image";
 
 export function Hero() {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-navy">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-navy ">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0 flex items-center justify-center">
         {/* <img
@@ -27,7 +27,7 @@ export function Hero() {
        
 
         {/* Logo Image */}
-        <div className="flex justify-center glitch">
+        <div className="flex justify-center ">
           <Image
             src="/hackhcc-coderunners-logo.png"
             alt="HackHCC: Coderunners Logo"
@@ -40,12 +40,12 @@ export function Hero() {
 
          <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 neon-border-cyan bg-dark-bg/80 rounded-full backdrop-blur-sm">
           {/* <Terminal className="w-4 h-4 text-cyber-cyan" /> */}
-          <span className="text-cyber-cyan">
+          <span className="text-cyber-cyan font-['interceptor']">
             Houston, Texas // May 22-23, 2026
           </span>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-8">
+        {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-8">
           <a
             href="https://registration.socio.events/e/hackhcc"
             target="_blank"
@@ -56,6 +56,21 @@ export function Hero() {
             <span className="relative z-10 font-bold">GET TICKET</span>
           </a>
 
+        </div> */}
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
+          <a
+            href="#register"
+            className="group relative px-10 py-4 bg-[#fcee0a]  text-[#0a0a0f] font-bold text-lg uppercase tracking-wider hover:bg-[#12121a] hover:text-[#fcee0a] transition-all duration-300"
+          >
+            <span className="relative z-10 flex items-center gap-2">
+              Register Now
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
+            </span>
+            <div className="absolute inset-0 border-2 border-[#fcee0a]  translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform" />
+          </a>
+         
         </div>
 
         {/* Floating Icons */}
@@ -65,6 +80,11 @@ export function Hero() {
         <div className="absolute -z-10 bottom-20 right-10 opacity-30">
           <Terminal className="w-16 h-16 text-cyber-magenta animate-pulse" />
         </div> */}
+           
+      </div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+        <span className="font-mono text-xs text-[#8888aa]">SCROLL</span>
+        <ChevronDown className="w-5 h-5 text-[#00f0ff]" />
       </div>
     </div>
   );
