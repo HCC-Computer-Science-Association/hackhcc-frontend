@@ -2,7 +2,9 @@
 @import url("https://fonts.cdnfonts.com/css/rovelink");
 @import url("https://fonts.cdnfonts.com/css/interceptor");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Share+Tech+Mono&display=swap');
 html {
   scroll-behavior: smooth;
 }
@@ -25,10 +27,14 @@ html {
   --font-family-rovelink: "Rovelink", sans-serif;
   --font-family-rubik-glitch: var(--font-rubik-glitch), sans-serif;
   --font-family-rubik-glitch: "Rubik Glitch", sans-serif;
+  /*  */
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "Share Tech Mono", "Geist Mono", monospace;
 }
 
 :root {
-  --dark-navy: #0a0a1f;
+  
+  --dark-navy: #050508;
   --deep-purple: #1a0d2e;
   --cyber-magenta: #e91e8c;
   --cyber-cyan: #00e5ff;
@@ -42,11 +48,10 @@ html {
 body {
   background: var(--dark-navy) !important;
   color: var(--neon-yellow);
-  font-family: "Interceptor", sans-serif;
+  font-family: "Geist", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  letter-spacing: -0.01em;
 }
 
 h1,
@@ -55,7 +60,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "rubik-glitch", sans-serif;
+  font-family: "interceptor", sans-serif;
 }
 
 h1 {
@@ -85,76 +90,89 @@ h4 {
 }
 
 p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-family: var(--font-sans);
 }
 
 @layer utilities {
   .neon-border-yellow {
     border: 2px solid var(--neon-yellow);
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5),
+    box-shadow:
+      0 0 10px rgba(255, 215, 0, 0.5),
       inset 0 0 10px rgba(255, 215, 0, 0.1);
   }
 
   .neon-border-magenta {
     border: 2px solid var(--cyber-magenta);
-    box-shadow: 0 0 10px rgba(233, 30, 140, 0.5),
+    box-shadow:
+      0 0 10px rgba(233, 30, 140, 0.5),
       inset 0 0 10px rgba(233, 30, 140, 0.1);
   }
 
   .neon-border-cyan {
     border: 2px solid var(--cyber-cyan);
-    box-shadow: 0 0 10px rgba(0, 229, 255, 0.5),
+    box-shadow:
+      0 0 10px rgba(0, 229, 255, 0.5),
       inset 0 0 10px rgba(0, 229, 255, 0.1);
   }
 
   .neon-border-platinum {
     border: 2px solid var(--platinum);
-    box-shadow: 0 0 10px rgba(229, 228, 226, 0.5),
+    box-shadow:
+      0 0 10px rgba(229, 228, 226, 0.5),
       inset 0 0 10px rgba(229, 228, 226, 0.1);
   }
 
   .neon-text-yellow {
     color: var(--neon-yellow);
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6),
-      0 0 20px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
+    text-shadow:
+      0 0 10px rgba(255, 215, 0, 0.6),
+      0 0 20px rgba(255, 215, 0, 0.4),
+      0 0 30px rgba(255, 215, 0, 0.2);
   }
 
   .neon-text-magenta {
     color: var(--cyber-magenta);
-    text-shadow: 0 0 10px rgba(233, 30, 140, 0.6),
-      0 0 20px rgba(233, 30, 140, 0.4), 0 0 30px rgba(233, 30, 140, 0.2);
+    text-shadow:
+      0 0 10px rgba(233, 30, 140, 0.6),
+      0 0 20px rgba(233, 30, 140, 0.4),
+      0 0 30px rgba(233, 30, 140, 0.2);
   }
 
   .neon-text-cyan {
     color: var(--cyber-cyan);
-    text-shadow: 0 0 10px rgba(0, 229, 255, 0.6),
-      0 0 20px rgba(0, 229, 255, 0.4), 0 0 30px rgba(0, 229, 255, 0.2);
+    text-shadow:
+      0 0 10px rgba(0, 229, 255, 0.6),
+      0 0 20px rgba(0, 229, 255, 0.4),
+      0 0 30px rgba(0, 229, 255, 0.2);
   }
 
   .neon-text-platinum {
     color: var(--platinum);
-    text-shadow: 0 0 10px rgba(229, 228, 226, 0.8),
-      0 0 20px rgba(229, 228, 226, 0.6), 0 0 30px rgba(229, 228, 226, 0.4);
+    text-shadow:
+      0 0 10px rgba(229, 228, 226, 0.8),
+      0 0 20px rgba(229, 228, 226, 0.6),
+      0 0 30px rgba(229, 228, 226, 0.4);
   }
 
   .neon-border-silver {
     border: 2px solid var(--silver);
-    box-shadow: 0 0 10px rgba(192, 192, 192, 0.5),
+    box-shadow:
+      0 0 10px rgba(192, 192, 192, 0.5),
       inset 0 0 10px rgba(192, 192, 192, 0.1);
   }
 
   .neon-text-silver {
     color: var(--silver);
-    text-shadow: 0 0 10px rgba(192, 192, 192, 0.8),
-      0 0 20px rgba(192, 192, 192, 0.6), 0 0 30px rgba(192, 192, 192, 0.4);
+    text-shadow:
+      0 0 10px rgba(192, 192, 192, 0.8),
+      0 0 20px rgba(192, 192, 192, 0.6),
+      0 0 30px rgba(192, 192, 192, 0.4);
   }
 
   .glitch {
     position: relative;
     animation: glitch 3s infinite;
   }
-  
 
   @keyframes glitch {
     0%,
@@ -226,7 +244,7 @@ p {
   }
 
   .cp-btn-black {
-    border-image: url('../img/cp-btn-black.svg') 0 20 fill;
+    border-image: url("../img/cp-btn-black.svg") 0 20 fill;
     color: #000;
   }
 
@@ -239,5 +257,5 @@ p {
     padding: 120px 50px;
     -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
-}
+  }
 }

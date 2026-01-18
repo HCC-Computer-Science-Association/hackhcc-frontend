@@ -44,8 +44,8 @@ export function FAQ() {
 
   return (
     <>
-      <div className="bg-[initial] bg-[url('../img/separator-yellow-f58e9aba.svg')]   w-full z-1">
-        hackerpsycho
+      <div className="bg-[initial] bg-[url('../img/separator-yellow-f58e9aba.svg')] h-8  w-full z-1">
+        {/* hackerpsycho */}
       </div>
       <section id="faq" className="py-20 px-4 bg-cp-yellow">
         <div className="max-w-4xl mx-auto">

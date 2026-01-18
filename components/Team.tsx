@@ -39,115 +39,134 @@ export function Team() {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative px-8 md:px-12">
+        <div className="relative px-4 md:px-16">
           {/* Previous Button */}
           <button
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all hidden md:flex"
+            type="button"
+            className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 z-20 p-3 bg-[#12121a] border border-[#2a2a3a] hover:border-[#00f0ff] text-[#e8e8e8] transition-all duration-300 hidden md:flex items-center justify-center group"
             onClick={scrollPrev}
+            aria-label="Previous team"
           >
-            <ChevronLeft size={32} />
+            <ChevronLeft size={28} className="group-hover:text-[#00f0ff] transition-colors" />
           </button>
 
           {/* Next Button */}
           <button
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all hidden md:flex"
+            type="button"
+            className="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 z-20 p-3 bg-[#12121a] border border-[#2a2a3a] hover:border-[#00f0ff] text-[#e8e8e8] transition-all duration-300 hidden md:flex items-center justify-center group"
             onClick={scrollNext}
+            aria-label="Next team"
           >
-            <ChevronRight size={32} />
+            <ChevronRight size={28} className="group-hover:text-[#00f0ff] transition-colors" />
           </button>
 
           {/* Embla Viewport */}
           <div className="overflow-hidden" ref={emblaRef}>
-            {/* CRITICAL FIX: 
-               1. added 'flex' to make slides horizontal
-               2. added 'touch-pan-y' for better mobile scrolling 
-            */}
             <div className="flex touch-pan-y">
               {teams.map((team) => {
-                const teamColorClass =
+                const teamColorHex =
                   team.color === "yellow"
-                    ? "neon-yellow"
+                    ? "#fcee0a"
                     : team.color === "magenta"
-                    ? "cyber-magenta"
-                    : team.color === "cyan"
-                    ? "cyber-cyan"
-                    : "";
+                      ? "#ff2a6d"
+                      : "#00f0ff"
+
                 return (
-                  // CRITICAL FIX: added 'flex-[0_0_100%]' and 'min-w-0'
-                  <div
-                    key={team.name}
-                    className="flex-[0_0_100%] min-w-0 pl-4 relative"
-                  >
-                    <div className="md:grid md:grid-cols-5 p-2 gap-10">
-                      
-                      {/* Left Side: Team Icon/Name */}
-                      <div className="md:col-start-1 m-auto flex flex-col items-center justify-center w-full mb-8 md:mb-auto">
-                        <div className="h-48 w-full flex items-center justify-center mb-4">
+                  <div key={team.name} className="flex-[0_0_100%] min-w-0 px-2">
+                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                      {/* Left Side: Team Name */}
+                      <div className="w-full md:w-64 flex flex-col items-center justify-center shrink-0 py-8">
+                        <div
+                          className="w-32 h-32  flex items-center justify-center mb-6 overflow-hidden"
+                          style={{ borderColor: teamColorHex }}
+                        >
                           <Image
-                            src={team.icon}
-                            width={500}
-                            height={500}
-                            alt={team.name}
-                            className="max-h-full w-auto object-contain"
+                            src={team.icon || "/placeholder.svg"}
+                            width={96}
+                            height={96}
+                            alt={`${team.name} icon`}
+                            className="w-full h-full object-contain p-2"
                           />
                         </div>
-                        <div className="h-16 w-full flex items-center justify-center">
-                          <h3 className={`text-center text-2xl font-bold text-${teamColorClass}`}>
-                            {team.name}
-                          </h3>
-                        </div>
+                        <h3
+                          className="text-2xl font-bold text-center tracking-wider"
+                          style={{ color: teamColorHex }}
+                        >
+                          {team.name}
+                        </h3>
+                        <div
+                          className="h-[2px] w-16 mt-4"
+                          style={{ backgroundColor: teamColorHex }}
+                        />
                       </div>
 
                       {/* Right Side: Members Grid */}
-                      <div className="md:col-start-2 md:col-span-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {team.members.map((member, index) => {
-                          const borderClass =
+                          const memberColorHex =
                             member.color === "cyan"
-                              ? "neon-border-cyan"
+                              ? "#00f0ff"
                               : member.color === "magenta"
-                              ? "neon-border-magenta"
-                              : "neon-border-yellow";
-
-                          const accentColor =
-                            member.color === "cyan"
-                              ? "text-cyber-cyan"
-                              : member.color === "magenta"
-                              ? "text-cyber-magenta"
-                              : "text-neon-yellow";
-
-                          const gradientFrom =
-                            member.color === "cyan"
-                              ? "from-cyber-cyan/20"
-                              : member.color === "magenta"
-                              ? "from-cyber-magenta/20"
-                              : "from-neon-yellow/20";
+                                ? "#ff2a6d"
+                                : "#fcee0a"
 
                           return (
                             <div
-                              key={index}
-                              className={`${borderClass} bg-dark-bg/80 backdrop-blur-sm p-6 hover:transform hover:scale-105 transition-all duration-300 group rounded-xl border border-white/10`}
+                              key={`${member.name}-${index}`}
+                              className="group relative  border border-[#2a2a3a] p-6 hover:border-opacity-100 transition-all duration-300"
+                              style={
+                                {
+                                  "--hover-color": memberColorHex,
+                                } as React.CSSProperties
+                              }
+                              onMouseEnter={(e) => {
+                                e.currentTarget.style.borderColor = memberColorHex
+                              }}
+                              onMouseLeave={(e) => {
+                                e.currentTarget.style.borderColor = "#2a2a3a"
+                              }}
                             >
+                              {/* Index */}
+                              <div className="absolute top-2 right-2 font-mono text-xs text-[#8888aa]/50">
+                                {String(index + 1).padStart(2, "0")}
+                              </div>
+
                               {/* Avatar */}
-                              <div className="relative mb-4 overflow-hidden flex justify-center">
+                              <div className="relative mb-4 flex justify-center">
                                 <div
-                                  className={`w-32 h-32 rounded-full ${borderClass} bg-gradient-to-br ${gradientFrom} to-transparent flex items-center justify-center overflow-hidden`}
+                                  className="w-20 h-20 border-2 flex items-center justify-center overflow-hidden"
+                                  style={{ borderColor: `${memberColorHex}50` }}
                                 >
                                   <Image
                                     src={`/img/${member.ref}`}
-                                    width={500}
-                                    height={500}
+                                    width={80}
+                                    height={80}
                                     alt={member.name}
                                     className="w-full h-full object-cover"
+                                    onError={(e) => {
+                                      // Fallback to initials if image fails
+                                      const target = e.target as HTMLImageElement
+                                      target.style.display = "none"
+                                      const parent = target.parentElement
+                                      if (parent) {
+                                        const span = document.createElement("span")
+                                        span.className = "font-mono text-lg"
+                                        span.style.color = memberColorHex
+                                        span.textContent = 'test'
+                                        parent.appendChild(span)
+                                      }
+                                    }}
                                   />
                                 </div>
                               </div>
 
                               {/* Info */}
                               <div className="text-center">
-                                <h4 className="text-white text-lg font-semibold mb-1">
-                                  {member.name}
-                                </h4>
-                                <p className={`text-sm mb-4 ${accentColor}`}>
+                                <h4 className="font-bold text-[#e8e8e8] mb-1">{member.name}</h4>
+                                <p
+                                  className="font-mono text-xs mb-4"
+                                  style={{ color: memberColorHex }}
+                                >
                                   {member.role}
                                 </p>
 
@@ -157,31 +176,58 @@ export function Team() {
                                     <a
                                       href={member.social.github}
                                       target="_blank"
-                                      className="w-8 h-8 rounded-full border border-white/30 hover:border-cyber-cyan flex items-center justify-center transition-all duration-300 hover:bg-cyber-cyan/10"
+                                      rel="noopener noreferrer"
+                                      className="w-8 h-8 border border-[#2a2a3a] hover:border-[#00f0ff] flex items-center justify-center transition-all duration-300 hover:bg-[#00f0ff]/10"
+                                      aria-label={`${member.name}'s GitHub`}
                                     >
-                                      <Github className="w-4 h-4 text-white/70" />
+                                      <Github className="w-4 h-4 text-[#8888aa] hover:text-[#00f0ff]" />
                                     </a>
                                   )}
                                   {member.social.linkedin && (
                                     <a
                                       href={member.social.linkedin}
                                       target="_blank"
-                                      className="w-8 h-8 rounded-full border border-white/30 hover:border-cyber-cyan flex items-center justify-center transition-all duration-300 hover:bg-cyber-cyan/10"
+                                      rel="noopener noreferrer"
+                                      className="w-8 h-8 border border-[#2a2a3a] hover:border-[#00f0ff] flex items-center justify-center transition-all duration-300 hover:bg-[#00f0ff]/10"
+                                      aria-label={`${member.name}'s LinkedIn`}
                                     >
-                                      <Linkedin className="w-4 h-4 text-white/70" />
+                                      <Linkedin className="w-4 h-4 text-[#8888aa] hover:text-[#00f0ff]" />
                                     </a>
                                   )}
                                 </div>
                               </div>
+
+                              {/* Bottom accent */}
+                              <div
+                                className="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500"
+                                style={{ backgroundColor: memberColorHex }}
+                              />
                             </div>
-                          );
+                          )
                         })}
                       </div>
                     </div>
                   </div>
-                );
+                )
               })}
             </div>
+          </div>
+
+          {/* Mobile Navigation Dots */}
+          <div className="flex justify-center gap-2 mt-8 md:hidden">
+            {teams.map((team, index) => (
+              <button
+                type="button"
+                key={team.name}
+                className="w-3 h-3 border border-[#00f0ff] transition-all"
+                style={{
+                  backgroundColor:
+                    index === 0 ? "#00f0ff" : "transparent",
+                }}
+                onClick={() => emblaApi?.scrollTo(index)}
+                aria-label={`Go to ${team.name} team`}
+              />
+            ))}
           </div>
         </div>
       </div>

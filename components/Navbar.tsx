@@ -64,7 +64,7 @@ export function Navbar() {
                   onClick={() => scrollToSection(item.href)}
                   className="flex items-center h-full gap-1 px-6 text-white/90 hover:text-neon-yellow transition-all duration-300 hover:bg-dark-bg/50 border-r border-white/10 last:border-r-0 relative group"
                 >
-                  <span className="tracking-wide">{item.label}</span>
+                  <span className="tracking-wide font-['interceptor']">{item.label}</span>
                   {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
                 </a>
               </div>
@@ -106,7 +106,7 @@ export function Navbar() {
               className="fixed top-0 left-0 bottom-0 w-[80%] max-w-sm bg-dark-navy border-r-2 border-cp-yellow z-50 pointer-events-auto flex flex-col shadow-[0_0_50px_rgba(252,238,10,0.2)]"
             >
               <div className="p-6 flex justify-between items-center border-b border-white/10 bg-black/20">
-                <span className="text-cp-yellow font-bold text-xl tracking-wider">MENU</span>
+                <span className="text-cp-yellow font-bold text-xl tracking-wider font-['interceptor']">MENU</span>
                 <button
                   onClick={() => setIsMobileOpen(false)}
                   className="text-white/80 hover:text-cp-yellow transition-colors"
@@ -123,7 +123,7 @@ export function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 + 0.1 }}
                     onClick={() => scrollToSection(item.href)}
-                    className="text-lg font-bold text-white/90 hover:text-cp-yellow hover:bg-white/5 py-4 px-4 border-l-2 border-transparent hover:border-cp-yellow transition-all duration-200 uppercase tracking-widest cursor-pointer"
+                    className="text-lg font-['interceptor'] font-bold text-white/90 hover:text-cp-yellow hover:bg-white/5 py-4 px-4 border-l-2 border-transparent hover:border-cp-yellow transition-all duration-200 uppercase tracking-widest cursor-pointer"
                   >
                     {item.label}
                   </motion.a>

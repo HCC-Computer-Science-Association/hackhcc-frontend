@@ -1,6 +1,13 @@
 import { Trophy, Award, Medal, Sparkles } from 'lucide-react';
 
 export function Prizes() {
+
+  const specialTracks = [
+  { name: "Gemini", prize: "TBA" },
+  { name: "ElevenLabs", prize: "TBA" },
+  { name: "Solana", prize: "TBA" },
+  { name: "Auth0", prize: "TBA" },
+]
   const prizes = [
     {
       place: '1ST PLACE',
@@ -108,7 +115,7 @@ export function Prizes() {
         </div> */}
 
         {/* Track Prizes */}
-        <div className="neon-border-cyan bg-dark-bg/80 backdrop-blur-sm p-8">
+        {/* <div className="neon-border-cyan bg-dark-bg/80 backdrop-blur-sm p-8">
           <div className="flex items-center justify-center gap-3 mb-8">
             <h3 className="text-white">SPECIAL TRACK PRIZES</h3>
           </div>
@@ -121,6 +128,33 @@ export function Prizes() {
               >
                 <h4 className="text-white mb-2">{track.name}</h4>
                 <p className="text-2xl neon-text-yellow">{track.prize}</p>
+              </div>
+            ))}
+          </div>
+        </div> */}
+
+        {/* Special track prizes */}
+        <div className="mb-8">
+          <h3 className="text-center text-xl font-bold text-[#e8e8e8] mb-8 flex items-center justify-center gap-3">
+            SPECIAL TRACK PRIZES
+          </h3>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {specialTracks.map((track, index) => (
+              <div
+                key={track.name}
+                className="group relative bg-[#12121a] border border-[#2a2a3a] p-6 text-center hover:border-[#00f0ff]/50 transition-all"
+              >
+                {/* Index number */}
+                <div className="absolute top-2 left-2 font-mono text-xs text-[#8888aa]">
+                  0{index + 1}
+                </div>
+                
+                <h5 className="font-bold text-lg text-[#00f0ff] mb-2">{track.name}</h5>
+                <div className="font-mono text-2xl font-bold text-[#8888aa]">{track.prize}</div>
+                
+                {/* Bottom accent */}
+                <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#00f0ff] group-hover:w-full transition-all duration-500" />
               </div>
             ))}
           </div>
