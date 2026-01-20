@@ -44,23 +44,14 @@ export function Hero() {
           </span>
         </div>
 
-        {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-8">
-          <a
-            href="https://registration.socio.events/e/hackhcc"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative inline-flex cursor-pointer px-8 py-4 
-            bg-neon-yellow text-dark-navy hover:bg-neon-yellow/90 transition-all duration-300 overflow-hidden shadow-[0_0_20px_rgba(255,215,0,0.5)] hover:shadow-[0_0_30px_rgba(255,215,0,0.8)] "
-          >
-            <span className="relative z-10 font-bold">GET TICKET</span>
-          </a>
 
-        </div> */}
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
           <a
-            href="#register"
+            href="https://registration.socio.events/e/hackhcc"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative px-10 py-4 bg-[#fcee0a]  text-[#0a0a0f] font-bold text-lg uppercase tracking-wider hover:bg-[#12121a] hover:text-[#fcee0a] transition-all duration-300"
           >
             <span className="relative z-10 flex items-center gap-2">
