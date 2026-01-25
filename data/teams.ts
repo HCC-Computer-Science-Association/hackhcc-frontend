@@ -34,7 +34,7 @@ export const teams = [
       {
         name: "Gabriel Morales",
         role: "Website & Tech",
-        ref: "gabriel_m.png",
+        ref: "gm-pfp.jpeg",
         color: "yellow",
         social: {
           github: "https://github.com/gabbo-dam",
