@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Github, Linkedin, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
@@ -8,6 +8,9 @@ import { teams } from "@/data/teams";
 export function Team() {
   // Initialize Embla with loop enabled
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  
+  // State to track current slide for the progression bar
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   // Navigation handlers
   const scrollPrev = useCallback(() => {
@@ -17,6 +20,23 @@ export function Team() {
   const scrollNext = useCallback(() => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
+
+  // Update selected index when carousel changes
+  const onSelect = useCallback((api: any) => {
+    setSelectedIndex(api.selectedScrollSnap());
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    onSelect(emblaApi);
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+
+    return () => {
+      if (emblaApi) emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi, onSelect]);
 
   return (
     <section
@@ -40,24 +60,24 @@ export function Team() {
 
         {/* Carousel Container */}
         <div className="relative px-4 md:px-16">
-          {/* Previous Button */}
+          {/* Previous Button - Now visible on mobile */}
           <button
             type="button"
-            className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 z-20 p-3 bg-[#12121a] border border-[#2a2a3a] hover:border-[#00f0ff] text-[#e8e8e8] transition-all duration-300 hidden md:flex items-center justify-center group"
+            className="absolute cursor-pointer left-0 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 bg-[#12121a]/80 md:bg-[#12121a] border border-[#2a2a3a] hover:border-[#00f0ff] text-[#e8e8e8] transition-all duration-300 flex items-center justify-center group rounded-full md:rounded-none backdrop-blur-sm md:backdrop-blur-none"
             onClick={scrollPrev}
             aria-label="Previous team"
           >
-            <ChevronLeft size={28} className="group-hover:text-[#00f0ff] transition-colors" />
+            <ChevronLeft size={24} className="md:w-7 md:h-7 group-hover:text-[#00f0ff] transition-colors" />
           </button>
 
-          {/* Next Button */}
+          {/* Next Button - Now visible on mobile */}
           <button
             type="button"
-            className="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 z-20 p-3 bg-[#12121a] border border-[#2a2a3a] hover:border-[#00f0ff] text-[#e8e8e8] transition-all duration-300 hidden md:flex items-center justify-center group"
+            className="absolute cursor-pointer right-0 top-1/2 -translate-y-1/2 z-20 p-2 md:p-3 bg-[#12121a]/80 md:bg-[#12121a] border border-[#2a2a3a] hover:border-[#00f0ff] text-[#e8e8e8] transition-all duration-300 flex items-center justify-center group rounded-full md:rounded-none backdrop-blur-sm md:backdrop-blur-none"
             onClick={scrollNext}
             aria-label="Next team"
           >
-            <ChevronRight size={28} className="group-hover:text-[#00f0ff] transition-colors" />
+            <ChevronRight size={24} className="md:w-7 md:h-7 group-hover:text-[#00f0ff] transition-colors" />
           </button>
 
           {/* Embla Viewport */}
@@ -69,15 +89,15 @@ export function Team() {
                     ? "#fcee0a"
                     : team.color === "magenta"
                       ? "#ff2a6d"
-                      : "#00f0ff"
+                      : "#00f0ff";
 
                 return (
                   <div key={team.name} className="flex-[0_0_100%] min-w-0 px-2">
-                    <div className="flex flex-col md:flex-row gap-8 items-start">
+                    <div className="flex flex-col md:flex-row gap-8 items-center">
                       {/* Left Side: Team Name */}
                       <div className="w-full md:w-64 flex flex-col items-center justify-center shrink-0 py-8">
                         <div
-                          className="w-32 h-32  flex items-center justify-center mb-6 overflow-hidden"
+                          className="w-32 h-32 flex items-center justify-center mb-6 overflow-hidden"
                           style={{ borderColor: teamColorHex }}
                         >
                           <Image
@@ -108,22 +128,22 @@ export function Team() {
                               ? "#00f0ff"
                               : member.color === "magenta"
                                 ? "#ff2a6d"
-                                : "#fcee0a"
+                                : "#fcee0a";
 
                           return (
                             <div
                               key={`${member.name}-${index}`}
-                              className="group relative  border border-[#2a2a3a] p-6 hover:border-opacity-100 transition-all duration-300"
+                              className="group relative border border-[#2a2a3a] p-6 hover:border-opacity-100 transition-all duration-300"
                               style={
                                 {
                                   "--hover-color": memberColorHex,
                                 } as React.CSSProperties
                               }
                               onMouseEnter={(e) => {
-                                e.currentTarget.style.borderColor = memberColorHex
+                                e.currentTarget.style.borderColor = memberColorHex;
                               }}
                               onMouseLeave={(e) => {
-                                e.currentTarget.style.borderColor = "#2a2a3a"
+                                e.currentTarget.style.borderColor = "#2a2a3a";
                               }}
                             >
                               {/* Index */}
@@ -144,16 +164,15 @@ export function Team() {
                                     alt={member.name}
                                     className="w-full h-full object-cover"
                                     onError={(e) => {
-                                      // Fallback to initials if image fails
-                                      const target = e.target as HTMLImageElement
-                                      target.style.display = "none"
-                                      const parent = target.parentElement
+                                      const target = e.target as HTMLImageElement;
+                                      target.style.display = "none";
+                                      const parent = target.parentElement;
                                       if (parent) {
-                                        const span = document.createElement("span")
-                                        span.className = "font-mono text-lg"
-                                        span.style.color = memberColorHex
-                                        span.textContent = 'test'
-                                        parent.appendChild(span)
+                                        const span = document.createElement("span");
+                                        span.className = "font-mono text-lg";
+                                        span.style.color = memberColorHex;
+                                        span.textContent = "test";
+                                        parent.appendChild(span);
                                       }
                                     }}
                                   />
@@ -203,26 +222,27 @@ export function Team() {
                                 style={{ backgroundColor: memberColorHex }}
                               />
                             </div>
-                          )
+                          );
                         })}
                       </div>
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </div>
 
-          {/* Mobile Navigation Dots */}
-          <div className="flex justify-center gap-2 mt-8 md:hidden">
+          {/* Navigation Dots (Progression Bar) - Fixed Logic */}
+          <div className="flex justify-center gap-2 mt-8">
             {teams.map((team, index) => (
               <button
                 type="button"
                 key={team.name}
-                className="w-3 h-3 border border-[#00f0ff] transition-all"
+                className="w-3 h-3 border border-[#00f0ff] transition-all duration-300"
                 style={{
                   backgroundColor:
-                    index === 0 ? "#00f0ff" : "transparent",
+                    index === selectedIndex ? "#00f0ff" : "transparent",
+                  transform: index === selectedIndex ? "scale(1.2)" : "scale(1)",
                 }}
                 onClick={() => emblaApi?.scrollTo(index)}
                 aria-label={`Go to ${team.name} team`}

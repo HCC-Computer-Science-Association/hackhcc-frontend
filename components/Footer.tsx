@@ -5,6 +5,7 @@ import {
   Linkedin,
   Mail,
   MapPin,
+  Facebook,
 } from "lucide-react";
 
 import Image from "next/image";
@@ -32,13 +33,9 @@ export function Footer() {
               />
             </div>
             <p className="text-white/70 text-sm mb-4">
-              Houston&#39;s premier hackathon experience. Building the future, one
-              line of code at a time.
+              Houston&#39;s premier hackathon experience. Building the future,
+              one line of code at a time.
             </p>
-            <div className="flex items-center gap-2 text-sm text-white/70">
-              <MapPin className="w-4 h-4 text-cyber-cyan" />
-              <span>HCC, Houston, TX</span>
-            </div>
           </div>
 
           {/* Quick Links */}
