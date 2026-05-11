@@ -95,12 +95,13 @@ export const teams = [
         },
       },
       {
-        name: "Rafay Ahmed Syed",
+        name: "Nahom Mulugeta",
         role: "Logistics",
         color: "cyan",
-        ref: "Rafay.png",
+        ref: "nahom.jpg",
         social: {
-          linkedin: "https://www.linkedin.com/in/rafayahmedsyed/",
+          linkedin: "https://www.linkedin.com/in/nahomsmulugeta/",
+          github: "https://github.com/nahomsolomon12",
         },
       },
     ],
@@ -121,16 +122,6 @@ export const teams = [
         },
       },
       {
-        name: "Adil Mujeeb",
-        role: "Sponsorship & Hospitality",
-        ref: "adil_mujeeb.jpeg",
-        color: "magenta",
-        social: {
-          github: "https://github.com/AdilMujeeb99/",
-          linkedin: "https://www.linkedin.com/in/adil-mujeeb-2a5b84231/",
-        },
-      },
-      {
         name: "Taki Boubekri",
         role: "Sponsorship & Hospitality",
         ref: "Taki.png",
@@ -138,6 +129,15 @@ export const teams = [
         social: {
           linkedin: "https://www.linkedin.com/in/taki-boubekri-b35953310/",
           github: "https://github.com/Anis93u/",
+        },
+      },
+      {
+        name: "Oyinade (Comfort) Balogun",
+        role: "Sponsorship & Hospitality",
+        ref: "Oyinade.jpg",
+        color: "magenta",
+        social: {
+          linkedin: "https://www.linkedin.com/in/oyinade-balogun-2a8628284/",
         },
       },
     ],

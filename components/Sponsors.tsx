@@ -16,8 +16,20 @@ interface Tier {
 
 export function Sponsors() {
   const sponsorTiers: Tier[] = [
-    { name: "NEXUS", slots: 2, color: "#fcee0a", sponsors: [] },
-    { name: "GRID", slots: 3, color: "#00f0ff", sponsors: [] },
+    { name: "NEXUS", slots: 2, color: "#fcee0a", sponsors: [
+      {
+        name: "ITServe",
+        logo: "/sponsors/itserve.png",
+        url: "https://www.itserve.org/",
+      },
+    ] },
+    { name: "GRID", slots: 3, color: "#00f0ff", sponsors: [
+      {
+        name: "Honeycomb",
+        logo: "/sponsors/honeycomb.png",
+        url: "https://honeycombsoft.com/",
+      },
+    ] },
     { name: "CIRCUIT", slots: 4, color: "#00ff9f", sponsors: [] },
     { name: "SHARD", slots: 4, color: "#8888aa", sponsors: [
       {
@@ -99,7 +111,7 @@ export function Sponsors() {
                                 src={sponsor.logo}
                                 alt={sponsor.name}
                                 fill
-                                className="object-contain filter grayscale group-hover/sponsor:grayscale-0 transition-all duration-300"
+                                className="object-contain"
                               />
                             </div>
                           </a>
