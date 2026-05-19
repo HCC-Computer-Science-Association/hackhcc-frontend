@@ -61,7 +61,7 @@ const day1: ScheduleEvent[] = [
     time: "5:00 p.m.",
     title: "Doors Lock",
     description:
-      "Building doors lock. Regular HCC security patrols relieved by officers allocated by Chief Ramirez.",
+      "Entry into the building will not be permitted after this time",
     tag: "SECURITY",
     tagColor: "magenta",
   },
