@@ -95,6 +95,7 @@ const day1: ScheduleEvent[] = [
     time: "8:30–9:30 p.m.",
     title: "Crochet Workshop",
     description: "Social event led by a CSA officer introducing participants to crocheting basics.",
+    location: "Room 169",
     tag: "SOCIAL",
     tagColor: "yellow",
     href: "/crochet.mp4",
