@@ -35,15 +35,15 @@ const day1: ScheduleEvent[] = [
   },
   {
     time: "1:00–2:30 p.m.",
-    title: "Workshop 1",
-    description: "A skills workshop covering a technology or technique relevant to the competition. Topic TBD.",
+    title: "Fullstack 101",
+    description: "Learn the intricacies of fullstack development by a seasoned veteran",
     location: "Room 169",
     tag: "WORKSHOP",
     tagColor: "cyan",
   },
   {
     time: "3:00–4:00 p.m.",
-    title: "MLH Workshop 1",
+    title: "MLH Workshop: Introduction to Google AI Studio.",
     description: "Workshop by Major League Hacking. Topic: Introduction to Google AI Studio.",
     location: "Room 171",
     tag: "MLH",
@@ -67,7 +67,7 @@ const day1: ScheduleEvent[] = [
   },
   {
     time: "5:00–6:00 p.m.",
-    title: "MLH Workshop 2",
+    title: "MLH Workshop: Hacking with GitHub Copilot." ,
     description: "Workshop by Major League Hacking. Topic: Hacking with GitHub Copilot.",
     location: "Room 171",
     tag: "MLH",
