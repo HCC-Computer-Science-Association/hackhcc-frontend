@@ -22,7 +22,7 @@ const day1: ScheduleEvent[] = [
     time: "11:30 a.m.",
     title: "Opening Ceremony",
     description:
-      "Event purpose, competition tracks, rules, and key information outlined. Attendees gather toward the auditorium at 11:15 a.m.",
+      "Event purpose, competition tracks, rules, and key information outlined.",
     tag: "CEREMONY",
     tagColor: "magenta",
   },
