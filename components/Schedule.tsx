@@ -1,4 +1,7 @@
-import { Calendar, Clock, MapPin, Moon, Sun } from "lucide-react";
+"use client";
+
+import { MapPin, Moon, Sun, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 type ScheduleEvent = {
   time: string;
@@ -7,6 +10,7 @@ type ScheduleEvent = {
   location?: string;
   tag?: string;
   tagColor?: "cyan" | "magenta" | "yellow";
+  href?: string;
 };
 
 const day1: ScheduleEvent[] = [
@@ -157,10 +161,11 @@ const day2: ScheduleEvent[] = [
   },
   {
     time: "4:00 p.m.",
-    title: "Check-Out + Cleanup",
-    description: "Participants leave the venue and cleanup begins.",
+    title: "Check-Out",
+    description: "GO HOME",
     tag: "END",
     tagColor: "yellow",
+    href: "/GOHOME.jpg",
   },
 ];
 
@@ -176,35 +181,59 @@ const borderStyles: Record<string, string> = {
   yellow: "border-[#fcee0a]/60 group-hover:border-[#fcee0a]",
 };
 
-function EventCard({ event }: { event: ScheduleEvent }) {
+function EventCard({ event, onImageClick }: { event: ScheduleEvent; onImageClick?: (src: string) => void }) {
   const color = event.tagColor ?? "cyan";
-  return (
-    <div className={`group relative flex gap-4 pl-4 py-3 border-l-2 ${borderStyles[color]} transition-colors duration-300`}>
-      <div className="flex-1 min-w-0">
-        <div className="flex flex-wrap items-center gap-2 mb-1">
-          <span className="font-mono text-xs text-[#8888aa]">{event.time}</span>
-          {event.tag && (
-            <span className={`font-mono text-[10px] border px-1.5 py-0.5 ${tagStyles[color]}`}>
-              {event.tag}
-            </span>
-          )}
-        </div>
-        <h4 className="text-white text-base font-semibold mb-0.5">{event.title}</h4>
-        {event.location && (
-          <div className="flex items-center gap-1 mb-1">
-            <MapPin className="w-3 h-3 text-[#8888aa]" />
-            <span className="font-mono text-xs text-[#8888aa]">{event.location}</span>
-          </div>
-        )}
-        {event.description && (
-          <p className="text-sm text-[#aaaacc] leading-relaxed">{event.description}</p>
+  const inner = (
+    <div className="flex-1 min-w-0">
+      <div className="flex flex-wrap items-center gap-2 mb-1">
+        <span className="font-mono text-xs text-[#8888aa]">{event.time}</span>
+        {event.tag && (
+          <span className={`font-mono text-[10px] border px-1.5 py-0.5 ${tagStyles[color]}`}>
+            {event.tag}
+          </span>
         )}
       </div>
+      <h4 className="text-white text-base font-semibold mb-0.5">{event.title}</h4>
+      {event.location && (
+        <div className="flex items-center gap-1 mb-1">
+          <MapPin className="w-3 h-3 text-[#8888aa]" />
+          <span className="font-mono text-xs text-[#8888aa]">{event.location}</span>
+        </div>
+      )}
+      {event.description && (
+        <p className="text-sm text-[#aaaacc] leading-relaxed">{event.description}</p>
+      )}
+    </div>
+  );
+
+  if (event.href) {
+    return (
+      <button
+        onClick={() => onImageClick?.(event.href!)}
+        className={`group relative flex gap-4 pl-4 py-3 border-l-2 ${borderStyles[color]} transition-colors duration-300 cursor-pointer w-full text-left`}
+      >
+        {inner}
+      </button>
+    );
+  }
+
+  return (
+    <div className={`group relative flex gap-4 pl-4 py-3 border-l-2 ${borderStyles[color]} transition-colors duration-300`}>
+      {inner}
     </div>
   );
 }
 
 export function Schedule() {
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!lightboxSrc) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setLightboxSrc(null); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightboxSrc]);
+
   return (
     <>
       <section
@@ -241,7 +270,7 @@ export function Schedule() {
               {/* Events */}
               <div className="px-6 py-5 space-y-3">
                 {day1.map((event, i) => (
-                  <EventCard key={i} event={event} />
+                  <EventCard key={i} event={event} onImageClick={setLightboxSrc} />
                 ))}
               </div>
             </div>
@@ -264,7 +293,7 @@ export function Schedule() {
               {/* Events */}
               <div className="px-6 py-5 space-y-3">
                 {day2.map((event, i) => (
-                  <EventCard key={i} event={event} />
+                  <EventCard key={i} event={event} onImageClick={setLightboxSrc} />
                 ))}
               </div>
             </div>
@@ -272,6 +301,28 @@ export function Schedule() {
         </div>
       </section>
       <div className="bg-cp-yellow bg-[url('../img/razor-099e4b40.svg')] bg-[length:auto_45px] bg-[right_bottom] rotate-180 bg-repeat-x px-[50px] py-5 -translate-y-[2px]"></div>
+
+      {/* Lightbox */}
+      {lightboxSrc && (
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95"
+          onClick={() => setLightboxSrc(null)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white/60 hover:text-white transition-colors"
+            onClick={() => setLightboxSrc(null)}
+            aria-label="Close"
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <img
+            src={lightboxSrc}
+            alt=""
+            className="max-w-full max-h-full object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </>
   );
 }
