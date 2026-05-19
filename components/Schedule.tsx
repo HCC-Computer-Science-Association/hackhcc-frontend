@@ -14,7 +14,7 @@ const day1: ScheduleEvent[] = [
     time: "9:30–11:30 a.m.",
     title: "Check-in + Networking",
     description:
-      "Arrive and check in to receive your badge. Network with sponsors at dedicated tables. Teams of up to four form during this window.",
+      "Arrive and check in to receive your badge. Network with sponsors at dedicated tables. Form your team.",
     tag: "NETWORKING",
     tagColor: "yellow",
   },
@@ -29,7 +29,7 @@ const day1: ScheduleEvent[] = [
   {
     time: "Noon",
     title: "Lunch + Hacking Begins",
-    description: "Lunch is served and teams may begin working on their projects.",
+    description: "Hacking begins.",
     tag: "FOOD",
     tagColor: "yellow",
   },
