@@ -21,6 +21,7 @@ const day1: ScheduleEvent[] = [
       "Arrive and check in to receive your badge. Network with sponsors at dedicated tables. Form your team.",
     tag: "NETWORKING",
     tagColor: "yellow",
+    href: "/checkin.mp4",
   },
   {
     time: "11:30 a.m.",
@@ -36,6 +37,7 @@ const day1: ScheduleEvent[] = [
     description: "Hacking begins.",
     tag: "FOOD",
     tagColor: "yellow",
+    href: "/lunchday1.mp4",
   },
   {
     time: "1:00–2:30 p.m.",
@@ -92,6 +94,7 @@ const day1: ScheduleEvent[] = [
       "All participants assemble for dinner. The auditorium will be closed for the remainder of the night; restrooms remain accessible.",
     tag: "FOOD",
     tagColor: "yellow",
+    href: "/dinnerday1.mp4",
   },
   {
     time: "8:30–9:30 p.m.",
@@ -106,6 +109,7 @@ const day1: ScheduleEvent[] = [
     description: "A quick typing competition open to all participants.",
     tag: "SOCIAL",
     tagColor: "yellow",
+    href: "/typing.mp4",
   },
   {
     time: "11:00 p.m.",
@@ -124,6 +128,7 @@ const day2: ScheduleEvent[] = [
     description: "The doors to the building reopen.",
     tag: "INFO",
     tagColor: "cyan",
+    href: "/day2doorsopen.mp4",
   },
   {
     time: "8:00 a.m.",
@@ -137,6 +142,7 @@ const day2: ScheduleEvent[] = [
     description: "Competition ends. All projects must be submitted by this time.",
     tag: "DEADLINE",
     tagColor: "magenta",
+    href: "/deadline.mp4",
   },
   {
     time: "Noon",
@@ -151,6 +157,7 @@ const day2: ScheduleEvent[] = [
       "Selected judges review participating teams' projects. Format likely involves numbered teams moving through judging stations.",
     tag: "JUDGING",
     tagColor: "cyan",
+    href: "/judging.mp4",
   },
   {
     time: "3:00 p.m.",
@@ -158,6 +165,7 @@ const day2: ScheduleEvent[] = [
     description: "Winners of the event are announced.",
     tag: "CEREMONY",
     tagColor: "magenta",
+    href: "/winners.mp4",
   },
   {
     time: "4:00 p.m.",
@@ -315,12 +323,23 @@ export function Schedule() {
           >
             <X className="w-8 h-8" />
           </button>
-          <img
-            src={lightboxSrc}
-            alt=""
-            className="max-w-full max-h-full object-contain"
-            onClick={(e) => e.stopPropagation()}
-          />
+          {/\.(mp4|webm|ogg|mov)$/i.test(lightboxSrc) ? (
+            <video
+              src={lightboxSrc}
+              className="max-w-full max-h-full"
+              controls
+              autoPlay
+              onClick={(e) => e.stopPropagation()}
+            />
+          ) : (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={lightboxSrc}
+              alt=""
+              className="max-w-full max-h-full object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          )}
         </div>
       )}
     </>
