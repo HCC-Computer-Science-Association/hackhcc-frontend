@@ -30,6 +30,7 @@ const day1: ScheduleEvent[] = [
       "Event purpose, competition tracks, rules, and key information outlined.",
     tag: "CEREMONY",
     tagColor: "magenta",
+    href: "/opening.mp4",
   },
   {
     time: "Noon",
@@ -70,14 +71,16 @@ const day1: ScheduleEvent[] = [
       "Entry into the building will not be permitted after this time",
     tag: "SECURITY",
     tagColor: "magenta",
+    href: "/lock.mp4",
   },
   {
     time: "5:00–6:00 p.m.",
-    title: "MLH Workshop: Hacking with GitHub Copilot." ,
+    title: "MLH Workshop: Hacking with GitHub Copilot.",
     description: "Workshop by Major League Hacking. Topic: Hacking with GitHub Copilot.",
     location: "Room 171",
     tag: "MLH",
     tagColor: "magenta",
+    href: "/copilot.mp4",
   },
   {
     time: "6:00–7:00 p.m.",
@@ -102,6 +105,7 @@ const day1: ScheduleEvent[] = [
     description: "Social event led by a CSA officer introducing participants to crocheting basics.",
     tag: "SOCIAL",
     tagColor: "yellow",
+    href: "/crochet.mp4",
   },
   {
     time: "9:30–10:00 p.m.",
@@ -118,6 +122,7 @@ const day1: ScheduleEvent[] = [
       "Most auditorium lights shut off to allow participants to rest. The competition continues through the night.",
     tag: "OVERNIGHT",
     tagColor: "magenta",
+    href: "/lightsout.mp4",
   },
 ];
 
@@ -135,6 +140,7 @@ const day2: ScheduleEvent[] = [
     title: "Breakfast",
     tag: "FOOD",
     tagColor: "yellow",
+    href: "/breakfast.mp4",
   },
   {
     time: "Noon",
@@ -149,6 +155,7 @@ const day2: ScheduleEvent[] = [
     title: "Lunch",
     tag: "FOOD",
     tagColor: "yellow",
+    href: "/day2lunch.mp4",
   },
   {
     time: "1:15–2:30 p.m.",
