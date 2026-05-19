@@ -60,7 +60,7 @@ export function About() {
     },
   ];
 
-  const { d, h, m, s } = useCountdown("2026-05-22T12:00:00-06:00");
+  const { d, h, m, s } = useCountdown("2026-05-22T09:00:00-05:00");
 
   return (
     <>
