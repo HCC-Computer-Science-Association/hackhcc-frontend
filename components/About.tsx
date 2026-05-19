@@ -14,7 +14,7 @@ export function About() {
   //   {
   //     icon: Users,
   //     title: "CONNECT",
-  //     description: "Network with 300+ developers, designers, and innovators",
+  //     description: "Network with 150+ developers, designers, and innovators",
   //     color: "magenta",
   //   },
   //   {
@@ -42,7 +42,7 @@ export function About() {
     {
       icon: Users,
       title: "CONNECT",
-      description: "Network with 300+ developers, designers, and innovators",
+      description: "Network with 150+ developers, designers, and innovators",
       color: "#fcee0a",
     },
     {
@@ -183,9 +183,9 @@ export function About() {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 pt-8 border-t border-[#2a2a3a]">
                 {[
-                  { value: "300+", label: "Hackers" },
+                  { value: "150+", label: "Hackers" },
                   { value: "24H", label: "Non-stop" },
-                  { value: "RAM", label: "In Prizes" },
+                  { value: "TBA", label: "In Prizes" },
                   { value: "FREE", label: "Entry" },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">

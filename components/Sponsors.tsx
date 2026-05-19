@@ -30,9 +30,9 @@ export function Sponsors() {
       ] },
     { name: "GRID", slots: 3, color: "#00f0ff", sponsors: [
       {
-        name: "Honeycomb",
-        logo: "/sponsors/honeycomb.png",
-        url: "https://honeycombsoft.com/",
+        name: "Google",
+        logo: "/sponsors/google.png",
+        url: "https://google.com",
       },
     ] },
     { name: "CIRCUIT", slots: 4, color: "#00ff9f", sponsors: [
@@ -40,7 +40,17 @@ export function Sponsors() {
           name: "DataVox",
           logo: "/sponsors/datavox.png",
           url: "https://www.datavox.net/",
-        }
+        },
+        {
+          name: "Tanches",
+          logo: "/sponsors/tanches.png",
+          url: "https://tanches.com/",
+        },
+        {
+          name: "NordVPN",
+          logo: "/sponsors/nordvpn.png",
+          url: "https://nordvpn.com/",
+        },
       ] },
     { name: "SHARD", slots: 4, color: "#8888aa", sponsors: [
       {
@@ -157,7 +167,7 @@ export function Sponsors() {
                 INTERESTED IN SPONSORING?
               </h3>
               <p className="text-[#8888aa] mb-8 max-w-lg mx-auto">
-                Partner with us to reach 300+ talented developers, designers,
+                Partner with us to reach 150+ talented developers, designers,
                 and innovators. Showcase your brand, recruit talent, and support
                 the Houston tech community.
               </p>

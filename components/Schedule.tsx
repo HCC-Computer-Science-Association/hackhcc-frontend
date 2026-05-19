@@ -59,8 +59,8 @@ const day1: ScheduleEvent[] = [
   },
   {
     time: "4:00–5:00 p.m.",
-    title: "Workshop 2",
-    description: "A skills workshop. Topic TBD.",
+    title: "Git Gud at Git",
+    description: "A workshop showcasing how to utilize git best along with core concepts explained",
     location: "Room 169",
     tag: "WORKSHOP",
     tagColor: "cyan",
@@ -81,14 +81,6 @@ const day1: ScheduleEvent[] = [
     location: "Room 171",
     tag: "MLH",
     tagColor: "magenta",
-  },
-  {
-    time: "6:00–7:00 p.m.",
-    title: "Workshop 3",
-    description: "A skills workshop. Topic TBD.",
-    location: "Room 169",
-    tag: "WORKSHOP",
-    tagColor: "cyan",
   },
   {
     time: "7:00 p.m.",
