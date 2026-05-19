@@ -47,6 +47,7 @@ const day1: ScheduleEvent[] = [
     location: "Room 169",
     tag: "WORKSHOP",
     tagColor: "cyan",
+    href: "/fullstack.mp4",
   },
   {
     time: "3:00–4:00 p.m.",
@@ -80,7 +81,6 @@ const day1: ScheduleEvent[] = [
     location: "Room 171",
     tag: "MLH",
     tagColor: "magenta",
-    href: "/copilot.mp4",
   },
   {
     time: "6:00–7:00 p.m.",
