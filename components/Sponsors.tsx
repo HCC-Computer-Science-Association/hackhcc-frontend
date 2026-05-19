@@ -22,7 +22,12 @@ export function Sponsors() {
         logo: "/sponsors/itserve.png",
         url: "https://www.itserve.org/",
       },
-    ] },
+        {
+          name: "HCC",
+          logo: "/sponsors/hcc.png",
+          url: "https://www.hccs.edu/community--partners/entrepreneurial-initiatives/center-for-entrepreneurship---southwest/",
+        },
+      ] },
     { name: "GRID", slots: 3, color: "#00f0ff", sponsors: [
       {
         name: "Honeycomb",
@@ -30,7 +35,13 @@ export function Sponsors() {
         url: "https://honeycombsoft.com/",
       },
     ] },
-    { name: "CIRCUIT", slots: 4, color: "#00ff9f", sponsors: [] },
+    { name: "CIRCUIT", slots: 4, color: "#00ff9f", sponsors: [
+        {
+          name: "DataVox",
+          logo: "/sponsors/datavox.png",
+          url: "https://www.datavox.net/",
+        }
+      ] },
     { name: "SHARD", slots: 4, color: "#8888aa", sponsors: [
       {
         name: "PureButtons",
