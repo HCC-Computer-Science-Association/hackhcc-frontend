@@ -47,12 +47,12 @@ export function Sponsors() {
           url: "https://tanches.com/",
         },
         {
-          name: "NordVPN",
-          logo: "/sponsors/nordvpn.png",
-          url: "https://nordvpn.com/",
+          name: "AT&T",
+          logo: "/sponsors/att.png",
+          url: "https://www.att.com/",
         },
       ] },
-    { name: "SHARD", slots: 4, color: "#8888aa", sponsors: [
+    { name: "SHARD", slots: 8, color: "#8888aa", sponsors: [
       {
         name: "PureButtons",
         logo: "/sponsors/purebutton.png",
@@ -62,6 +62,36 @@ export function Sponsors() {
         name: "GitBook",
         logo: "/sponsors/gitbook.png",
         url: "https://www.gitbook.com/",
+      },
+      {
+        name: "NordVPN",
+        logo: "/sponsors/nordvpn.png",
+        url: "https://nordvpn.com/",
+      },
+      {
+        name: "NordPass",
+        logo: "/sponsors/nordpass.png",
+        url: "https://nordpass.com/",
+      },
+      {
+        name: "NordProtect",
+        logo: "/sponsors/nordprotect.webp",
+        url: "https://nordprotect.com/",
+      },
+      {
+        name: "Incogni",
+        logo: "/sponsors/incogni.png",
+        url: "https://incogni.com/",
+      },
+      {
+        name: "Saily",
+        logo: "/sponsors/saily.png",
+        url: "https://saily.com/",
+      },
+      {
+        name: "Nexos",
+        logo: "/sponsors/nexos.png",
+        url: "#",
       },
     ] },
   ];
