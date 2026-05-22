@@ -3,8 +3,9 @@ import Image from "next/image";
 
 interface Sponsor {
   name: string;
-  logo: string;
+  logo?: string;
   url: string;
+  textOnly?: boolean;
 }
 
 interface Tier {
@@ -31,8 +32,8 @@ export function Sponsors() {
     { name: "GRID", slots: 3, color: "#00f0ff", sponsors: [
       {
         name: "Google",
-        logo: "/sponsors/google.png",
         url: "https://google.com",
+        textOnly: true,
       },
     ] },
     { name: "CIRCUIT", slots: 4, color: "#00ff9f", sponsors: [
@@ -133,55 +134,60 @@ export function Sponsors() {
                   />
                 </div>
 
-                <div
-                  className={`grid gap-4 ${
-                    tier.slots === 2
-                      ? "grid-cols-2"
-                      : tier.slots === 3
-                        ? "grid-cols-3"
-                        : "grid-cols-2 md:grid-cols-4"
-                  }`}
-                >
-                  {Array.from({ length: tier.slots }).map((_, index) => {
-                    const sponsor = tier.sponsors[index];
-                    return (
-                      <div
-                        key={index}
-                        className="relative aspect-[2/1] border border-[#2a2a3a] flex items-center justify-center hover:border-opacity-50 transition-all group overflow-hidden"
-                        style={{ borderColor: `${tier.color}30` }}
-                      >
-                        {sponsor ? (
-                          <a
-                            href={sponsor.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-full h-full flex items-center justify-center p-2 group/sponsor"
+                <div className="flex flex-wrap justify-center gap-4">
+                  {tier.sponsors.map((sponsor, index) => (
+                    <div
+                      key={index}
+                      className={`relative aspect-[2/1] border flex items-center justify-center hover:border-opacity-50 transition-all group overflow-hidden flex-shrink-0 ${
+                        tier.slots <= 2
+                          ? "w-[calc(50%-8px)]"
+                          : tier.slots === 3
+                            ? "w-[calc(33.333%-11px)]"
+                            : "w-[calc(50%-8px)] md:w-[calc(25%-12px)]"
+                      }`}
+                      style={{ borderColor: `${tier.color}30` }}
+                    >
+                      {sponsor.textOnly ? (
+                        <a
+                          href={sponsor.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full h-full flex items-center justify-center p-4"
+                        >
+                          <span
+                            className="font-bold text-2xl tracking-wide transition-opacity hover:opacity-70"
+                            style={{ color: tier.color }}
                           >
-                            <div className="relative w-full h-full">
-                              <Image
-                                src={sponsor.logo}
-                                alt={sponsor.name}
-                                fill
-                                className="object-contain"
-                              />
-                            </div>
-                          </a>
-                        ) : (
-                          <span className="font-mono text-[#8888aa]/50 text-sm">
-                            TBA
+                            {sponsor.name}
                           </span>
-                        )}
+                        </a>
+                      ) : (
+                        <a
+                          href={sponsor.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full h-full flex items-center justify-center p-2 group/sponsor"
+                        >
+                          <div className="relative w-full h-full">
+                            <Image
+                              src={sponsor.logo!}
+                              alt={sponsor.name}
+                              fill
+                              className="object-contain"
+                            />
+                          </div>
+                        </a>
+                      )}
 
-                        {/* Corner accent */}
-                        <div
-                          className="absolute top-0 right-0 w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"
-                          style={{
-                            background: `linear-gradient(135deg, ${tier.color}30 50%, transparent 50%)`,
-                          }}
-                        />
-                      </div>
-                    );
-                  })}
+                      {/* Corner accent */}
+                      <div
+                        className="absolute top-0 right-0 w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity"
+                        style={{
+                          background: `linear-gradient(135deg, ${tier.color}30 50%, transparent 50%)`,
+                        }}
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
