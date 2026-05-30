@@ -49,7 +49,7 @@ export function Sponsors() {
         },
         {
           name: "AT&T",
-          logo: "/sponsors/att.png",
+          logo: "/sponsors/att-logo.webp",
           url: "https://www.att.com/",
         },
       ] },
