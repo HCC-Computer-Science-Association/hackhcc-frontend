@@ -39,7 +39,7 @@ export function Sponsors() {
     { name: "CIRCUIT", slots: 4, color: "#00ff9f", sponsors: [
         {
           name: "DataVox",
-          logo: "/sponsors/datavox.png",
+          logo: "/sponsors/DataVox_logoReversed-3-300x87.png",
           url: "https://www.datavox.net/",
         },
         {
@@ -66,32 +66,32 @@ export function Sponsors() {
       },
       {
         name: "NordVPN",
-        logo: "/sponsors/nordvpn.png",
+        logo: "/sponsors/NordVPN_Logo_RGB_Primary_Blue_White (1).svg",
         url: "https://nordvpn.com/",
       },
       {
         name: "NordPass",
-        logo: "/sponsors/nordpass.png",
+        logo: "/sponsors/NordPass-white-horizontal (2).png",
         url: "https://nordpass.com/",
       },
       {
         name: "NordProtect",
-        logo: "/sponsors/nordprotect.webp",
+        logo: "/sponsors/nord_protect_white_letters.png",
         url: "https://nordprotect.com/",
       },
       {
         name: "Incogni",
-        logo: "/sponsors/incogni.png",
+        logo: "/sponsors/Incogni_logo_white_better_quality.png",
         url: "https://incogni.com/",
       },
       {
         name: "Saily",
-        logo: "/sponsors/saily.png",
+        logo: "/sponsors/saily-logo-white (3).png",
         url: "https://saily.com/",
       },
       {
         name: "Nexos",
-        logo: "/sponsors/nexos.png",
+        logo: "/sponsors/nexos-ai-logo-MAIN-white-horizontal.png",
         url: "#",
       },
     ] },
