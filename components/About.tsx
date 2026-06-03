@@ -1,6 +1,5 @@
 "use client";
 import { Code2, Code, Users, Trophy, Cpu, GraduationCap } from "lucide-react";
-import { TimeBox } from "./TimeBox";
 import { useCountdown } from "@/utils/useCountdown";
 
 export function About() {
@@ -78,28 +77,6 @@ export function About() {
             <h2 className="mb-4">
               <span className="text-dark-navy font-rub">ABOUT THE EVENT</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-cyber-cyan to-cyber-magenta mx-auto"></div>
-            {/* Countdown */}
-            <div className="mt-10 flex items-center gap-6 justify-center">
-              {/* <div className="text-xs uppercase tracking-widest text-dark-navy font-medium">
-              Countdown
-            </div> */}
-              <div className="flex items-center gap-3 text-2xl font-mono text-dark-navy">
-                <TimeBox label="days" value={d} />
-                <span className="text-dark-navy/40 text-2xl sm:text-5xl lg:text-7xl mb-6 sm:mb-12 lg:mb-16">
-                  :
-                </span>
-                <TimeBox label="hours" value={h} />
-                <span className="text-dark-navy/40 text-2xl sm:text-5xl lg:text-7xl mb-6 sm:mb-12 lg:mb-16">
-                  :
-                </span>
-                <TimeBox label="mins" value={m} />
-                <span className="text-dark-navy/40 text-2xl sm:text-5xl lg:text-7xl mb-6 sm:mb-12 lg:mb-16">
-                  :
-                </span>
-                <TimeBox label="secs" value={s} />
-              </div>
-            </div>
           </div>
           
           {/* Here */}
