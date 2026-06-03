@@ -45,30 +45,6 @@ export function Hero() {
         </div>
 
 
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
-          <a
-            href="https://registration.socio.events/e/hackhcc"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative px-10 py-4 bg-[#fcee0a] text-[#0a0a0f] font-bold text-lg uppercase tracking-wider hover:bg-[#12121a] hover:text-[#fcee0a] transition-all duration-300"
-          >
-            <span className="relative z-10">Register Now</span>
-            <div className="absolute inset-0 border-2 border-[#fcee0a] translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform" />
-          </a>
-
-          <a
-            href="https://discord.gg/ydYaYUxs"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative px-10 py-4 bg-[#5865F2] text-white font-bold text-lg uppercase tracking-wider hover:bg-[#12121a] hover:text-[#5865F2] transition-all duration-300"
-          >
-            <span className="relative z-10">Join Discord</span>
-            <div className="absolute inset-0 border-2 border-[#5865F2] translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform" />
-          </a>
-        </div>
-
         {/* Floating Icons */}
         {/* <div className="absolute -z-10 top-20 left-10 opacity-30">
           <Zap className="w-12 h-12 text-cyber-cyan animate-pulse" />
