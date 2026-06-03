@@ -37,9 +37,9 @@ export function Hero() {
           />
         </div>
 
-         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 neon-border-cyan bg-dark-bg/80 rounded-full backdrop-blur-sm">
+         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 neon-border-yellow bg-dark-bg/80 rounded-full backdrop-blur-sm">
           {/* <Terminal className="w-4 h-4 text-cyber-cyan" /> */}
-          <span className="text-cyber-cyan font-['interceptor']">
+          <span className="text-cp-yellow font-['interceptor']">
             Houston, Texas // May 22-23, 2026
           </span>
         </div>
@@ -55,7 +55,7 @@ export function Hero() {
               href="https://hackhcc-code-runners.devpost.com/project-gallery"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 neon-border-cyan bg-dark-bg/80 rounded-md backdrop-blur-sm font-['interceptor'] text-cyber-cyan hover:bg-cyber-cyan/10 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-3 neon-border-yellow bg-dark-bg/80 rounded-md backdrop-blur-sm font-['interceptor'] text-cp-yellow hover:bg-cp-yellow/10 transition-colors"
             >
               <Trophy className="w-4 h-4" />
               Winning Projects
@@ -64,7 +64,7 @@ export function Hero() {
               href="https://www.linkedin.com/posts/hackhcc-hcc-hackathon-ugcPost-7466608062141739008-Rnfw/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 neon-border-cyan bg-dark-bg/80 rounded-md backdrop-blur-sm font-['interceptor'] text-cyber-cyan hover:bg-cyber-cyan/10 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-3 neon-border-yellow bg-dark-bg/80 rounded-md backdrop-blur-sm font-['interceptor'] text-cp-yellow hover:bg-cp-yellow/10 transition-colors"
             >
               <Film className="w-4 h-4" />
               Highlight Reel
@@ -73,7 +73,7 @@ export function Hero() {
               href="https://drive.google.com/drive/folders/1K_dbcXkMlcmTO7yeTvQYee6Uvif7WqKV?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 neon-border-cyan bg-dark-bg/80 rounded-md backdrop-blur-sm font-['interceptor'] text-cyber-cyan hover:bg-cyber-cyan/10 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-3 neon-border-yellow bg-dark-bg/80 rounded-md backdrop-blur-sm font-['interceptor'] text-cp-yellow hover:bg-cp-yellow/10 transition-colors"
             >
               <Images className="w-4 h-4" />
               Photo Album
@@ -81,7 +81,7 @@ export function Hero() {
           </div>
 
           <div className="flex flex-col items-center gap-3 mt-2">
-            <p className="font-['interceptor'] text-[#8888aa] text-sm md:text-base max-w-xl">
+            <p className="font-['interceptor'] text-cyber-cyan text-sm md:text-base max-w-xl">
               Join us again next year. In the meantime, follow our socials to stay updated.
             </p>
             <div className="flex items-center gap-4">
@@ -90,7 +90,7 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HackHCC on Instagram"
-                className="p-3 neon-border-cyan bg-dark-bg/80 rounded-full backdrop-blur-sm text-cyber-cyan hover:bg-cyber-cyan/10 transition-colors"
+                className="p-3 neon-border-yellow bg-dark-bg/80 rounded-full backdrop-blur-sm text-cp-yellow hover:bg-cp-yellow/10 transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -99,7 +99,7 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="CompSciA on LinkedIn"
-                className="p-3 neon-border-cyan bg-dark-bg/80 rounded-full backdrop-blur-sm text-cyber-cyan hover:bg-cyber-cyan/10 transition-colors"
+                className="p-3 neon-border-yellow bg-dark-bg/80 rounded-full backdrop-blur-sm text-cp-yellow hover:bg-cp-yellow/10 transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
