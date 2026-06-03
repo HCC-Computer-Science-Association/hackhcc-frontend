@@ -77,8 +77,10 @@ export function Hero() {
           </div>
 
           <div className="flex flex-col items-center gap-3 mt-2">
-            <p className="font-mono text-cyber-cyan text-sm md:text-base max-w-xl">
-              Join us again next year. In the meantime, follow our socials to stay updated.
+            <p className="font-['interceptor'] font-bold text-white text-sm md:text-base max-w-xl">
+              Join us again next year.
+              <br />
+              In the meantime, follow our socials to stay updated.
             </p>
             <div className="flex items-center gap-4">
               <a
