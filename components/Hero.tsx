@@ -76,7 +76,7 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="flex flex-col items-center gap-3 mt-2">
+          <div className="flex flex-col items-center gap-4 mt-8">
             <p className="font-['interceptor'] font-bold text-white text-sm md:text-base max-w-xl">
               Join us again next year.
               <br />
@@ -88,18 +88,18 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="HackHCC on Instagram"
-                className="p-3 neon-border-yellow bg-dark-bg/80 rounded-full backdrop-blur-sm text-cp-yellow hover:bg-cp-yellow/10 transition-colors"
+                className="text-white hover:scale-110 transition-all drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-6 h-6" />
               </a>
               <a
                 href="https://www.linkedin.com/company/compscia/posts/?feedView=all"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="CompSciA on LinkedIn"
-                className="p-3 neon-border-yellow bg-dark-bg/80 rounded-full backdrop-blur-sm text-cp-yellow hover:bg-cp-yellow/10 transition-colors"
+                className="text-white hover:scale-110 transition-all drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-6 h-6" />
               </a>
             </div>
           </div>
