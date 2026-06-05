@@ -1,4 +1,4 @@
-import { Terminal, Zap, ChevronDown } from "lucide-react";
+import { ChevronDown, Trophy, Film, Images, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 
 export function Hero() {
@@ -37,37 +37,74 @@ export function Hero() {
           />
         </div>
 
-         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 neon-border-cyan bg-dark-bg/80 rounded-full backdrop-blur-sm">
+         <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 neon-border-yellow bg-dark-bg/80 rounded-full backdrop-blur-sm">
           {/* <Terminal className="w-4 h-4 text-cyber-cyan" /> */}
-          <span className="text-cyber-cyan font-['interceptor']">
-            Houston, Texas // May 22-23, 2026
+          <span className="text-cp-yellow font-['interceptor']">
+            That&apos;s a wrap on Coderunners! Thanks to everyone who hacked with us.
           </span>
         </div>
 
+        {/* Post-event message */}
+        <div className="mt-4 flex flex-col items-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="https://hackhcc-code-runners.devpost.com/project-gallery"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-3 neon-border-yellow bg-dark-bg/80 rounded-md backdrop-blur-sm font-['interceptor'] text-cp-yellow hover:bg-cp-yellow/10 transition-colors"
+            >
+              <Trophy className="w-4 h-4" />
+              Winning Projects
+            </a>
+            <a
+              href="https://www.linkedin.com/posts/hackhcc-hcc-hackathon-ugcPost-7466608062141739008-Rnfw/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-3 neon-border-yellow bg-dark-bg/80 rounded-md backdrop-blur-sm font-['interceptor'] text-cp-yellow hover:bg-cp-yellow/10 transition-colors"
+            >
+              <Film className="w-4 h-4" />
+              Highlight Reel
+            </a>
+            <a
+              href="https://drive.google.com/drive/folders/1K_dbcXkMlcmTO7yeTvQYee6Uvif7WqKV?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-3 neon-border-yellow bg-dark-bg/80 rounded-md backdrop-blur-sm font-['interceptor'] text-cp-yellow hover:bg-cp-yellow/10 transition-colors"
+            >
+              <Images className="w-4 h-4" />
+              Photo Album
+            </a>
+          </div>
 
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12">
-          <a
-            href="https://registration.socio.events/e/hackhcc"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative px-10 py-4 bg-[#fcee0a] text-[#0a0a0f] font-bold text-lg uppercase tracking-wider hover:bg-[#12121a] hover:text-[#fcee0a] transition-all duration-300"
-          >
-            <span className="relative z-10">Register Now</span>
-            <div className="absolute inset-0 border-2 border-[#fcee0a] translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform" />
-          </a>
-
-          <a
-            href="https://discord.gg/ydYaYUxs"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative px-10 py-4 bg-[#5865F2] text-white font-bold text-lg uppercase tracking-wider hover:bg-[#12121a] hover:text-[#5865F2] transition-all duration-300"
-          >
-            <span className="relative z-10">Join Discord</span>
-            <div className="absolute inset-0 border-2 border-[#5865F2] translate-x-1 translate-y-1 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform" />
-          </a>
+          <div className="flex flex-col items-center gap-4 mt-8">
+            <p className="font-['interceptor'] font-bold text-white text-sm md:text-base max-w-xl">
+              Join us again next year.
+              <br />
+              In the meantime, follow our socials to stay updated.
+            </p>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.instagram.com/hackhcc"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HackHCC on Instagram"
+                className="text-white hover:scale-110 transition-all drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/compscia/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="CompSciA on LinkedIn"
+                className="text-white hover:scale-110 transition-all drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+              >
+                <Linkedin className="w-6 h-6" />
+              </a>
+            </div>
+          </div>
         </div>
+
 
         {/* Floating Icons */}
         {/* <div className="absolute -z-10 top-20 left-10 opacity-30">
